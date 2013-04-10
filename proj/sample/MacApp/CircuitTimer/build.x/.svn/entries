@@ -1,0 +1,51 @@
+10
+
+dir
+146
+svn://nws.techarts.co.jp/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build
+svn://nws.techarts.co.jp/ssa
+
+
+
+2010-09-02T19:11:02.692556Z
+146
+godai
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b3f6cf35-63c7-4cdf-b0e1-89249ca97818
+
+
+
+
+
+
+
+
+((conflict CircuitTimer.build dir update edited deleted (version svn://nws.techarts.co.jp/ssa 3 145 trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build none) (version svn://nws.techarts.co.jp/ssa 3 146 trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build dir)) (conflict Debug-iphonesimulator dir update edited deleted (version svn://nws.techarts.co.jp/ssa 3 145 trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator none) (version svn://nws.techarts.co.jp/ssa 3 146 trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator dir)))
+
+CircuitTimer.build
+dir
+
+
+
+delete
+
+Debug-iphonesimulator
+dir
+
+
+
+delete
+

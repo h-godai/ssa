@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MapObjectCreator", "MapObjectCreator.vcproj", "{E8BDB1DD-47F1-43C1-B028-524D475CB0A8}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{657DCA9B-6A94-4687-AF2C-FC1D6B025C8E} = {657DCA9B-6A94-4687-AF2C-FC1D6B025C8E}
+		{7242C828-42B5-44ED-A798-0EA86B130F47} = {7242C828-42B5-44ED-A798-0EA86B130F47}
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA} = {C73D6F2C-A332-47C8-8B08-2CBB481B45AA}
+		{1B46CBB7-7FEF-43EB-8961-BB318CDBAACF} = {1B46CBB7-7FEF-43EB-8961-BB318CDBAACF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSMath", "..\..\..\..\libTS\Math\build_vc8\TSMath.vcproj", "{657DCA9B-6A94-4687-AF2C-FC1D6B025C8E}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlatformDependent", "..\..\..\..\libTS\PlatformDependent\build_vc8\PlatformDependent.vcproj", "{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSGraphics", "..\..\..\..\libTS\Graphics\build_vc8\TSGraphics.vcproj", "{7242C828-42B5-44ED-A798-0EA86B130F47}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "util", "..\..\..\..\libTS\Util\build_vc8\util.vcproj", "{1B46CBB7-7FEF-43EB-8961-BB318CDBAACF}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release(staticMFC)|Win32 = Release(staticMFC)|Win32
+		Release|Win32 = Release|Win32
+		Static|Win32 = Static|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8BDB1DD-47F1-43C1-B028-524D475CB0A8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8BDB1DD-47F1-43C1-B028-524D475CB0A8}.Debug|Win32.Build.0 = Debug|Win32
+		{E8BDB1DD-47F1-43C1-B028-524D475CB0A8}.Release(staticMFC)|Win32.ActiveCfg = Static|Win32
+		{E8BDB1DD-47F1-43C1-B028-524D475CB0A8}.Release(staticMFC)|Win32.Build.0 = Static|Win32
+		{E8BDB1DD-47F1-43C1-B028-524D475CB0A8}.Release|Win32.ActiveCfg = Release|Win32
+		{E8BDB1DD-47F1-43C1-B028-524D475CB0A8}.Release|Win32.Build.0 = Release|Win32
+		{E8BDB1DD-47F1-43C1-B028-524D475CB0A8}.Static|Win32.ActiveCfg = Static|Win32
+		{E8BDB1DD-47F1-43C1-B028-524D475CB0A8}.Static|Win32.Build.0 = Static|Win32
+		{657DCA9B-6A94-4687-AF2C-FC1D6B025C8E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{657DCA9B-6A94-4687-AF2C-FC1D6B025C8E}.Debug|Win32.Build.0 = Debug|Win32
+		{657DCA9B-6A94-4687-AF2C-FC1D6B025C8E}.Release(staticMFC)|Win32.ActiveCfg = Release|Win32
+		{657DCA9B-6A94-4687-AF2C-FC1D6B025C8E}.Release(staticMFC)|Win32.Build.0 = Release|Win32
+		{657DCA9B-6A94-4687-AF2C-FC1D6B025C8E}.Release|Win32.ActiveCfg = Release|Win32
+		{657DCA9B-6A94-4687-AF2C-FC1D6B025C8E}.Release|Win32.Build.0 = Release|Win32
+		{657DCA9B-6A94-4687-AF2C-FC1D6B025C8E}.Static|Win32.ActiveCfg = Release|Win32
+		{657DCA9B-6A94-4687-AF2C-FC1D6B025C8E}.Static|Win32.Build.0 = Release|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Debug|Win32.Build.0 = Debug|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Release(staticMFC)|Win32.ActiveCfg = Release|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Release(staticMFC)|Win32.Build.0 = Release|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Release|Win32.ActiveCfg = Release|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Release|Win32.Build.0 = Release|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Static|Win32.ActiveCfg = Static|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Static|Win32.Build.0 = Static|Win32
+		{7242C828-42B5-44ED-A798-0EA86B130F47}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7242C828-42B5-44ED-A798-0EA86B130F47}.Debug|Win32.Build.0 = Debug|Win32
+		{7242C828-42B5-44ED-A798-0EA86B130F47}.Release(staticMFC)|Win32.ActiveCfg = Release|Win32
+		{7242C828-42B5-44ED-A798-0EA86B130F47}.Release(staticMFC)|Win32.Build.0 = Release|Win32
+		{7242C828-42B5-44ED-A798-0EA86B130F47}.Release|Win32.ActiveCfg = Release|Win32
+		{7242C828-42B5-44ED-A798-0EA86B130F47}.Release|Win32.Build.0 = Release|Win32
+		{7242C828-42B5-44ED-A798-0EA86B130F47}.Static|Win32.ActiveCfg = Static|Win32
+		{7242C828-42B5-44ED-A798-0EA86B130F47}.Static|Win32.Build.0 = Static|Win32
+		{1B46CBB7-7FEF-43EB-8961-BB318CDBAACF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1B46CBB7-7FEF-43EB-8961-BB318CDBAACF}.Debug|Win32.Build.0 = Debug|Win32
+		{1B46CBB7-7FEF-43EB-8961-BB318CDBAACF}.Release(staticMFC)|Win32.ActiveCfg = Release(staticMFC)|Win32
+		{1B46CBB7-7FEF-43EB-8961-BB318CDBAACF}.Release(staticMFC)|Win32.Build.0 = Release(staticMFC)|Win32
+		{1B46CBB7-7FEF-43EB-8961-BB318CDBAACF}.Release|Win32.ActiveCfg = Release|Win32
+		{1B46CBB7-7FEF-43EB-8961-BB318CDBAACF}.Release|Win32.Build.0 = Release|Win32
+		{1B46CBB7-7FEF-43EB-8961-BB318CDBAACF}.Static|Win32.ActiveCfg = Release(staticMFC)|Win32
+		{1B46CBB7-7FEF-43EB-8961-BB318CDBAACF}.Static|Win32.Build.0 = Release(staticMFC)|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,2 @@
+INDEX VERSION 1.126+/Users/godai/ssa/ssa/trunk/source/proj/sample/Android/AndroidNDKbook/.metadata/.plugins/org.eclipse.jdt.core
+2207238185.index

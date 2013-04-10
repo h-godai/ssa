@@ -1,0 +1,12 @@
+00:33:23 **** インクリメンタル・ビルド of configuration デフォルト for project NativeActivity ****
+/Applications/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
+Gdbsetup       : libs/armeabi/gdb.setup
+Compile++ thumb  : native-activity <= main.cpp
+In file included from jni/main.cpp:12:0:
+jni/../src/hogehoge.cpp:12:18: fatal error: vector: No such file or directory
+compilation terminated.
+make: *** [obj/local/armeabi/objs-debug/native-activity/main.o] Error 1
+
+00:33:23 Build Finished (took 140ms)
+

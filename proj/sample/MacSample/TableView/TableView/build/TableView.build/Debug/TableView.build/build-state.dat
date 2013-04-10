@@ -1,0 +1,39 @@
+TTableView
+v7
+r1
+
+N/Users/nishi/src/Samples/TableView/MainWindow.xib
+c000000004C74B18C000000000000553E
+t1282716044
+s21822
+
+N/Users/nishi/src/Samples/TableView/build/Debug/TableView.app
+t2
+s0
+
+N/Users/nishi/src/Samples/TableView/build/Debug/TableView.app/Contents/Info.plist
+t2
+s0
+
+N/Users/nishi/src/Samples/TableView/build/Debug/TableView.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/nishi/src/Samples/TableView/build/Debug/TableView.app/Contents/Resources/MainWindow.nib
+t2
+s0
+
+NTableView-Info.plist
+c000000004C74A6D1000000000000038D
+t1282713297
+s909
+
+CCompileXIB /Users/nishi/src/Samples/TableView/MainWindow.xib
+r0
+
+CProcessInfoPlistFile /Users/nishi/src/Samples/TableView/build/Debug/TableView.app/Contents/Info.plist TableView-Info.plist
+r0
+
+CTouch /Users/nishi/src/Samples/TableView/build/Debug/TableView.app
+r0
+

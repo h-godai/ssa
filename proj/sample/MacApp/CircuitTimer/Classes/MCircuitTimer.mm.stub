@@ -1,0 +1,624 @@
+/* -*-mode:ObjC;tab-width:4-*- */
+
+#import "MCircuitTimer.h"
+#include "CircuitTimer.hpp"
+#define STUB
+
+using namespace ts;
+using namespace circuit_timer;
+
+namespace {
+  inline CircuitTimer& circuitTimer() {
+	return CircuitTimer::Instance();
+  }
+}
+
+
+@implementation MCircuitTimer;
+
+
++ (void)startTimer {
+#ifndef STUB
+  	circuitTimer().startTimer();
+#endif
+}
+
++ (void)stopTimer {
+#ifndef STUB
+  	circuitTimer().stopTimer();
+#endif
+}
+
++ (NSString*)lapTimer {
+#ifndef STUB
+  MicroTime tp(circuitTimer().lapTimer());
+  NSString* str = [NSString stringWithFormat: @"%u:%02u.%03u"
+							, tp.min_only(), tp.sec(), tp.msec()];
+  return str;
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
++ (NSString*)pitOut:(BOOL)changeStint  {
+#ifndef STUB
+  MicroTime tp(circuitTimer().pitOut(changeStint == YES));
+  NSString* str = [NSString stringWithFormat: @"%u:%02u.%03u"
+							, tp.min_only(), tp.sec(), tp.msec()];
+  return str;
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
++ (NSString*)pitStop {
+#ifndef STUB
+  MicroTime tp(circuitTimer().pitStop());
+  NSString* str = [NSString stringWithFormat: @"%u:%02u.%03u"
+							, tp.min_only(), tp.sec(), tp.msec()];
+  return str;
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
+
++ (void)missLap {
+#ifndef STUB
+  circuitTimer().missLap();
+#endif
+}
+
++ (NSString*)getLapTime {
+#ifndef STUB
+  MicroTime lap(circuitTimer().getLapTime());
+  NSString* str = [NSString stringWithFormat: @"%u:%02u.%03u"
+							, lap.min_only(), lap.sec(), lap.msec()];
+  return str;
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+	
+}
+
++ (NSString*)getTotalTime {
+#ifndef STUB
+  MicroTime tt(circuitTimer().getTotalTime());
+  NSString* str = [NSString stringWithFormat: @"%02u:%02u:%02u"
+							, tt.hour(), tt.min(), tt.sec()];
+  return str;
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
+
++ (NSString*)getBestLap {
+#ifndef STUB
+  MicroTime tt(circuitTimer().getRiderInfo().bestLap_);
+  NSString* str = [NSString stringWithFormat: @"%u:%02u.%03u"
+							, tt.min_only(), tt.sec(), tt.msec()];
+  return str;
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
+
++ (unsigned int)getLapCount {
+#ifndef STUB
+  return circuitTimer().getLapCount();
+#else
+  return 0;
+#endif
+}
+
+
++ (bool)isStarted {
+#ifndef STUB
+  return circuitTimer().getStatus() == CircuitTimer::Started;
+#else
+  return 0;
+#endif
+}
++ (bool)isPitStop {
+#ifndef STUB
+  return circuitTimer().getStatus() == CircuitTimer::PitStoped;
+#else
+  return 0;
+#endif
+}
+
++ (void)getRealStintInfo:(int)stint
+				   rider:(UILabel*)rider
+					best:(UILabel*)bestLap
+					aver:(UILabel*)lapAverage 
+				stintlap:(UILabel*)stintLap
+			   stinttime:(UILabel*)stintTime
+				 fulllap:(UILabel*)fullLapCount
+		  assumeFuelCost:(UILabel*)assumeFuelCost
+		realFuelCost:(UILabel*)realFuelCost
+{
+#ifndef STUB
+  const StintInfo& si = circuitTimer().getStint(stint);
+  if (!si.valid()) return;
+  const RiderInfo& ri = circuitTimer().getRiderInfo(si.rider_);
+  if (!ri.valid()) return;
+  rider.text = [NSString stringWithUTF8String: ri.name_.c_str()];
+  bestLap.text = [NSString stringWithFormat: @"%u:%02u.%03u"
+						   , si.bestLapTime_.min_only()
+						   , si.bestLapTime_.sec()
+						   , si.bestLapTime_.msec()];
+  lapAverage.text = [NSString stringWithFormat: @"%u:%02u.%03u"
+							  , si.getLapAverage().min_only()
+							  , si.getLapAverage().sec()
+							  , si.getLapAverage().msec()];
+  stintLap.text = [NSString stringWithFormat: @"%u", si.startLap_];
+  stintTime.text = [NSString stringWithFormat: @"%s", si.stintTime_.toMS().c_str()];
+  fullLapCount.text = [NSString stringWithFormat: @"%u", si.fullLapCount_];
+  assumeFuelCost.text = [NSString stringWithFormat: @"%.2lf", si.assumeFuelCost_];
+  realFuelCost.text = [NSString stringWithFormat: @"%.2lf", si.realFuelCost_];
+#endif
+  
+}
+
++ (int)getHistoryCount {
+#ifndef STUB
+  return circuitTimer().getHistoryCount();
+#else
+  return 0;
+#endif
+}
++ (NSString*)getHistoryText:(int)row {
+#ifndef STUB
+  const ActionLog& act = circuitTimer().getHistory(row);
+  //  time_t t = act.ts_.time();
+  //struct tm *lt = localtime(&t);
+  NSString* str = [NSString stringWithFormat: 
+							  @"%d  r-%d  %02d:%02d:%02d LAP-%03d %10.10-s %02u:%02u.%03u  %.1lfl %.1lf"
+							, act.stint_ + 1
+							, act.rider_
+							, act.total_.hour(), act.total_.min(), act.total_.sec() //lt->tm_hour, lt->tm_min, lt->tm_sec
+							, act.lapCount_
+							, ActionLog::GetActionTypeText(act.act_)
+							, act.lap_.min_only()
+							, act.lap_.sec()
+							, act.lap_.msec()
+							, act.fuelLeft_
+							, act.reFuel_
+				   ];
+  return str;
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
+
++ (NSString*)getRaceName {
+#ifndef STUB
+  NSString* str = [NSString stringWithUTF8String: circuitTimer().getRaceInfo().name_.c_str()];
+  return str;
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
++ (NSString*)getCircuitName {
+#ifndef STUB
+  NSString* str = [NSString stringWithUTF8String: circuitTimer().getRaceInfo().circuit_.name_.c_str()];
+  return str;
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
+
++ (double)getFuelLeft {
+#ifndef STUB
+  return circuitTimer().getFuelLeft();
+#else
+  return 0;
+#endif
+}
++ (double)getCanLapLeft {
+#ifndef STUB
+  return circuitTimer().getCanLapLeft();
+#else
+  return 0;
+#endif
+}
+
++ (void)setCurrentRider:(int)rider {
+#ifndef STUB
+  circuitTimer().setCurrentRider(rider);
+#endif
+}
+
++ (int)getNumOfStint {
+#ifndef STUB
+  return circuitTimer().getNumOfStint();
+#else
+  return 0;
+#endif
+}
+
++ (NSString*)getStintText:(int)row {
+#ifndef STUB
+  static const char* fuelText[] = { "  -   ", " full " };
+  static const char* wheelText[] = { "   -   ", " change " };
+  const StintInfo& info = circuitTimer().getStint(row);
+  NSString* rider = [NSString stringWithUTF8String: circuitTimer().getRiderInfo(info.rider_).name_.c_str()];
+  while([rider length] < 18) rider = [rider stringByAppendingString: @" "];
+  NSString* str1 = [NSString stringWithFormat: @" %d  %02u/%03u  %02d:%02d:%02d(%02d:%02d) "
+							 , info.num_+1
+							 , info.laps_, info.getTotalLap()
+							 , info.totalTime_.hour(), info.totalTime_.min(), info.totalTime_.sec()
+							 , info.stintTime_.min_only(), info.stintTime_.sec()
+					];
+  NSString* str2 = [NSString stringWithFormat: @"%d:%04.1lf %5.1lfKm/l %5.2lfL   %4.uKm  %s  %s  "
+							 , info.assumeAverageLapTime_.min_only()
+							 , info.assumeAverageLapTime_.secf()
+							 , info.assumeFuelCost_
+							 , info.fuelLeft_
+							 , static_cast<int>(info.tireUsed_)
+							 , fuelText[info.fullFuel_ ? 1 : 0]
+							 , wheelText[info.changeWheels_ ? 1 : 0]];
+  return [[str1 stringByAppendingString:str2] stringByAppendingString:rider];
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
+
++ (int)getRiders {
+#ifndef STUB
+  return circuitTimer().getRiders();
+#else
+  return 0;
+#endif
+}
++ (void)setRiders:(int)riders {
+#ifndef STUB
+  circuitTimer().setRiders(riders);
+#endif
+}
+
++ (int)getCurrentRider {
+#ifndef STUB
+  return circuitTimer().getCurrentRider();
+#else
+  return  0;
+#endif
+}
++ (int)getCurrentStint {
+#ifndef STUB
+  return circuitTimer().getCurrentStint();
+#else
+  return 0;
+#endif
+}
+
++ (void)updateRiderInfo:(int)rider 
+			  riderName:(NSString*)name
+	   assumeLapTimeMin:(NSString*)min
+	   assumeLapTimeSec:(NSString*)sec
+		 assumeFuelCost:(NSString*)fuel 
+{
+#ifndef STUB
+  RiderInfo& info = circuitTimer().riderInfo(rider);
+  info.name_ = [name UTF8String];
+  int msec = static_cast<int>([sec floatValue] * 1000);
+  TimeParam lt(0, [min intValue], msec / 1000, (msec % 1000) * 1000);
+  info.averageLapTime_ = (micro_time_t)lt;
+  info.fuelCost_ = [fuel doubleValue];
+#endif
+
+}
+
++ (void)getSettingRiderInfo:(int)rider 
+				  riderName:(UITextField*)name
+		   assumeLapTimeMin:(UITextField*)min
+		   assumeLapTimeSec:(UITextField*)sec
+			 assumeFuelCost:(UITextField*)fuel 
+{
+#ifndef STUB
+  RiderInfo& info = circuitTimer().riderInfo(rider);
+  name.text = [NSString stringWithUTF8String: info.name_.c_str()];
+  min.text =@"hoge"; //[NSString stringWithFormat: @"%d", info.averageLapTime_.min_only()];
+  sec.text = [NSString stringWithFormat: @"%d:%u.%03u"
+					   , info.averageLapTime_.min_only()
+					   , info.averageLapTime_.sec()
+					   , info.averageLapTime_.msec()];
+  fuel.text = [NSString stringWithFormat: @"%.3lf", info.fuelCost_];
+
+#endif
+}
+
++ (int)updateStint:(int)stint
+			 rider:(int)rider
+			  laps:(int)laps
+		  fuelFlag:(BOOL)fuel
+   wheelChangeFlag:(BOOL)wheel
+		  fuelCost:(double)fuelCost
+		averageLap:(NSString*)average
+{
+#ifndef STUB
+  return circuitTimer().updateStint(stint
+									   , rider
+									   , laps
+									   , fuel==YES
+									   , wheel==YES
+									   , fuelCost
+									   , MicroTime([average UTF8String]));
+
+#else
+  return 0;
+#endif
+}
+
+
++ (void)getStintInfo:(int)stint
+			 p_rider:(int*)rider
+		   riderName:(NSString**)riderName
+				laps:(int*)laps
+		  p_fuelFlag:(BOOL*)fuelFlag
+		 p_wheelFlag:(BOOL*)wheelFlag
+			fuelCost:(NSString**)fuelCost
+			 average:(NSString**)average
+{
+  //#ifndef STUB
+  const StintInfo& info = circuitTimer().getStint(stint);
+  if (rider != nil) *rider = info.rider_;
+  if (laps != nil) *laps = info.laps_;
+  if (fuelFlag != nil) *fuelFlag = info.fullFuel_ ? YES : NO;
+  if (wheelFlag != nil) *wheelFlag = info.changeWheels_ ? YES : NO;
+  if (fuelCost != nil) *fuelCost = [NSString stringWithFormat: @"%.2lf", info.assumeFuelCost_];
+  if (riderName != nil) *riderName = [NSString stringWithUTF8String: circuitTimer().getRiderInfo(info.rider_).name_.c_str()];
+  if (average != nil) *average =  [NSString stringWithFormat: @"%d:%02u.%03u", info.assumeAverageLapTime_.min_only()
+											,info.assumeAverageLapTime_.sec()
+											,info.assumeAverageLapTime_.msec()];
+  //printf("getStintInfo: stint=%d rider=%d\n", stint, *rider);
+  //#endif
+}
+
++ (void)setStintInfo:(int)stint
+			   rider:(int)rider
+		   riderName:(NSString*)riderName
+				laps:(int)laps
+			fuelFlag:(BOOL)fuelFlag
+		   wheelFlag:(BOOL)wheelChange
+			fuelCost:(double)fuelCost
+			 average:(NSString*)average
+{
+#ifndef STUB
+  StintInfo& sinfo = circuitTimer().getStint(stint);
+  sinfo.rider_ = rider;
+  circuitTimer().riderInfo(rider).name_ = [riderName UTF8String];
+  //sinfo.laps_ = laps;
+  sinfo.fullFuel_ = fuelFlag == YES;
+  sinfo.changeWheels_ = wheelChange == YES;
+  sinfo.assumeFuelCost_ = fuelCost;
+  sinfo.assumeAverageLapTime_ = [average UTF8String];
+#endif
+}
+
+
++ (void)deleteLastHistory {
+#ifndef STUB
+  circuitTimer().deleteLastHistory();
+#endif
+}
++ (void)setDocumentPath:(NSString*)path {
+#ifndef STUB
+  circuitTimer().setDocumentPath([path UTF8String]);
+#endif
+}
+
++ (void)load:(NSString*)path {
+#ifndef STUB
+  if (path == nil) {
+	circuitTimer().load();
+  }
+  else {
+	circuitTimer().load([path UTF8String]);
+  }
+#endif
+
+}
+
++ (void)save:(BOOL)latest {
+#ifndef STUB
+  circuitTimer().save(latest==YES);
+#endif
+}
+
++ (void)fuelIn:(NSString*)fuel {
+#ifndef STUB
+  circuitTimer().fuelIn([fuel doubleValue]);
+#endif
+}
+
++ (void)setImmidiateMode:(BOOL)on {
+#ifndef STUB
+  circuitTimer().setImmidateMode(on == YES);
+#endif
+}
+
++ (BOOL)isImmidiateMode {
+#ifndef STUB
+  return circuitTimer().isImmidiateMode() ? YES : NO;
+#else
+  return NO;
+#endif
+
+}
+
++ (void)setCurrentLapTime:(NSString*)laptime {
+#ifndef STUB
+  circuitTimer().setCurrentLapTime(MicroTime([laptime UTF8String]));
+#endif
+}
+
++ (void)calcStint {
+#ifndef STUB
+  circuitTimer().calcStint();
+#endif
+}
+
++ (void)addStintLap:(int)stint value:(int)value {
+#ifndef STUB
+  circuitTimer().getStint(stint).laps_ += value;
+  circuitTimer().getStint(stint).autoLapNum_ = false;
+#endif
+}
+
++ (void)setStintRider:(int)stint rider:(int)rider {
+#ifndef STUB
+  StintInfo& stinfo = circuitTimer().getStint(stint);
+  if (stinfo.rider_ != rider) {
+	// ライダー変更時はライダーの基本データをコピーする
+	const RiderInfo& rinfo = circuitTimer().getRiderInfo(rider);
+	stinfo.assumeAverageLapTime_ = rinfo.averageLapTime_;
+	stinfo.assumeFuelCost_ = rinfo.fuelCost_;
+  }
+  stinfo.rider_ = rider;
+#endif
+}
+
++ (void)addStintAverageLap:(int)stint value:(double)value {
+#ifndef STUB
+  int v = static_cast<int>(value*1000000.0);
+  circuitTimer().getStint(stint).assumeAverageLapTime_ += v;
+  circuitTimer().riderInfo(circuitTimer().getStint(stint).rider_).averageLapTime_ =
+	circuitTimer().getStint(stint).averageLapTime_;
+#endif
+}
++ (void)addStintFuelCost:(int)stint value:(double)value {
+#ifndef STUB
+  circuitTimer().getStint(stint).assumeFuelCost_ += value;
+  circuitTimer().riderInfo(circuitTimer().getStint(stint).rider_).fuelCost_ =
+	circuitTimer().getStint(stint).assumeFuelCost_;
+#endif
+}
+
++ (void)resetStint {
+#ifndef STUB
+  circuitTimer().clearStint();
+#endif
+}
+
++ (void)getRaceInfo:(CTRaceInfo*)raceinfo {
+  //#ifndef STUB
+  const RaceInfo& rinfo = circuitTimer().getRaceInfo();
+  // set RaceInfo
+  raceinfo->raceName = [NSString stringWithUTF8String: rinfo.name_.c_str()];
+  raceinfo->dateText = [NSString stringWithFormat: @"2010/9/12"];
+  raceinfo->circuitName = [NSString stringWithUTF8String: rinfo.circuit_.name_.c_str()];
+  raceinfo->courseLength = rinfo.circuit_.courseLength_;
+  raceinfo->minLapTime = (double)MicroTime(rinfo.circuit_.minimumLapTime_);
+  raceinfo->raceDistance = ((double)MicroTime(rinfo.raceDistanceTime_))/3600.0;
+  raceinfo->raceType = (CTRaceUnitType)rinfo.raceType_;
+  raceinfo->sightingLaps = rinfo.sightingLaps_;        // サイティングラップ数
+  raceinfo->scLapTime = rinfo.circuit_.scLapTime_;     // セーフティーカーの平均ラップタイム
+  printf("getRaceInfo: %lf %llu\n", raceinfo->raceDistance, rinfo.raceDistanceTime_.mtime_);
+  //#endif
+}
+
++ (void)setRaceInfo:(CTRaceInfo*)raceinfo {
+#ifndef STUB
+  RaceInfo& rinfo = circuitTimer().raceInfo();
+  rinfo.name_ = [raceinfo->raceName UTF8String];
+  //raceinfo->dateText = @"2010/9/12";
+  rinfo.circuit_.name_ = [raceinfo->circuitName UTF8String];
+  rinfo.circuit_.courseLength_ = raceinfo->courseLength;
+  rinfo.circuit_.minimumLapTime_ = raceinfo->minLapTime;
+  rinfo.raceDistanceTime_ = MicroTime(raceinfo->raceDistance * 3600.0);
+  rinfo.raceType_ = static_cast<circuit_timer::RaceUnitType>(raceinfo->raceType);
+  rinfo.sightingLaps_ = raceinfo->sightingLaps;
+  rinfo.circuit_.scLapTime_ = raceinfo->scLapTime;
+  printf("%lf %lf %llu\n",raceinfo->raceDistance, (double)rinfo.raceDistanceTime_, rinfo.raceDistanceTime_.mtime_);
+#endif
+}
+
++ (void)getTeamInfo:(CTTeamInfo*)teaminfo {
+  //#ifndef STUB
+  const TeamInfo& tinfo = circuitTimer().getTeamInfo();
+  teaminfo->teamName= [NSString stringWithUTF8String: tinfo.name_.c_str()];      // チーム名
+  teaminfo->numOfRiders = tinfo.numOfRiders_;         // ライダー人数
+  teaminfo->pitStopTime = tinfo.pitStopTime_; // ピットストップの基本時間
+  teaminfo->withFuelFullTime = tinfo.withFullFuelTime_;    // 給油時にプラスされる時間
+  teaminfo->withWheelsChangeTime = tinfo.withChangeWheelsTime_; // タイヤ交換時にプラスされる時間
+  teaminfo->inLapLossTime = tinfo.inLapLossTime_;    // インラップに要するロスタイム
+  teaminfo->outLapLossTime = tinfo.outLapLossTime_;     // アウトラップに要するロスタイム
+  teaminfo->sightingFuelCost = tinfo.sightingFuelCost_;  // サイティングラップ中の燃費
+  teaminfo->pitInTimingValue = tinfo.pitInTimingValue_; // ピットインタイミング値
+  teaminfo->pitInTimingType = (CTPitInTimingType)tinfo.pitInTimingType_; // ピットインタイミングの種別
+  teaminfo->machineName = [NSString stringWithUTF8String: tinfo.machineInfo_.name_.c_str()];    // マシン名
+  teaminfo->fuelCapacity = tinfo.machineInfo_.fuelCapacity_;      // タンク容量
+  //#endif
+}
++ (void)setTeamInfo:(CTTeamInfo*)teaminfo {
+#ifndef STUB
+  TeamInfo& tinfo = circuitTimer().teamInfo();
+  tinfo.name_ = [teaminfo->teamName UTF8String];
+  tinfo.numOfRiders_ = teaminfo->numOfRiders;
+  tinfo.pitStopTime_ = teaminfo->pitStopTime;
+  tinfo.withFullFuelTime_ = teaminfo->withFuelFullTime;
+  tinfo.withChangeWheelsTime_ = teaminfo->withWheelsChangeTime;
+  tinfo.inLapLossTime_ = teaminfo->inLapLossTime;
+  tinfo.outLapLossTime_ = teaminfo->outLapLossTime;
+  tinfo.sightingFuelCost_ = teaminfo->sightingFuelCost;
+  tinfo.pitInTimingValue_ = teaminfo->pitInTimingValue;
+  tinfo.pitInTimingType_ = static_cast<circuit_timer::PitInTimingType>(teaminfo->pitInTimingType);
+  tinfo.machineInfo_.name_ = [teaminfo->machineName UTF8String];
+  tinfo.machineInfo_.fuelCapacity_ = teaminfo->fuelCapacity;
+#endif
+}
+
++ (NSString*)getStintLapLeft {
+#ifndef STUB
+  return [NSString stringWithFormat: @"%d"
+				   , circuitTimer().getStintLaps() - circuitTimer().getCurrentStintLap()];
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
+
++ (NSString*)getRiderLapLeft {
+#ifndef STUB
+  return [NSString stringWithFormat: @"%d/%d"
+				   , circuitTimer().getCurrentStintLap()
+				   , circuitTimer().getStintLaps()];
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
+
++ (NSString*)getRiderName:(int)rider {
+#ifndef STUB
+  const RiderInfo& rinfo = circuitTimer().getRiderInfo(rider);
+  return [NSString stringWithUTF8String: rinfo.name_.c_str()];
+#else
+  return [NSString stringWithFormat: @"hoge"];
+#endif
+}
+
++ (int)getRider:(int)stint {
+#ifndef STUB
+  return circuitTimer().getStint(stint).rider_;
+#else
+  return 0;
+#endif
+}
+
+
++ (int)getNextRider:(int)stint {
+#ifndef STUB
+  int rider = circuitTimer().getStint(stint+1).rider_;
+  if (rider == -1) {
+	rider = (circuitTimer().getStint(stint).rider_ + 1) % circuitTimer().getRiders();
+  }
+  return rider;
+#else
+  return 1;
+#endif
+}
+
++ (void)refuel:(double)value lap:(int)lap {
+#ifndef STUB
+  circuitTimer().reFuel(value, lap);
+#endif
+}
+
+@end

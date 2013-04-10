@@ -1,0 +1,424 @@
+TTableView
+v7
+r0
+t306827986.129402
+cCheck dependencies
+cCpResource build/Debug-iphoneos/TableView.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/ResourceRules.plist
+cProcessInfoPlistFile /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/Info.plist TableView-Info.plist
+cCompileXIB /Users/nishi/src/Samples/TableView/MainWindow.xib
+cProcessPCH /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-ctckckoscmorinaeaywlxjiegsua/TableView_Prefix.pch.gch TableView_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-davlytdhgiepqybaxdxzvnffdewr/TableView_Prefix.pch.gch TableView_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/main.o /Users/nishi/src/Samples/TableView/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableViewAppDelegate.o /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/myTableView.o /Users/nishi/src/Samples/TableView/Classes/myTableView.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableView normal armv6
+cCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/main.o /Users/nishi/src/Samples/TableView/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableViewAppDelegate.o /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/myTableView.o /Users/nishi/src/Samples/TableView/Classes/myTableView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableView normal armv7
+cCreateUniversalBinary /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/TableView normal "armv6 armv7"
+cGenerateDSYMFile /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app.dSYM /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/TableView
+cProcessProductPackaging "/Users/nishi/Library/MobileDevice/Provisioning Profiles/7BC05023-5972-42E4-BF81-C84E1070B6A1.mobileprovision" /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/embedded.mobileprovision
+cTouch /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app
+cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/Entitlements.plist /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView.xcent
+cCodeSign /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk
+c000000004C6DE9E30000000000000110
+t1282271715
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/Entitlements.plist
+c000000004C578FA900000000000001A7
+t1280806825
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/ResourceRules.plist
+c000000004C578FA900000000000001E5
+t1280806825
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004C5A51050000000000345F00
+t1280987397
+s3432192
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004C5A52B100000000003E1EF0
+t1280987825
+s4071152
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004C5A527F0000000000001466
+t1280987775
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C62427000000000000009CD
+t1281507952
+s2509
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C62430F0000000002EBC2B0
+t1281508111
+s49005232
+
+N/Users/nishi/Library/MobileDevice/Provisioning Profiles/7BC05023-5972-42E4-BF81-C84E1070B6A1.mobileprovision
+c000000004C8F22610000000000001D68
+t1284448865
+s7528
+
+N/Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.h
+c000000004C74A6D1000000000000014F
+t1282713297
+s335
+i<UIKit/UIKit.h>
+
+N/Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m
+c000000004C74A6D100000000000009CA
+t1282713297
+s2506
+i"TableViewAppDelegate.h"
+
+N/Users/nishi/src/Samples/TableView/Classes/myTableView.h
+c000000004C74B0EE000000000000011B
+t1282715886
+s283
+i<UIKit/UIKit.h>
+
+N/Users/nishi/src/Samples/TableView/Classes/myTableView.m
+c000000004C74B1B50000000000000490
+t1282716085
+s1168
+i"myTableView.h"
+
+N/Users/nishi/src/Samples/TableView/MainWindow.xib
+c000000004C74B18C000000000000553E
+t1282716044
+s21822
+
+N/Users/nishi/src/Samples/TableView/TableView_Prefix.pch
+c000000004C74A6D100000000000000BB
+t1282713297
+s187
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app
+t1285135184
+s340
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app.dSYM
+t1285135183
+s102
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/Info.plist
+t1285135179
+s734
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/MainWindow.nib
+t1285135180
+s2581
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/PkgInfo
+t1285135179
+s8
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/ResourceRules.plist
+t1285135179
+s485
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/TableView
+t1285135183
+s59296
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/embedded.mobileprovision
+t1285135183
+s7528
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableView
+t1285135183
+s20608
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableView.LinkFileList
+c000000004C999B4B0000000000000173
+t1285135179
+s371
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableViewAppDelegate.o
+t1285135182
+s46052
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/main.o
+t1285135182
+s6440
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/myTableView.o
+t1285135182
+s42384
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableView
+t1285135183
+s20608
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableView.LinkFileList
+c000000004C999B4B0000000000000173
+t1285135179
+s371
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableViewAppDelegate.o
+t1285135182
+s45996
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/main.o
+t1285135182
+s6424
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/myTableView.o
+t1285135182
+s42280
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView.xcent
+t1285135183
+s424
+
+N/Users/nishi/src/Samples/TableView/main.m
+c000000004C74A6D1000000000000016D
+t1282713297
+s365
+i<UIKit/UIKit.h>
+
+N/var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-ctckckoscmorinaeaywlxjiegsua/TableView_Prefix.pch.gch
+t1285135182
+s9852464
+
+N/var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-davlytdhgiepqybaxdxzvnffdewr/TableView_Prefix.pch.gch
+t1285135182
+s10315312
+
+N/var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-euzctmpwweiogoblmcqldffuvbqv/TableView_Prefix.pch.gch
+t2
+s0
+
+N/var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-fidwmnpzpmkwjvgujtxwptihxmit/TableView_Prefix.pch.gch
+t2
+s0
+
+NTableView-Info.plist
+c000000004C74A6D1000000000000038D
+t1282713297
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies306827986#306827986#0(0"0(0#1#0"8608064000#0"0#
+
+CCodeSign /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app
+s306827983.600543
+e306827984.349471
+r1
+xCodeSign
+x/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app
+lSLF07#2@43"CodeSign build/Debug-iphoneos/TableView.app306827983#306827984#0(0"0(0#0#69"/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app8604750144#648"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Nobuyuki Nishiyama (8YQTW5Z42Z)" --resource-rules=/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/ResourceRules.plist --entitlements /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView.xcent /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app0#
+
+CCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableViewAppDelegate.o /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s306827982.430455
+e306827982.571206
+r1
+xCompileC
+xbuild/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableViewAppDelegate.o
+x/Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m306827982#306827982#0(0"0(0#0#65"/Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m8606803232#1760"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.0 -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -I/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources/armv6 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources -include /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-ctckckoscmorinaeaywlxjiegsua/TableView_Prefix.pch -c /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableViewAppDelegate.o0#
+
+CCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/main.o /Users/nishi/src/Samples/TableView/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s306827982.429146
+e306827982.548998
+r1
+xCompileC
+xbuild/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/main.o
+x/Users/nishi/src/Samples/TableView/main.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@49"Compile /Users/nishi/src/Samples/TableView/main.m306827982#306827982#0(0"0(0#0#41"/Users/nishi/src/Samples/TableView/main.m8595023456#1720"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.0 -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -I/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources/armv6 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources -include /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-ctckckoscmorinaeaywlxjiegsua/TableView_Prefix.pch -c /Users/nishi/src/Samples/TableView/main.m -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/main.o0#
+
+CCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/myTableView.o /Users/nishi/src/Samples/TableView/Classes/myTableView.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s306827982.549101
+e306827982.633862
+r1
+xCompileC
+xbuild/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/myTableView.o
+x/Users/nishi/src/Samples/TableView/Classes/myTableView.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/nishi/src/Samples/TableView/Classes/myTableView.m306827982#306827982#0(0"0(0#0#56"/Users/nishi/src/Samples/TableView/Classes/myTableView.m8612219424#1742"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.0 -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -I/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources/armv6 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources -include /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-ctckckoscmorinaeaywlxjiegsua/TableView_Prefix.pch -c /Users/nishi/src/Samples/TableView/Classes/myTableView.m -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/myTableView.o0#
+
+CCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableViewAppDelegate.o /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s306827982.635042
+e306827982.708258
+r1
+xCompileC
+xbuild/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableViewAppDelegate.o
+x/Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m306827982#306827982#0(0"0(0#0#65"/Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m8606877984#1760"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.0 -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -I/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources/armv7 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources -include /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-davlytdhgiepqybaxdxzvnffdewr/TableView_Prefix.pch -c /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableViewAppDelegate.o0#
+
+CCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/main.o /Users/nishi/src/Samples/TableView/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s306827982.571313
+e306827982.634961
+r1
+xCompileC
+xbuild/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/main.o
+x/Users/nishi/src/Samples/TableView/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@49"Compile /Users/nishi/src/Samples/TableView/main.m306827982#306827982#0(0"0(0#0#41"/Users/nishi/src/Samples/TableView/main.m8608502016#1720"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.0 -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -I/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources/armv7 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources -include /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-davlytdhgiepqybaxdxzvnffdewr/TableView_Prefix.pch -c /Users/nishi/src/Samples/TableView/main.m -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/main.o0#
+
+CCompileC build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/myTableView.o /Users/nishi/src/Samples/TableView/Classes/myTableView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s306827982.708356
+e306827982.777023
+r1
+xCompileC
+xbuild/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/myTableView.o
+x/Users/nishi/src/Samples/TableView/Classes/myTableView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/nishi/src/Samples/TableView/Classes/myTableView.m306827982#306827982#0(0"0(0#0#56"/Users/nishi/src/Samples/TableView/Classes/myTableView.m8608418752#1742"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.0 -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -I/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources/armv7 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources -include /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-davlytdhgiepqybaxdxzvnffdewr/TableView_Prefix.pch -c /Users/nishi/src/Samples/TableView/Classes/myTableView.m -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/myTableView.o0#
+
+CCompileXIB /Users/nishi/src/Samples/TableView/MainWindow.xib
+s306827979.866066
+e306827981.015068
+r1
+xCompileXIB
+x/Users/nishi/src/Samples/TableView/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib306827979#306827981#0(0"0(0#0#49"/Users/nishi/src/Samples/TableView/MainWindow.xib8608482080#532"    cd /Users/nishi/src/Samples/TableView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/MainWindow.nib /Users/nishi/src/Samples/TableView/MainWindow.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk0#
+
+CCpResource build/Debug-iphoneos/TableView.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/ResourceRules.plist
+s306827979.808677
+e306827979.865938
+r1
+xCpResource
+xbuild/Debug-iphoneos/TableView.app/ResourceRules.plist
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/ResourceRules.plist
+lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/ResourceRules.plist306827979#306827979#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/ResourceRules.plist8307809061684012032#474"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/ResourceRules.plist /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app0#
+
+CCreateUniversalBinary /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/TableView normal "armv6 armv7"
+s306827983.431171
+e306827983.460674
+r1
+xCreateUniversalBinary
+x/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/TableView
+xnormal
+xarmv6 armv7
+lSLF07#2@87"CreateUniversalBinary build/Debug-iphoneos/TableView.app/TableView normal "armv6 armv7"306827983#306827983#0(0"0(0#0#46"/Users/nishi/src/Samples/TableView/armv6 armv78610853696#518"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableView /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableView -output /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/TableView0#
+
+CGenerateDSYMFile /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app.dSYM /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/TableView
+s306827983.460764
+e306827983.566210
+r1
+xGenerateDSYMFile
+x/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app.dSYM
+x/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/TableView
+lSLF07#2@101"GenerateDSYMFile build/Debug-iphoneos/TableView.app.dSYM build/Debug-iphoneos/TableView.app/TableView306827983#306827983#0(0"0(0#0#79"/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/TableView8610410720#356"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/TableView -o /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app.dSYM0#
+
+CLd /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableView normal armv6
+s306827982.633961
+e306827983.430569
+r1
+xLd
+x/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableView
+xnormal
+xarmv6
+lSLF07#2@123"Link /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableView306827982#306827983#0(0"0(0#0#0"8608217312#851"    cd /Users/nishi/src/Samples/TableView    setenv IPHONEOS_DEPLOYMENT_TARGET 3.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk -L/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -F/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -filelist /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableView.LinkFileList -dead_strip -miphoneos-version-min=3.0 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv6/TableView0#
+
+CLd /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableView normal armv7
+s306827982.777120
+e306827983.431094
+r1
+xLd
+x/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableView
+xnormal
+xarmv7
+lSLF07#2@123"Link /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableView306827982#306827983#0(0"0(0#0#0"8608340416#851"    cd /Users/nishi/src/Samples/TableView    setenv IPHONEOS_DEPLOYMENT_TARGET 3.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk -L/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -F/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -filelist /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableView.LinkFileList -dead_strip -miphoneos-version-min=3.0 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/Objects-normal/armv7/TableView0#
+
+CProcessInfoPlistFile /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/Info.plist TableView-Info.plist
+s306827979.840386
+e306827979.848546
+r1
+xProcessInfoPlistFile
+x/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/Info.plist
+xTableView-Info.plist
+lSLF07#2@28"Process TableView-Info.plist306827979#306827979#0(0"0(0#0#55"/Users/nishi/src/Samples/TableView/TableView-Info.plist8610179680#554"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility TableView-Info.plist -genpkginfo /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/ResourceRules.plist -o /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/Info.plist0#
+
+CProcessPCH /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-ctckckoscmorinaeaywlxjiegsua/TableView_Prefix.pch.gch TableView_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+s306827981.015236
+e306827982.266172
+r1
+xProcessPCH
+x/var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-ctckckoscmorinaeaywlxjiegsua/TableView_Prefix.pch.gch
+xTableView_Prefix.pch
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile TableView_Prefix.pch306827981#306827982#0(0"0(0#0#55"/Users/nishi/src/Samples/TableView/TableView_Prefix.pch8610599008#1620"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.0 -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -I/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources/armv6 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources -c /Users/nishi/src/Samples/TableView/TableView_Prefix.pch -o /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-ctckckoscmorinaeaywlxjiegsua/TableView_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-davlytdhgiepqybaxdxzvnffdewr/TableView_Prefix.pch.gch TableView_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s306827981.016382
+e306827982.429013
+r1
+xProcessPCH
+x/var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-davlytdhgiepqybaxdxzvnffdewr/TableView_Prefix.pch.gch
+xTableView_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile TableView_Prefix.pch306827981#306827982#0(0"0(0#0#55"/Users/nishi/src/Samples/TableView/TableView_Prefix.pch8610533856#1620"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.0 -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphoneos -I/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources/armv7 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/DerivedSources -c /Users/nishi/src/Samples/TableView/TableView_Prefix.pch -o /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-davlytdhgiepqybaxdxzvnffdewr/TableView_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-euzctmpwweiogoblmcqldffuvbqv/TableView_Prefix.pch.gch TableView_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CProcessPCH /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-fidwmnpzpmkwjvgujtxwptihxmit/TableView_Prefix.pch.gch TableView_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CProcessProductPackaging "/Users/nishi/Library/MobileDevice/Provisioning Profiles/7BC05023-5972-42E4-BF81-C84E1070B6A1.mobileprovision" /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/embedded.mobileprovision
+s306827983.566319
+e306827983.567862
+r1
+xProcessProductPackaging
+x/Users/nishi/Library/MobileDevice/Provisioning Profiles/7BC05023-5972-42E4-BF81-C84E1070B6A1.mobileprovision
+x/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/embedded.mobileprovision
+lSLF07#2@194"ProcessProductPackaging "/Users/nishi/Library/MobileDevice/Provisioning Profiles/7BC05023-5972-42E4-BF81-C84E1070B6A1.mobileprovision" build/Debug-iphoneos/TableView.app/embedded.mobileprovision306827983#306827983#0(0"0(0#0#94"/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/embedded.mobileprovision8608104736#417"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/nishi/Library/MobileDevice/Provisioning Profiles/7BC05023-5972-42E4-BF81-C84E1070B6A1.mobileprovision" -o /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app/embedded.mobileprovision0#
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/Entitlements.plist /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView.xcent
+s306827983.584470
+e306827983.600453
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/Entitlements.plist
+x/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView.xcent
+lSLF07#2@181"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/Entitlements.plist build/TableView.build/Debug-iphoneos/TableView.build/TableView.xcent306827983#306827983#0(0"0(0#0#103"/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView.xcent8606688576#430"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/Entitlements.plist -entitlements -format xml -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphoneos/TableView.build/TableView.xcent0#
+
+CTouch /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app
+s306827983.567921
+e306827983.584360
+r1
+xTouch
+x/Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app
+lSLF07#2@75"Touch /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app306827983#306827983#0(0"0(0#0#0"8607629120#258"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/nishi/src/Samples/TableView/build/Debug-iphoneos/TableView.app0#
+

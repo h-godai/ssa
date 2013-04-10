@@ -1,0 +1,16 @@
+/*
+ * hogehoge.cpp
+ *
+ *  Created on: 2013/02/05
+ *      Author: godai
+ */
+
+
+
+
+#include <vector>
+
+struct hogehoge {
+	std::vector<int> intvec_;
+
+};

@@ -1,0 +1,24 @@
+/*
+ * hogehoge.cpp
+ *
+ *  Created on: 2013/02/05
+ *      Author: godai
+ */
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+//#include <vector>
+//#include <iostream>
+//using namespace std;
+
+struct hogehoge {
+//	std::vector<int> intvec_;
+public:
+
+	int hogehoge;
+	int hoho:8;
+	int get() { return hogehoge; }
+	void dump() { printf("%d\n", hogehoge); }
+};

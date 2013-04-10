@@ -1,0 +1,31 @@
+AllocatorTest.o: ../AllocatorTest.cpp stdafx.h \
+  ../../../libTS/PlatformDependent/Timer/MeasureTime.hpp \
+  ../../../libTS/PlatformDependent/Timer/../../Common/Common.h \
+  ../ITestBody.h ../ITestForm.h ../TestMain.h \
+  ../../../libTS/Util/allocator.hpp \
+  ../../../libTS/Util/pool/pool_storage.hpp \
+  ../../../libTS/Util/pool/../linked_list.hpp \
+  ../../../libTS/Util/pool/pool_util.hpp
+CppAdvent.o: ../CppAdvent.cpp stdafx.h \
+  ../../../libTS/PlatformDependent/Timer/MeasureTime.hpp \
+  ../../../libTS/PlatformDependent/Timer/../../Common/Common.h \
+  ../ITestBody.h ../ITestForm.h ../TestMain.h
+IncTest.o: ../IncTest.cpp stdafx.h ../TestMain.h ../ITestForm.h \
+  ../ITestBody.h ../IncTest.h \
+  ../../../libTS/PlatformDependent/Timer/MeasureTime.hpp \
+  ../../../libTS/PlatformDependent/Timer/../../Common/Common.h
+SortTest.o: ../SortTest.cpp stdafx.h ../TestMain.h ../ITestForm.h \
+  ../ITestBody.h ../SortTest.h \
+  ../../../libTS/PlatformDependent/Timer/MeasureTime.hpp \
+  ../../../libTS/PlatformDependent/Timer/../../Common/Common.h
+TestMain.o: ../TestMain.cpp stdafx.h ../TestMain.h ../ITestForm.h \
+  ../ITestBody.h
+VectorTest.o: ../VectorTest.cpp stdafx.h ../TestMain.h ../ITestForm.h \
+  ../ITestBody.h ../VectorTest.h \
+  ../../../libTS/PlatformDependent/Timer/MeasureTime.hpp \
+  ../../../libTS/PlatformDependent/Timer/../../Common/Common.h
+MeasureTime.o: ../../../libTS/PlatformDependent/Timer/MeasureTime.cpp \
+  stdafx.h ../../../libTS/PlatformDependent/Timer/MeasureTime.hpp \
+  ../../../libTS/PlatformDependent/Timer/../../Common/Common.h
+PerformanceTest.o: PerformanceTest.cpp ../TestMain.h ../ITestForm.h \
+  ../ITestBody.h PerformanceTestForm.h ../ITestForm.h

@@ -1,0 +1,8 @@
+21:04:00 **** インクリメンタル・ビルド of configuration デフォルト for project NativeActivity ****
+/Applications/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
+Gdbsetup       : libs/armeabi/gdb.setup
+Install        : libnative-activity.so => libs/armeabi/libnative-activity.so
+
+21:04:00 Build Finished (took 174ms)
+

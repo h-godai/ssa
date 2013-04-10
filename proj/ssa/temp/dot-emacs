@@ -1,0 +1,71 @@
+;; .emacs
+
+;;; uncomment this line to disable loading of "default.el" at startup
+;; (setq inhibit-default-init t)
+
+;; enable visual feedback on selections
+;(setq transient-mark-mode t)
+
+;; default to better frame titles
+(setq frame-title-format
+      (concat  "%b - emacs@" (system-name)))
+
+;; default to unified diffs
+(setq diff-switches "-u")
+
+;; always end a file with a newline
+;(setq require-final-newline 'query)
+
+;;; uncomment for CJK utf-8 support for non-Asian users
+;; (require 'un-define)
+
+(defun my-c-mode-common-hook ()
+　(c-set-style "linux") (setq indent-tabs-mode t) ;linux 式がいいとき
+;;;; /usr/src/linux/Documentation/CodingStyle 参照
+　(c-set-style "k&r") ;k&r式がいいときはこれを有効にする
+;;　(c-set-style "gnu") ;デフォルトの設定
+;;;; タブ幅
+;;　(setq tab-width '4)
+;;　(setq c-basic-offset tab-width)
+  (setq indent-tabs-mode nil)
+
+;;;; コメント形式
+　 (setq comment-start "// ")
+　(setq comment-end "")
+　)
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+; [F7]でmakeを実行，[f4]でエラーの行へジャンプ
+(add-hook 'c-mode-common-hook
+	  '(lambda ()
+       ;; 補完する．
+       (setq completion-mode t) 
+       ;; 右端で折り返さない
+       (setq truncate-lines t)
+       ;; make のオプションの確認は不要
+       ;(setq compilation-read-command nil)
+       ;; make するとき save する
+       (setq compilation-ask-about-save nil)
+       ;; make時のデフォルトコマンド
+       (setq compile-command "make")
+       ;; コンパイルウィンドウの高さ
+       (setq compilation-window-height 10)
+       ;; [F1] を押すとカーソルの下の単語の man を表示する
+       (define-key c-mode-base-map [f1] 'manual-entry)
+       ;; [F7] を押すと make を実行する
+       (define-key c-mode-base-map [f7] 'compile)
+       ;; [F4] を押すと次のエラーの行へジャンプ
+       (define-key c-mode-base-map [f4] 'next-error)
+       ;; SHIFT+[F4] を押すと前のエラーの行へジャンプ
+       (define-key c-mode-base-map [(shift f4)] 'previous-error)
+       ))
+; キーワードカラー表示(?)
+(global-font-lock-mode t)
+; 対応する括弧の明示
+(show-paren-mode t)
+(setq indent-tabs-mode nil)
+
+
+(put 'upcase-region 'disabled nil)
+
+(put 'downcase-region 'disabled nil)

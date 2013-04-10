@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* CircuitTimerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CircuitTimerAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		4B1F26D61254F8C80034E0F7 /* FileListDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F26D41254F8C80034E0F7 /* FileListDialog.m */; };
+		4B1F26D71254F8C80034E0F7 /* FileListDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1F26D51254F8C80034E0F7 /* FileListDialog.xib */; };
+		4B4E6467125B73D2007E5AB5 /* button_bg_01_B.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E6464125B73D2007E5AB5 /* button_bg_01_B.jpg */; };
+		4B4E6468125B73D2007E5AB5 /* button_bg_01_G.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E6465125B73D2007E5AB5 /* button_bg_01_G.jpg */; };
+		4B4E6469125B73D2007E5AB5 /* button_bg_01_R.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E6466125B73D2007E5AB5 /* button_bg_01_R.jpg */; };
+		4B4E6481125C7154007E5AB5 /* button_bg_01_GrayScale.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E6480125C7154007E5AB5 /* button_bg_01_GrayScale.png */; };
+		4B4E6495125C7E33007E5AB5 /* button_bg_01_B.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E6494125C7E33007E5AB5 /* button_bg_01_B.png */; };
+		4B4E663E125CE63A007E5AB5 /* button_bg_01_R.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E663C125CE63A007E5AB5 /* button_bg_01_R.png */; };
+		4B4E663F125CE63A007E5AB5 /* button_bg_01_G.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E663D125CE63A007E5AB5 /* button_bg_01_G.png */; };
+		4B4E668A125D8A41007E5AB5 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E6689125D8A41007E5AB5 /* DatePickerView.m */; };
+		4B4E66B4125E01AA007E5AB5 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E66B3125E01AA007E5AB5 /* DatePickerView.xib */; };
+		4B4E693C12658DBB007E5AB5 /* StintCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E693B12658DBB007E5AB5 /* StintCellView.m */; };
+		4B4E694012659041007E5AB5 /* StintCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E693F12659041007E5AB5 /* StintCellView.xib */; };
+		4B4E6944126591E2007E5AB5 /* StintCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E6943126591E2007E5AB5 /* StintCellViewController.m */; };
+		4B4E6A6112687B12007E5AB5 /* RaceHistoryCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E6A6012687B12007E5AB5 /* RaceHistoryCellView.m */; };
+		4B4E6A6412687B37007E5AB5 /* RaceHistoryCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E6A6312687B37007E5AB5 /* RaceHistoryCellViewController.m */; };
+		4B4E6A6612687B5D007E5AB5 /* RaceHistoryCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E6A6512687B5D007E5AB5 /* RaceHistoryCellView.xib */; };
+		4B4E6AED126C1AF9007E5AB5 /* bar01_GrayScale.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E6AEC126C1AF9007E5AB5 /* bar01_GrayScale.png */; };
+		4B4E6B05126C3902007E5AB5 /* NumericPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E6B04126C3902007E5AB5 /* NumericPickerView.m */; };
+		4B7C545D123020C3008696DE /* RootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7C545C123020C3008696DE /* RootView.xib */; };
+		4B7C54641230215E008696DE /* RootView-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7C54631230215E008696DE /* RootView-iPad.xib */; };
+		4B7C5472123021CF008696DE /* RootViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C5471123021CF008696DE /* RootViewControl.m */; };
+		4B7C5479123025DE008696DE /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C5477123025DE008696DE /* ConfigViewController.m */; };
+		4B7C547A123025DE008696DE /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7C5478123025DE008696DE /* ConfigViewController.xib */; };
+		4B993A211209EC330019BD5F /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B993A201209EC330019BD5F /* MainWindow-iPad.xib */; };
+		4B993AE9120BC2810019BD5F /* MCircuitTimer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B993AE8120BC2810019BD5F /* MCircuitTimer.mm */; };
+		4BD2FC0C1223DD330063D952 /* MyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2FC0A1223DD330063D952 /* MyTableView.m */; };
+		4BF162981248DD0B002DE649 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF162971248DD0B002DE649 /* libsqlite3.dylib */; };
+		4BF1649A124F7DCD002DE649 /* PitWorkDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF16498124F7DCD002DE649 /* PitWorkDialog.m */; };
+		4BF1649B124F7DCD002DE649 /* PitWorkDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF16499124F7DCD002DE649 /* PitWorkDialog.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* CircuitTimerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircuitTimerAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* CircuitTimerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircuitTimerAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* CircuitTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircuitTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* CircuitTimer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircuitTimer_Prefix.pch; sourceTree = "<group>"; };
+		4B1F26D31254F8C80034E0F7 /* FileListDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileListDialog.h; sourceTree = "<group>"; };
+		4B1F26D41254F8C80034E0F7 /* FileListDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileListDialog.m; sourceTree = "<group>"; };
+		4B1F26D51254F8C80034E0F7 /* FileListDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FileListDialog.xib; path = Classes/FileListDialog.xib; sourceTree = "<group>"; };
+		4B4E6464125B73D2007E5AB5 /* button_bg_01_B.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button_bg_01_B.jpg; sourceTree = "<group>"; };
+		4B4E6465125B73D2007E5AB5 /* button_bg_01_G.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button_bg_01_G.jpg; sourceTree = "<group>"; };
+		4B4E6466125B73D2007E5AB5 /* button_bg_01_R.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button_bg_01_R.jpg; sourceTree = "<group>"; };
+		4B4E6480125C7154007E5AB5 /* button_bg_01_GrayScale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bg_01_GrayScale.png; sourceTree = "<group>"; };
+		4B4E6494125C7E33007E5AB5 /* button_bg_01_B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bg_01_B.png; sourceTree = "<group>"; };
+		4B4E663C125CE63A007E5AB5 /* button_bg_01_R.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bg_01_R.png; sourceTree = "<group>"; };
+		4B4E663D125CE63A007E5AB5 /* button_bg_01_G.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bg_01_G.png; sourceTree = "<group>"; };
+		4B4E6688125D8A41007E5AB5 /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
+		4B4E6689125D8A41007E5AB5 /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
+		4B4E66B3125E01AA007E5AB5 /* DatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+		4B4E693A12658DBB007E5AB5 /* StintCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StintCellView.h; sourceTree = "<group>"; };
+		4B4E693B12658DBB007E5AB5 /* StintCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StintCellView.m; sourceTree = "<group>"; };
+		4B4E693F12659041007E5AB5 /* StintCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StintCellView.xib; sourceTree = "<group>"; };
+		4B4E6942126591E2007E5AB5 /* StintCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StintCellViewController.h; sourceTree = "<group>"; };
+		4B4E6943126591E2007E5AB5 /* StintCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StintCellViewController.m; sourceTree = "<group>"; };
+		4B4E6A5F12687B12007E5AB5 /* RaceHistoryCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceHistoryCellView.h; sourceTree = "<group>"; };
+		4B4E6A6012687B12007E5AB5 /* RaceHistoryCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceHistoryCellView.m; sourceTree = "<group>"; };
+		4B4E6A6212687B37007E5AB5 /* RaceHistoryCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceHistoryCellViewController.h; sourceTree = "<group>"; };
+		4B4E6A6312687B37007E5AB5 /* RaceHistoryCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceHistoryCellViewController.m; sourceTree = "<group>"; };
+		4B4E6A6512687B5D007E5AB5 /* RaceHistoryCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RaceHistoryCellView.xib; sourceTree = "<group>"; };
+		4B4E6AEC126C1AF9007E5AB5 /* bar01_GrayScale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar01_GrayScale.png; sourceTree = "<group>"; };
+		4B4E6B03126C3902007E5AB5 /* NumericPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericPickerView.h; sourceTree = "<group>"; };
+		4B4E6B04126C3902007E5AB5 /* NumericPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericPickerView.m; sourceTree = "<group>"; };
+		4B7C545C123020C3008696DE /* RootView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootView.xib; sourceTree = "<group>"; };
+		4B7C54631230215E008696DE /* RootView-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "RootView-iPad.xib"; sourceTree = "<group>"; };
+		4B7C5470123021CF008696DE /* RootViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewControl.h; sourceTree = "<group>"; };
+		4B7C5471123021CF008696DE /* RootViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewControl.m; sourceTree = "<group>"; };
+		4B7C5476123025DE008696DE /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		4B7C5477123025DE008696DE /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		4B7C5478123025DE008696DE /* ConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConfigViewController.xib; path = Classes/ConfigViewController.xib; sourceTree = "<group>"; };
+		4B993A201209EC330019BD5F /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		4B993AE8120BC2810019BD5F /* MCircuitTimer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MCircuitTimer.mm; sourceTree = "<group>"; };
+		4B993AEA120BCAD60019BD5F /* MCircuitTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCircuitTimer.h; sourceTree = "<group>"; };
+		4BCC9639122DF52100D050EF /* CircuitTimer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CircuitTimer.hpp; sourceTree = "<group>"; };
+		4BD2FC0A1223DD330063D952 /* MyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableView.m; sourceTree = "<group>"; };
+		4BD2FC0B1223DD330063D952 /* MyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableView.h; sourceTree = "<group>"; };
+		4BF162971248DD0B002DE649 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4BF16497124F7DCD002DE649 /* PitWorkDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitWorkDialog.h; sourceTree = "<group>"; };
+		4BF16498124F7DCD002DE649 /* PitWorkDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitWorkDialog.m; sourceTree = "<group>"; };
+		4BF16499124F7DCD002DE649 /* PitWorkDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PitWorkDialog.xib; path = Classes/PitWorkDialog.xib; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* CircuitTimer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CircuitTimer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				4BF162981248DD0B002DE649 /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4BD2FC0B1223DD330063D952 /* MyTableView.h */,
+				4BD2FC0A1223DD330063D952 /* MyTableView.m */,
+				1D3623240D0F684500981E51 /* CircuitTimerAppDelegate.h */,
+				1D3623250D0F684500981E51 /* CircuitTimerAppDelegate.m */,
+				4B993AE8120BC2810019BD5F /* MCircuitTimer.mm */,
+				4B993AEA120BCAD60019BD5F /* MCircuitTimer.h */,
+				4B7C5470123021CF008696DE /* RootViewControl.h */,
+				4B7C5471123021CF008696DE /* RootViewControl.m */,
+				4B7C5476123025DE008696DE /* ConfigViewController.h */,
+				4B7C5477123025DE008696DE /* ConfigViewController.m */,
+				4BF16497124F7DCD002DE649 /* PitWorkDialog.h */,
+				4BF16498124F7DCD002DE649 /* PitWorkDialog.m */,
+				4B1F26D31254F8C80034E0F7 /* FileListDialog.h */,
+				4B1F26D41254F8C80034E0F7 /* FileListDialog.m */,
+				4B4E6688125D8A41007E5AB5 /* DatePickerView.h */,
+				4B4E6689125D8A41007E5AB5 /* DatePickerView.m */,
+				4B4E693A12658DBB007E5AB5 /* StintCellView.h */,
+				4B4E693B12658DBB007E5AB5 /* StintCellView.m */,
+				4B4E6942126591E2007E5AB5 /* StintCellViewController.h */,
+				4B4E6943126591E2007E5AB5 /* StintCellViewController.m */,
+				4B4E6A5F12687B12007E5AB5 /* RaceHistoryCellView.h */,
+				4B4E6A6012687B12007E5AB5 /* RaceHistoryCellView.m */,
+				4B4E6A6212687B37007E5AB5 /* RaceHistoryCellViewController.h */,
+				4B4E6A6312687B37007E5AB5 /* RaceHistoryCellViewController.m */,
+				4B4E6B03126C3902007E5AB5 /* NumericPickerView.h */,
+				4B4E6B04126C3902007E5AB5 /* NumericPickerView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* CircuitTimer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				4BCC95E0122DF44A00D050EF /* C++Classes */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* CircuitTimer_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B4E6AEC126C1AF9007E5AB5 /* bar01_GrayScale.png */,
+				4B4E663C125CE63A007E5AB5 /* button_bg_01_R.png */,
+				4B4E663D125CE63A007E5AB5 /* button_bg_01_G.png */,
+				4B4E6494125C7E33007E5AB5 /* button_bg_01_B.png */,
+				4B4E6480125C7154007E5AB5 /* button_bg_01_GrayScale.png */,
+				4B4E6464125B73D2007E5AB5 /* button_bg_01_B.jpg */,
+				4B4E6465125B73D2007E5AB5 /* button_bg_01_G.jpg */,
+				4B4E6466125B73D2007E5AB5 /* button_bg_01_R.jpg */,
+				4B1F26D51254F8C80034E0F7 /* FileListDialog.xib */,
+				4BF16499124F7DCD002DE649 /* PitWorkDialog.xib */,
+				4B7C5478123025DE008696DE /* ConfigViewController.xib */,
+				4B993A201209EC330019BD5F /* MainWindow-iPad.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* CircuitTimer-Info.plist */,
+				4B7C54631230215E008696DE /* RootView-iPad.xib */,
+				4B7C545C123020C3008696DE /* RootView.xib */,
+				4B4E66B3125E01AA007E5AB5 /* DatePickerView.xib */,
+				4B4E693F12659041007E5AB5 /* StintCellView.xib */,
+				4B4E6A6512687B5D007E5AB5 /* RaceHistoryCellView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				4BF162971248DD0B002DE649 /* libsqlite3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BCC95E0122DF44A00D050EF /* C++Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4BCC9639122DF52100D050EF /* CircuitTimer.hpp */,
+			);
+			name = "C++Classes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* CircuitTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CircuitTimer" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircuitTimer;
+			productName = CircuitTimer;
+			productReference = 1D6058910D05DD3D006BFB54 /* CircuitTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = SoftwareSoietyAkihabara;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CircuitTimer" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* CircuitTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				4B993A211209EC330019BD5F /* MainWindow-iPad.xib in Resources */,
+				4B7C545D123020C3008696DE /* RootView.xib in Resources */,
+				4B7C54641230215E008696DE /* RootView-iPad.xib in Resources */,
+				4B7C547A123025DE008696DE /* ConfigViewController.xib in Resources */,
+				4BF1649B124F7DCD002DE649 /* PitWorkDialog.xib in Resources */,
+				4B1F26D71254F8C80034E0F7 /* FileListDialog.xib in Resources */,
+				4B4E6467125B73D2007E5AB5 /* button_bg_01_B.jpg in Resources */,
+				4B4E6468125B73D2007E5AB5 /* button_bg_01_G.jpg in Resources */,
+				4B4E6469125B73D2007E5AB5 /* button_bg_01_R.jpg in Resources */,
+				4B4E6481125C7154007E5AB5 /* button_bg_01_GrayScale.png in Resources */,
+				4B4E6495125C7E33007E5AB5 /* button_bg_01_B.png in Resources */,
+				4B4E663E125CE63A007E5AB5 /* button_bg_01_R.png in Resources */,
+				4B4E663F125CE63A007E5AB5 /* button_bg_01_G.png in Resources */,
+				4B4E66B4125E01AA007E5AB5 /* DatePickerView.xib in Resources */,
+				4B4E694012659041007E5AB5 /* StintCellView.xib in Resources */,
+				4B4E6A6612687B5D007E5AB5 /* RaceHistoryCellView.xib in Resources */,
+				4B4E6AED126C1AF9007E5AB5 /* bar01_GrayScale.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* CircuitTimerAppDelegate.m in Sources */,
+				4B993AE9120BC2810019BD5F /* MCircuitTimer.mm in Sources */,
+				4BD2FC0C1223DD330063D952 /* MyTableView.m in Sources */,
+				4B7C5472123021CF008696DE /* RootViewControl.m in Sources */,
+				4B7C5479123025DE008696DE /* ConfigViewController.m in Sources */,
+				4BF1649A124F7DCD002DE649 /* PitWorkDialog.m in Sources */,
+				4B1F26D61254F8C80034E0F7 /* FileListDialog.m in Sources */,
+				4B4E668A125D8A41007E5AB5 /* DatePickerView.m in Sources */,
+				4B4E693C12658DBB007E5AB5 /* StintCellView.m in Sources */,
+				4B4E6944126591E2007E5AB5 /* StintCellViewController.m in Sources */,
+				4B4E6A6112687B12007E5AB5 /* RaceHistoryCellView.m in Sources */,
+				4B4E6A6412687B37007E5AB5 /* RaceHistoryCellViewController.m in Sources */,
+				4B4E6B05126C3902007E5AB5 /* NumericPickerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CircuitTimer_Prefix.pch;
+				INFOPLIST_FILE = "CircuitTimer-Info.plist";
+				PRODUCT_NAME = CircuitTimer;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CircuitTimer_Prefix.pch;
+				INFOPLIST_FILE = "CircuitTimer-Info.plist";
+				PRODUCT_NAME = CircuitTimer;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos4.3;
+				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "/usr/local/include ../../../**";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CircuitTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CircuitTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

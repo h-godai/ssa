@@ -1,0 +1,73 @@
+19:26:19 **** クリーンのみのビルド of configuration デフォルト for project NativeActivity ****
+ndk-build NDK_DEBUG=1 clean 
+プログラム "ndk-build" を実行できません: Unknown reason
+
+Error: Program "ndk-build" not found in PATH
+PATH=[/usr/bin:/bin:/usr/sbin:/sbin]
+19:29:57 **** ビルド of configuration デフォルト for project NativeActivity ****
+/Applications/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
+Gdbsetup       : libs/armeabi/gdb.setup
+Compile++ thumb  : native-activity <= main.cpp
+In file included from jni/main.cpp:12:0:
+jni/../src/hogehoge.cpp:12:18: fatal error: vector: No such file or directory
+compilation terminated.
+make: *** [obj/local/armeabi/objs-debug/native-activity/main.o] Error 1
+19:41:38 **** インクリメンタル・ビルド of configuration デフォルト for project NativeActivity ****
+/Applications/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
+Gdbsetup       : libs/armeabi/gdb.setup
+Compile++ thumb  : native-activity <= main.cpp
+Compile++ thumb  : native-activity <= hogehoge.cpp
+Compile thumb  : android_native_app_glue <= android_native_app_glue.c
+StaticLibrary  : libandroid_native_app_glue.a
+SharedLibrary  : libnative-activity.so
+Install        : libnative-activity.so => libs/armeabi/libnative-activity.so
+19:54:25 **** インクリメンタル・ビルド of configuration デフォルト for project NativeActivity ****
+/Applications/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
+Gdbsetup       : libs/armeabi/gdb.setup
+Compile++ thumb  : native-activity <= main.cpp
+Compile++ thumb  : native-activity <= hogehoge.cpp
+SharedLibrary  : libnative-activity.so
+Install        : libnative-activity.so => libs/armeabi/libnative-activity.so
+19:55:38 **** インクリメンタル・ビルド of configuration デフォルト for project NativeActivity ****
+/Applications/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
+Gdbsetup       : libs/armeabi/gdb.setup
+Install        : libnative-activity.so => libs/armeabi/libnative-activity.so
+19:56:19 **** インクリメンタル・ビルド of configuration デフォルト for project NativeActivity ****
+/Applications/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
+Gdbsetup       : libs/armeabi/gdb.setup
+Compile++ thumb  : native-activity <= main.cpp
+In file included from jni/main.cpp:12:0:
+jni/../src/hogehoge.cpp:20:6: error: invalid use of non-static data member 'hogehoge::hogehoge'
+jni/../src/hogehoge.cpp:26:27: error: from this location
+jni/../src/hogehoge.cpp:20:6: error: invalid use of non-static data member 'hogehoge::hogehoge'
+jni/../src/hogehoge.cpp:26:27: error: from this location
+jni/../src/hogehoge.cpp:26:27: error: 'hogehoge::hogehoge' cannot appear in a constant-expression
+jni/../src/hogehoge.cpp:26:35: error: template argument 1 is invalid
+jni/../src/hogehoge.cpp: In static member function 'static int hogehoge::create()':
+jni/../src/hogehoge.cpp:20:6: error: invalid use of member 'hogehoge::hogehoge' in static member function
+jni/../src/hogehoge.cpp:27:28: error: from this location
+jni/../src/hogehoge.cpp:20:6: error: invalid use of member 'hogehoge::hogehoge' in static member function
+jni/../src/hogehoge.cpp:27:28: error: from this location
+jni/../src/hogehoge.cpp:27:28: error: 'hogehoge::hogehoge' cannot appear in a constant-expression
+jni/../src/hogehoge.cpp:27:36: error: template argument 1 is invalid
+jni/../src/hogehoge.cpp:27:42: error: expected type-specifier before 'hogehoge'
+jni/../src/hogehoge.cpp:27:42: error: expected ')' before 'hogehoge'
+make: *** [obj/local/armeabi/objs-debug/native-activity/main.o] Error 1
+19:56:49 **** インクリメンタル・ビルド of configuration デフォルト for project NativeActivity ****
+/Applications/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
+Gdbsetup       : libs/armeabi/gdb.setup
+Compile++ thumb  : native-activity <= main.cpp
+Compile++ thumb  : native-activity <= hogehoge.cpp
+SharedLibrary  : libnative-activity.so
+Install        : libnative-activity.so => libs/armeabi/libnative-activity.so
+21:04:00 **** インクリメンタル・ビルド of configuration デフォルト for project NativeActivity ****
+/Applications/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
+Gdbsetup       : libs/armeabi/gdb.setup
+Install        : libnative-activity.so => libs/armeabi/libnative-activity.so

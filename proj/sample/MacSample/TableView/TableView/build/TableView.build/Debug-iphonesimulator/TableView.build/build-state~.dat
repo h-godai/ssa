@@ -1,0 +1,227 @@
+TTableView
+v7
+r0
+t304410575.473282
+cCheck dependencies
+cProcessInfoPlistFile /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/Info.plist TableView-Info.plist
+cCompileXIB /Users/nishi/src/Samples/TableView/MainWindow.xib
+cProcessPCH /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-dfbcbdavvkvfgnhachtwvppskiod/TableView_Prefix.pch.gch TableView_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/main.o /Users/nishi/src/Samples/TableView/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/TableViewAppDelegate.o /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/myTableView.o /Users/nishi/src/Samples/TableView/Classes/myTableView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView normal i386
+cGenerateDSYMFile /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app.dSYM /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView
+cTouch /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk
+c000000004C634C670000000000000132
+t1281576039
+s306
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BFDFE39000000000027C7D0
+t1274936889
+s2607056
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004BFDFE7C000000000029D5D0
+t1274936956
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004BFDFE6E0000000000001466
+t1274936942
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C0470BB00000000000009CD
+t1275359419
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C0471620000000001D47210
+t1275359586
+s30700048
+
+N/Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.h
+c000000004C74A6D1000000000000014F
+t1282713297
+s335
+i<UIKit/UIKit.h>
+
+N/Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m
+c000000004C74A6D100000000000009CA
+t1282713297
+s2506
+i"TableViewAppDelegate.h"
+
+N/Users/nishi/src/Samples/TableView/Classes/myTableView.h
+c000000004C74B0EE000000000000011B
+t1282715886
+s283
+i<UIKit/UIKit.h>
+
+N/Users/nishi/src/Samples/TableView/Classes/myTableView.m
+c000000004C74B1B50000000000000490
+t1282716085
+s1168
+i"myTableView.h"
+
+N/Users/nishi/src/Samples/TableView/MainWindow.xib
+c000000004C74B18C000000000000553E
+t1282716044
+s21822
+
+N/Users/nishi/src/Samples/TableView/TableView_Prefix.pch
+c000000004C74A6D100000000000000BB
+t1282713297
+s187
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app
+t1282717775
+s204
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app.dSYM
+t1282717775
+s102
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/Info.plist
+t1282717774
+s599
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/MainWindow.nib
+t1282717775
+s1686
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/PkgInfo
+t1282717774
+s8
+
+N/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView
+t1282717775
+s16952
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/TableView.LinkFileList
+c000000004C74B84E0000000000000185
+t1282717774
+s389
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/TableViewAppDelegate.o
+t1282717775
+s46232
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/main.o
+t1282717775
+s6296
+
+N/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/myTableView.o
+t1282717775
+s42268
+
+N/Users/nishi/src/Samples/TableView/main.m
+c000000004C74A6D1000000000000016D
+t1282713297
+s365
+i<UIKit/UIKit.h>
+
+N/var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-dfbcbdavvkvfgnhachtwvppskiod/TableView_Prefix.pch.gch
+t1282715615
+s15232016
+
+NTableView-Info.plist
+c000000004C74A6D1000000000000038D
+t1282713297
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies304410574#304410574#0(0"0(0#1#0"8621337792#0"0#
+
+CCompileC build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/TableViewAppDelegate.o /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s304410575.243066
+e304410575.375661
+r1
+xCompileC
+xbuild/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/TableViewAppDelegate.o
+x/Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m304410575#304410575#0(0"0(0#0#65"/Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m8622938496#1937"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator -I/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/DerivedSources/i386 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/DerivedSources -include /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-dfbcbdavvkvfgnhachtwvppskiod/TableView_Prefix.pch -c /Users/nishi/src/Samples/TableView/Classes/TableViewAppDelegate.m -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/TableViewAppDelegate.o0#
+
+CCompileC build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/main.o /Users/nishi/src/Samples/TableView/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s304410575.241996
+e304410575.332006
+r1
+xCompileC
+xbuild/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/main.o
+x/Users/nishi/src/Samples/TableView/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@49"Compile /Users/nishi/src/Samples/TableView/main.m304410575#304410575#0(0"0(0#0#41"/Users/nishi/src/Samples/TableView/main.m8629002432#1897"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator -I/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/DerivedSources/i386 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/DerivedSources -include /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-dfbcbdavvkvfgnhachtwvppskiod/TableView_Prefix.pch -c /Users/nishi/src/Samples/TableView/main.m -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/main.o0#
+
+CCompileC build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/myTableView.o /Users/nishi/src/Samples/TableView/Classes/myTableView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s304410575.332108
+e304410575.426716
+r1
+xCompileC
+xbuild/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/myTableView.o
+x/Users/nishi/src/Samples/TableView/Classes/myTableView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/nishi/src/Samples/TableView/Classes/myTableView.m304410575#304410575#0(0"0(0#0#56"/Users/nishi/src/Samples/TableView/Classes/myTableView.m8621284960#1919"    cd /Users/nishi/src/Samples/TableView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-generated-files.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-own-target-headers.hmap -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-all-target-headers.hmap -iquote /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/TableView-project-headers.hmap -F/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator -I/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/include -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/DerivedSources/i386 -I/Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/DerivedSources -include /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-dfbcbdavvkvfgnhachtwvppskiod/TableView_Prefix.pch -c /Users/nishi/src/Samples/TableView/Classes/myTableView.m -o /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/myTableView.o0#
+
+CCompileXIB /Users/nishi/src/Samples/TableView/MainWindow.xib
+s304410574.817304
+e304410575.241826
+r1
+xCompileXIB
+x/Users/nishi/src/Samples/TableView/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib304410574#304410575#0(0"0(0#0#49"/Users/nishi/src/Samples/TableView/MainWindow.xib8601957792#560"    cd /Users/nishi/src/Samples/TableView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/MainWindow.nib /Users/nishi/src/Samples/TableView/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CGenerateDSYMFile /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app.dSYM /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView
+s304410575.451536
+e304410575.470072
+r1
+xGenerateDSYMFile
+x/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app.dSYM
+x/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView
+lSLF07#2@115"GenerateDSYMFile build/Debug-iphonesimulator/TableView.app.dSYM build/Debug-iphonesimulator/TableView.app/TableView304410575#304410575#0(0"0(0#0#86"/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView8609562080#377"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView -o /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app.dSYM0#
+
+CLd /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView normal i386
+s304410575.426814
+e304410575.451429
+r1
+xLd
+x/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView
+xnormal
+xi386
+lSLF07#2@91"Link /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView304410575#304410575#0(0"0(0#0#0"8621153568#890"    cd /Users/nishi/src/Samples/TableView    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -L/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator -F/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator -filelist /Users/nishi/src/Samples/TableView/build/TableView.build/Debug-iphonesimulator/TableView.build/Objects-normal/i386/TableView.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/TableView0#
+
+CProcessInfoPlistFile /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/Info.plist TableView-Info.plist
+s304410574.813003
+e304410574.817207
+r1
+xProcessInfoPlistFile
+x/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/Info.plist
+xTableView-Info.plist
+lSLF07#2@28"Process TableView-Info.plist304410574#304410574#0(0"0(0#0#55"/Users/nishi/src/Samples/TableView/TableView-Info.plist8604732320#473"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility TableView-Info.plist -genpkginfo /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app/Info.plist0#
+
+CProcessPCH /var/folders/gO/gOheLmnmGzGLC80vCTY5UE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableView_Prefix-dfbcbdavvkvfgnhachtwvppskiod/TableView_Prefix.pch.gch TableView_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CTouch /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app
+s304410575.470322
+e304410575.473240
+r1
+xTouch
+x/Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app
+lSLF07#2@82"Touch /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app304410575#304410575#0(0"0(0#0#0"8608871168#272"    cd /Users/nishi/src/Samples/TableView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/nishi/src/Samples/TableView/build/Debug-iphonesimulator/TableView.app0#
+

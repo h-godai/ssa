@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MapObjectCreator">
+</Property><Property Name="ソリューション ファイル" Value="D:\TechArts\trunk\proj\KKC\src\MapObjectCreator\build_vc9\MapObjectCreator.sln">
+</Property><Property Name="Date" Value="2009年3月9日">
+</Property><Property Name="Time" Value="4:20">
+</Property></Properties><Event ErrorLevel="0" Project="MapObjectCreator" Source="MapObjectCreator.vcproj" Description="ローカルの IIS サーバーへの Web 配置はサポートされなくなりました。Web 配置ビルド ツールはプロジェクト設定から削除されました。">
+</Event><Event ErrorLevel="1" Project="MapObjectCreator" Source="MapObjectCreator.vcproj" Description="このアプリケーションは、Windows Vista のユーザー アカウント制御 (UAC) 機能に関連する設定を含むように更新されました。既定で、UAC を有効にして Windows Vista 上でアプリケーションを実行すると、起動したプロセスと同じ特権で実行するようにマークされます。このマークによって、アプリケーションの仮想化による実行も無効になります。プロジェクトのプロパティ ページから UAC 関連の設定を変更できます。">
+</Event><Event ErrorLevel="0" Project="MapObjectCreator" Source="MapObjectCreator.vcproj" Description="プロジェクトは正常にアップグレードされました。">
+</Event><Event ErrorLevel="3" Project="MapObjectCreator" Source="MapObjectCreator.vcproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="TSGraphics" Source="..\..\..\..\libTS\Graphics\build_win32\TSGraphics.vcproj" Description="このアプリケーションは、Windows Vista のユーザー アカウント制御 (UAC) 機能に関連する設定を含むように更新されました。既定で、UAC を有効にして Windows Vista 上でアプリケーションを実行すると、起動したプロセスと同じ特権で実行するようにマークされます。このマークによって、アプリケーションの仮想化による実行も無効になります。プロジェクトのプロパティ ページから UAC 関連の設定を変更できます。">
+</Event><Event ErrorLevel="0" Project="TSGraphics" Source="..\..\..\..\libTS\Graphics\build_win32\TSGraphics.vcproj" Description="プロジェクトは正常にアップグレードされました。">
+</Event><Event ErrorLevel="3" Project="TSGraphics" Source="..\..\..\..\libTS\Graphics\build_win32\TSGraphics.vcproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="util" Source="..\..\..\..\libTS\Util\build_win32\util.vcproj" Description="このアプリケーションは、Windows Vista のユーザー アカウント制御 (UAC) 機能に関連する設定を含むように更新されました。既定で、UAC を有効にして Windows Vista 上でアプリケーションを実行すると、起動したプロセスと同じ特権で実行するようにマークされます。このマークによって、アプリケーションの仮想化による実行も無効になります。プロジェクトのプロパティ ページから UAC 関連の設定を変更できます。">
+</Event><Event ErrorLevel="0" Project="util" Source="..\..\..\..\libTS\Util\build_win32\util.vcproj" Description="プロジェクトは正常にアップグレードされました。">
+</Event><Event ErrorLevel="3" Project="util" Source="..\..\..\..\libTS\Util\build_win32\util.vcproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="PlatformDependent" Source="..\..\..\..\libTS\PlatformDependent\build_win32\PlatformDependent.vcproj" Description="このアプリケーションは、Windows Vista のユーザー アカウント制御 (UAC) 機能に関連する設定を含むように更新されました。既定で、UAC を有効にして Windows Vista 上でアプリケーションを実行すると、起動したプロセスと同じ特権で実行するようにマークされます。このマークによって、アプリケーションの仮想化による実行も無効になります。プロジェクトのプロパティ ページから UAC 関連の設定を変更できます。">
+</Event><Event ErrorLevel="0" Project="PlatformDependent" Source="..\..\..\..\libTS\PlatformDependent\build_win32\PlatformDependent.vcproj" Description="プロジェクトは正常にアップグレードされました。">
+</Event><Event ErrorLevel="3" Project="PlatformDependent" Source="..\..\..\..\libTS\PlatformDependent\build_win32\PlatformDependent.vcproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="TSMath" Source="..\..\..\..\libTS\Math\build_vc8\TSMath.vcproj" Description="このアプリケーションは、Windows Vista のユーザー アカウント制御 (UAC) 機能に関連する設定を含むように更新されました。既定で、UAC を有効にして Windows Vista 上でアプリケーションを実行すると、起動したプロセスと同じ特権で実行するようにマークされます。このマークによって、アプリケーションの仮想化による実行も無効になります。プロジェクトのプロパティ ページから UAC 関連の設定を変更できます。">
+</Event><Event ErrorLevel="0" Project="TSMath" Source="..\..\..\..\libTS\Math\build_vc8\TSMath.vcproj" Description="プロジェクトは正常にアップグレードされました。">
+</Event><Event ErrorLevel="3" Project="TSMath" Source="..\..\..\..\libTS\Math\build_vc8\TSMath.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MapObjectCreator.sln" Description="ソリューションは正常に変換されました">
+</Event><Event ErrorLevel="3" Project="" Source="MapObjectCreator.sln" Description="Converted">
+</Event></UpgradeLog>

@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* RotersPuzzleAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* RotersPuzzleAppDelegate.mm */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2514C27B10084DCA00A42282 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2514C27910084DCA00A42282 /* Shader.fsh */; };
+		2514C27C10084DCA00A42282 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 2514C27A10084DCA00A42282 /* Shader.vsh */; };
+		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		4B30971613BCE01400510CE3 /* puzzle-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B30971413BCE01400510CE3 /* puzzle-6.png */; };
+		4B30971713BCE01400510CE3 /* puzzle-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B30971513BCE01400510CE3 /* puzzle-7.png */; };
+		4B4383FB1357BE5C00B72068 /* AppMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4383F71357BE5C00B72068 /* AppMain.cpp */; };
+		4B4B7BA513A0E8D300EDD68F /* RiseOut-Transit.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B7BA413A0E8D300EDD68F /* RiseOut-Transit.aif */; };
+		4B5DC26E13A11C8B000433E3 /* Rotors.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DC26D13A11C8B000433E3 /* Rotors.mp3 */; };
+		4B5DC2F113A32077000433E3 /* puzzle-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DC2EF13A32077000433E3 /* puzzle-4.png */; };
+		4B5DC2F213A32077000433E3 /* puzzle-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DC2F013A32077000433E3 /* puzzle-5.png */; };
+		4B5DC30013A36D39000433E3 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DC2FB13A36D39000433E3 /* icon-72.png */; };
+		4B5DC30113A36D39000433E3 /* icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DC2FC13A36D39000433E3 /* icon-Small-50.png */; };
+		4B5DC30213A36D39000433E3 /* icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DC2FD13A36D39000433E3 /* icon-Small.png */; };
+		4B5DC30313A36D39000433E3 /* icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DC2FE13A36D39000433E3 /* icon-Small@2x.png */; };
+		4B5DC30413A36D39000433E3 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DC2FF13A36D39000433E3 /* icon@2x.png */; };
+		4B71E7CC1393E96800A694EC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B71E7CA1393E96800A694EC /* background.png */; };
+		4B71E7CD1393E96800A694EC /* rotatepuzzle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B71E7CB1393E96800A694EC /* rotatepuzzle.png */; };
+		4B71E7EB13940AFD00A694EC /* bgm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B71E7EA13940AFD00A694EC /* bgm1.mp3 */; };
+		4B71E8291394145600A694EC /* mesh.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B71E8281394145600A694EC /* mesh.png */; };
+		4B73B97D13BCB9F30079ECA5 /* png.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B96A13BCB9F30079ECA5 /* png.c */; };
+		4B73B97E13BCB9F30079ECA5 /* pngerror.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B96B13BCB9F30079ECA5 /* pngerror.c */; };
+		4B73B97F13BCB9F30079ECA5 /* pngget.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B96C13BCB9F30079ECA5 /* pngget.c */; };
+		4B73B98013BCB9F30079ECA5 /* pngmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B96D13BCB9F30079ECA5 /* pngmem.c */; };
+		4B73B98113BCB9F30079ECA5 /* pngpread.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B96E13BCB9F30079ECA5 /* pngpread.c */; };
+		4B73B98213BCB9F30079ECA5 /* pngread.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B96F13BCB9F30079ECA5 /* pngread.c */; };
+		4B73B98313BCB9F30079ECA5 /* pngrio.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B97013BCB9F30079ECA5 /* pngrio.c */; };
+		4B73B98413BCB9F30079ECA5 /* pngrtran.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B97113BCB9F30079ECA5 /* pngrtran.c */; };
+		4B73B98513BCB9F30079ECA5 /* pngrutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B97213BCB9F30079ECA5 /* pngrutil.c */; };
+		4B73B98613BCB9F30079ECA5 /* pngset.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B97313BCB9F30079ECA5 /* pngset.c */; };
+		4B73B98813BCB9F30079ECA5 /* pngtrans.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B97513BCB9F30079ECA5 /* pngtrans.c */; };
+		4B73B98913BCB9F30079ECA5 /* pngwio.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B97613BCB9F30079ECA5 /* pngwio.c */; };
+		4B73B98A13BCB9F30079ECA5 /* pngwrite.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B97713BCB9F30079ECA5 /* pngwrite.c */; };
+		4B73B98B13BCB9F30079ECA5 /* pngwtran.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B97813BCB9F30079ECA5 /* pngwtran.c */; };
+		4B73B98C13BCB9F30079ECA5 /* pngwutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B97913BCB9F30079ECA5 /* pngwutil.c */; };
+		4B806294135AABCE0005E94C /* b210.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4B806293135AABCE0005E94C /* b210.wav */; };
+		4B8062A6135AC4610005E94C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8062A5135AC4610005E94C /* AudioToolbox.framework */; };
+		4B87CDBC136B26B600DFD442 /* ssabanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87CDB7136B26B600DFD442 /* ssabanner.png */; };
+		4B87CDBD136B26B600DFD442 /* puzzle-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87CDB8136B26B600DFD442 /* puzzle-3.png */; };
+		4B87CDBE136B26B600DFD442 /* puzzle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87CDB9136B26B600DFD442 /* puzzle-2.png */; };
+		4B87CDBF136B26B600DFD442 /* puzzle-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87CDBA136B26B600DFD442 /* puzzle-1.png */; };
+		4B87CDC0136B26B600DFD442 /* gadget.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87CDBB136B26B600DFD442 /* gadget.png */; };
+		4BA348A7138BA1F200A5DF93 /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4BA348A2138BA1F200A5DF93 /* GLView.mm */; };
+		4BA348A8138BA1F200A5DF93 /* render_control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BA348A5138BA1F200A5DF93 /* render_control.cpp */; };
+		4BA349BD138BA37A00A5DF93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA349BC138BA37A00A5DF93 /* CoreGraphics.framework */; };
+		4BB156C6135CB2BE00EDC5F2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB156C5135CB2BE00EDC5F2 /* libz.dylib */; };
+		4BB15763135DF20600EDC5F2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB15762135DF20600EDC5F2 /* AVFoundation.framework */; };
+		4BC25BF21545AF240047E1F0 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC25BE81545AE730047E1F0 /* libboost_system.a */; };
+		4BC25BF31545AF240047E1F0 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC25BE91545AE730047E1F0 /* libboost_thread.a */; };
+		4BC25C031545B49D0047E1F0 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC25C021545B49D0047E1F0 /* CoreAudio.framework */; };
+		4BC25C051545B4B70047E1F0 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC25C041545B4B70047E1F0 /* libbz2.dylib */; };
+		4BC25C071545B4C70047E1F0 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC25C061545B4C70047E1F0 /* libz.1.1.3.dylib */; };
+		4BC282AC1545B5DE0047E1F0 /* libboost_exception.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC282AB1545B5DE0047E1F0 /* libboost_exception.a */; };
+		4BC282B11545D3620047E1F0 /* puzzle-1-1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC282AD1545D3620047E1F0 /* puzzle-1-1536.png */; };
+		4BC282B21545D3620047E1F0 /* puzzle-2-1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC282AE1545D3620047E1F0 /* puzzle-2-1536.png */; };
+		4BC282B31545D3620047E1F0 /* puzzle-3-1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC282AF1545D3620047E1F0 /* puzzle-3-1536.png */; };
+		4BC282B41545D3620047E1F0 /* puzzle-4-1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC282B01545D3620047E1F0 /* puzzle-4-1536.png */; };
+		4BC282B81546A0A40047E1F0 /* icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC282B71546A0A40047E1F0 /* icon-144.png */; };
+		4BC282BA1546A0C20047E1F0 /* icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC282B91546A0C20047E1F0 /* icon-144.png */; };
+		4BC282BC1546D7C20047E1F0 /* gadget-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC282BB1546D7C20047E1F0 /* gadget-1024.png */; };
+		4BDD13F7135AD50A001EE61F /* b214.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD13F6135AD50A001EE61F /* b214.wav */; };
+		4BDD13FD135ADA82001EE61F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD13FC135ADA82001EE61F /* icon.png */; };
+		4BDD1491135C2EDC001EE61F /* b213.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD1490135C2EDC001EE61F /* b213.wav */; };
+		4BFE52301358398C000C59F3 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE522E1358398C000C59F3 /* Logger.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* RotersPuzzleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotersPuzzleAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* RotersPuzzleAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RotersPuzzleAppDelegate.mm; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* RotersPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotersPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2514C27910084DCA00A42282 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		2514C27A10084DCA00A42282 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* RotersPuzzle_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotersPuzzle_Prefix.pch; sourceTree = "<group>"; };
+		4B30971413BCE01400510CE3 /* puzzle-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-6.png"; path = "../res/puzzle-6.png"; sourceTree = SOURCE_ROOT; };
+		4B30971513BCE01400510CE3 /* puzzle-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-7.png"; path = "../res/puzzle-7.png"; sourceTree = SOURCE_ROOT; };
+		4B4383F71357BE5C00B72068 /* AppMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppMain.cpp; path = ../AppMain.cpp; sourceTree = SOURCE_ROOT; };
+		4B4383F81357BE5C00B72068 /* GameLogic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GameLogic.hpp; path = ../GameLogic.hpp; sourceTree = SOURCE_ROOT; };
+		4B4383FA1357BE5C00B72068 /* AppMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppMain.h; path = ../AppMain.h; sourceTree = SOURCE_ROOT; };
+		4B4B7BA413A0E8D300EDD68F /* RiseOut-Transit.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RiseOut-Transit.aif"; path = "../res/RiseOut-Transit.aif"; sourceTree = SOURCE_ROOT; };
+		4B508FC413745C1900B18476 /* drawframe_app.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = drawframe_app.hpp; path = ../../../../libTS/appfw/drawframe_app.hpp; sourceTree = SOURCE_ROOT; };
+		4B5DC26D13A11C8B000433E3 /* Rotors.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Rotors.mp3; path = ../res/Rotors.mp3; sourceTree = SOURCE_ROOT; };
+		4B5DC2EF13A32077000433E3 /* puzzle-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-4.png"; path = "../res/puzzle-4.png"; sourceTree = SOURCE_ROOT; };
+		4B5DC2F013A32077000433E3 /* puzzle-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-5.png"; path = "../res/puzzle-5.png"; sourceTree = SOURCE_ROOT; };
+		4B5DC2FB13A36D39000433E3 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "../res/icon-72.png"; sourceTree = SOURCE_ROOT; };
+		4B5DC2FC13A36D39000433E3 /* icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-Small-50.png"; path = "../res/icon-Small-50.png"; sourceTree = SOURCE_ROOT; };
+		4B5DC2FD13A36D39000433E3 /* icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-Small.png"; path = "../res/icon-Small.png"; sourceTree = SOURCE_ROOT; };
+		4B5DC2FE13A36D39000433E3 /* icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-Small@2x.png"; path = "../res/icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
+		4B5DC2FF13A36D39000433E3 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../res/icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		4B71E5AA138E92B800A694EC /* positioning.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = positioning.hpp; path = ../../../../libTS/appfw/gl/positioning.hpp; sourceTree = SOURCE_ROOT; };
+		4B71E7CA1393E96800A694EC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../res/background.png; sourceTree = SOURCE_ROOT; };
+		4B71E7CB1393E96800A694EC /* rotatepuzzle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rotatepuzzle.png; path = ../res/rotatepuzzle.png; sourceTree = SOURCE_ROOT; };
+		4B71E7EA13940AFD00A694EC /* bgm1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bgm1.mp3; path = ../res/bgm1.mp3; sourceTree = SOURCE_ROOT; };
+		4B71E8281394145600A694EC /* mesh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mesh.png; path = ../res/mesh.png; sourceTree = SOURCE_ROOT; };
+		4B73B96A13BCB9F30079ECA5 /* png.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = png.c; path = ../../../../lib/lpng140/png.c; sourceTree = SOURCE_ROOT; };
+		4B73B96B13BCB9F30079ECA5 /* pngerror.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngerror.c; path = ../../../../lib/lpng140/pngerror.c; sourceTree = SOURCE_ROOT; };
+		4B73B96C13BCB9F30079ECA5 /* pngget.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngget.c; path = ../../../../lib/lpng140/pngget.c; sourceTree = SOURCE_ROOT; };
+		4B73B96D13BCB9F30079ECA5 /* pngmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngmem.c; path = ../../../../lib/lpng140/pngmem.c; sourceTree = SOURCE_ROOT; };
+		4B73B96E13BCB9F30079ECA5 /* pngpread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngpread.c; path = ../../../../lib/lpng140/pngpread.c; sourceTree = SOURCE_ROOT; };
+		4B73B96F13BCB9F30079ECA5 /* pngread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngread.c; path = ../../../../lib/lpng140/pngread.c; sourceTree = SOURCE_ROOT; };
+		4B73B97013BCB9F30079ECA5 /* pngrio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngrio.c; path = ../../../../lib/lpng140/pngrio.c; sourceTree = SOURCE_ROOT; };
+		4B73B97113BCB9F30079ECA5 /* pngrtran.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngrtran.c; path = ../../../../lib/lpng140/pngrtran.c; sourceTree = SOURCE_ROOT; };
+		4B73B97213BCB9F30079ECA5 /* pngrutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngrutil.c; path = ../../../../lib/lpng140/pngrutil.c; sourceTree = SOURCE_ROOT; };
+		4B73B97313BCB9F30079ECA5 /* pngset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngset.c; path = ../../../../lib/lpng140/pngset.c; sourceTree = SOURCE_ROOT; };
+		4B73B97513BCB9F30079ECA5 /* pngtrans.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngtrans.c; path = ../../../../lib/lpng140/pngtrans.c; sourceTree = SOURCE_ROOT; };
+		4B73B97613BCB9F30079ECA5 /* pngwio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngwio.c; path = ../../../../lib/lpng140/pngwio.c; sourceTree = SOURCE_ROOT; };
+		4B73B97713BCB9F30079ECA5 /* pngwrite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngwrite.c; path = ../../../../lib/lpng140/pngwrite.c; sourceTree = SOURCE_ROOT; };
+		4B73B97813BCB9F30079ECA5 /* pngwtran.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngwtran.c; path = ../../../../lib/lpng140/pngwtran.c; sourceTree = SOURCE_ROOT; };
+		4B73B97913BCB9F30079ECA5 /* pngwutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngwutil.c; path = ../../../../lib/lpng140/pngwutil.c; sourceTree = SOURCE_ROOT; };
+		4B73B97A13BCB9F30079ECA5 /* png.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = png.h; path = ../../../../lib/lpng140/png.h; sourceTree = SOURCE_ROOT; };
+		4B73B97B13BCB9F30079ECA5 /* pngconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pngconf.h; path = ../../../../lib/lpng140/pngconf.h; sourceTree = SOURCE_ROOT; };
+		4B73B97C13BCB9F30079ECA5 /* pngpriv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pngpriv.h; path = ../../../../lib/lpng140/pngpriv.h; sourceTree = SOURCE_ROOT; };
+		4B806293135AABCE0005E94C /* b210.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = b210.wav; path = ../res/b210.wav; sourceTree = SOURCE_ROOT; };
+		4B8062A5135AC4610005E94C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4B87CA741369B5ED00DFD442 /* rectangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rectangle.hpp; path = ../../../../libTS/appfw/gl/rectangle.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CB621369B60800DFD442 /* draw_object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = draw_object.hpp; path = ../../../../libTS/appfw/gl/draw_object.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CB631369B60800DFD442 /* button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = button.hpp; path = ../../../../libTS/appfw/gl/button.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CDB7136B26B600DFD442 /* ssabanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ssabanner.png; path = ../res/ssabanner.png; sourceTree = SOURCE_ROOT; };
+		4B87CDB8136B26B600DFD442 /* puzzle-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-3.png"; path = "../res/puzzle-3.png"; sourceTree = SOURCE_ROOT; };
+		4B87CDB9136B26B600DFD442 /* puzzle-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-2.png"; path = "../res/puzzle-2.png"; sourceTree = SOURCE_ROOT; };
+		4B87CDBA136B26B600DFD442 /* puzzle-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-1.png"; path = "../res/puzzle-1.png"; sourceTree = SOURCE_ROOT; };
+		4B87CDBB136B26B600DFD442 /* gadget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gadget.png; path = ../res/gadget.png; sourceTree = SOURCE_ROOT; };
+		4B94BAC21369B4A500C11F6D /* effect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = effect.hpp; path = ../../../../libTS/appfw/gl/effect.hpp; sourceTree = SOURCE_ROOT; };
+		4B94BAC31369B4A500C11F6D /* layer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = layer.hpp; path = ../../../../libTS/appfw/gl/layer.hpp; sourceTree = SOURCE_ROOT; };
+		4BA348A1138BA1F200A5DF93 /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLView.h; path = ../../../../libTS/appfw/ext_mac/GLView.h; sourceTree = SOURCE_ROOT; };
+		4BA348A2138BA1F200A5DF93 /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GLView.mm; path = ../../../../libTS/appfw/ext_mac/GLView.mm; sourceTree = SOURCE_ROOT; };
+		4BA348A3138BA1F200A5DF93 /* ios_control.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ios_control.hpp; path = ../../../../libTS/appfw/ext_mac/ios_control.hpp; sourceTree = SOURCE_ROOT; };
+		4BA348A4138BA1F200A5DF93 /* ios_device.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ios_device.hpp; path = ../../../../libTS/appfw/ext_mac/ios_device.hpp; sourceTree = SOURCE_ROOT; };
+		4BA348A5138BA1F200A5DF93 /* render_control.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = render_control.cpp; path = ../../../../libTS/appfw/ext_mac/render_control.cpp; sourceTree = SOURCE_ROOT; };
+		4BA348A6138BA1F200A5DF93 /* render_control.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = render_control.hpp; path = ../../../../libTS/appfw/ext_mac/render_control.hpp; sourceTree = SOURCE_ROOT; };
+		4BA349BC138BA37A00A5DF93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4BB156C5135CB2BE00EDC5F2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4BB156D2135DB05500EDC5F2 /* rect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rect.hpp; path = ../../../../libTS/math/rect.hpp; sourceTree = SOURCE_ROOT; };
+		4BB156D3135DB05500EDC5F2 /* pos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pos.hpp; path = ../../../../libTS/math/pos.hpp; sourceTree = SOURCE_ROOT; };
+		4BB156D4135DB05500EDC5F2 /* vec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = vec.hpp; path = ../../../../libTS/math/vec.hpp; sourceTree = SOURCE_ROOT; };
+		4BB156D5135DB05500EDC5F2 /* arithmetic_operations.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = arithmetic_operations.hpp; path = ../../../../libTS/math/arithmetic_operations.hpp; sourceTree = SOURCE_ROOT; };
+		4BB156D6135DB05500EDC5F2 /* size.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = size.hpp; path = ../../../../libTS/math/size.hpp; sourceTree = SOURCE_ROOT; };
+		4BB156D7135DB05500EDC5F2 /* geometric.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = geometric.hpp; path = ../../../../libTS/math/geometric.hpp; sourceTree = SOURCE_ROOT; };
+		4BB15762135DF20600EDC5F2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4BBC0D241365CE1E00F6D5D3 /* GameResource.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GameResource.hpp; path = ../GameResource.hpp; sourceTree = SOURCE_ROOT; };
+		4BBC0D251365CE1E00F6D5D3 /* ChipObj.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ChipObj.hpp; path = ../ChipObj.hpp; sourceTree = SOURCE_ROOT; };
+		4BC25BE71545AE730047E1F0 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/libboost_filesystem.a; sourceTree = "<group>"; };
+		4BC25BE81545AE730047E1F0 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/libboost_system.a; sourceTree = "<group>"; };
+		4BC25BE91545AE730047E1F0 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = ../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/libboost_thread.a; sourceTree = "<group>"; };
+		4BC25C021545B49D0047E1F0 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		4BC25C041545B4B70047E1F0 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		4BC25C061545B4C70047E1F0 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		4BC282AB1545B5DE0047E1F0 /* libboost_exception.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_exception.a; path = ../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/libboost_exception.a; sourceTree = "<group>"; };
+		4BC282AD1545D3620047E1F0 /* puzzle-1-1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-1-1536.png"; path = "../res/puzzle-1-1536.png"; sourceTree = "<group>"; };
+		4BC282AE1545D3620047E1F0 /* puzzle-2-1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-2-1536.png"; path = "../res/puzzle-2-1536.png"; sourceTree = "<group>"; };
+		4BC282AF1545D3620047E1F0 /* puzzle-3-1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-3-1536.png"; path = "../res/puzzle-3-1536.png"; sourceTree = "<group>"; };
+		4BC282B01545D3620047E1F0 /* puzzle-4-1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-4-1536.png"; path = "../res/puzzle-4-1536.png"; sourceTree = "<group>"; };
+		4BC282B71546A0A40047E1F0 /* icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-144.png"; path = "../res/icon-144.png"; sourceTree = "<group>"; };
+		4BC282B91546A0C20047E1F0 /* icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-144.png"; sourceTree = "<group>"; };
+		4BC282BB1546D7C20047E1F0 /* gadget-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gadget-1024.png"; path = "../res/gadget-1024.png"; sourceTree = "<group>"; };
+		4BD993B013598E1D00C3678B /* libpthread.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpthread.dylib; path = usr/lib/libpthread.dylib; sourceTree = SDKROOT; };
+		4BDD13F6135AD50A001EE61F /* b214.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = b214.wav; path = ../res/b214.wav; sourceTree = SOURCE_ROOT; };
+		4BDD13FC135ADA82001EE61F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../res/icon.png; sourceTree = SOURCE_ROOT; };
+		4BDD1490135C2EDC001EE61F /* b213.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = b213.wav; path = ../res/b213.wav; sourceTree = SOURCE_ROOT; };
+		4BFE522513583958000C59F3 /* appfw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = appfw.hpp; path = ../../../../libTS/appfw/appfw.hpp; sourceTree = SOURCE_ROOT; };
+		4BFE522613583958000C59F3 /* inputfw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = inputfw.hpp; path = ../../../../libTS/appfw/inputfw.hpp; sourceTree = SOURCE_ROOT; };
+		4BFE522713583958000C59F3 /* exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = exception.hpp; path = ../../../../libTS/appfw/exception.hpp; sourceTree = SOURCE_ROOT; };
+		4BFE522913583979000C59F3 /* show_image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = show_image.hpp; path = ../../../../libTS/appfw/gl/show_image.hpp; sourceTree = SOURCE_ROOT; };
+		4BFE522A13583979000C59F3 /* image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = image.hpp; path = ../../../../libTS/appfw/gl/image.hpp; sourceTree = SOURCE_ROOT; };
+		4BFE522B13583979000C59F3 /* glfw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = glfw.hpp; path = ../../../../libTS/appfw/gl/glfw.hpp; sourceTree = SOURCE_ROOT; };
+		4BFE522C13583979000C59F3 /* context.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = context.hpp; path = ../../../../libTS/appfw/gl/context.hpp; sourceTree = SOURCE_ROOT; };
+		4BFE522D13583979000C59F3 /* common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = common.hpp; path = ../../../../libTS/appfw/gl/common.hpp; sourceTree = SOURCE_ROOT; };
+		4BFE522E1358398C000C59F3 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Logger.cpp; path = ../../../../libTS/Util/Logger.cpp; sourceTree = SOURCE_ROOT; };
+		4BFE522F1358398C000C59F3 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = ../../../../libTS/Util/Logger.h; sourceTree = SOURCE_ROOT; };
+		4BFE523313583A07000C59F3 /* soundfw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = soundfw.hpp; path = ../../../../libTS/appfw/sound/soundfw.hpp; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* RotersPuzzle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RotersPuzzle-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BC282AC1545B5DE0047E1F0 /* libboost_exception.a in Frameworks */,
+				4BC25C071545B4C70047E1F0 /* libz.1.1.3.dylib in Frameworks */,
+				4BC25C051545B4B70047E1F0 /* libbz2.dylib in Frameworks */,
+				4BC25C031545B49D0047E1F0 /* CoreAudio.framework in Frameworks */,
+				4BC25BF21545AF240047E1F0 /* libboost_system.a in Frameworks */,
+				4BC25BF31545AF240047E1F0 /* libboost_thread.a in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
+				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
+				4B8062A6135AC4610005E94C /* AudioToolbox.framework in Frameworks */,
+				4BB156C6135CB2BE00EDC5F2 /* libz.dylib in Frameworks */,
+				4BB15763135DF20600EDC5F2 /* AVFoundation.framework in Frameworks */,
+				4BA349BD138BA37A00A5DF93 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* RotersPuzzleAppDelegate.h */,
+				1D3623250D0F684500981E51 /* RotersPuzzleAppDelegate.mm */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* RotersPuzzle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2514C27610084DB600A42282 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				2514C27910084DCA00A42282 /* Shader.fsh */,
+				2514C27A10084DCA00A42282 /* Shader.vsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				4BC282B91546A0C20047E1F0 /* icon-144.png */,
+				4BC282AB1545B5DE0047E1F0 /* libboost_exception.a */,
+				4BC25C061545B4C70047E1F0 /* libz.1.1.3.dylib */,
+				4BC25C041545B4B70047E1F0 /* libbz2.dylib */,
+				4BC25C021545B49D0047E1F0 /* CoreAudio.framework */,
+				4BC25BE71545AE730047E1F0 /* libboost_filesystem.a */,
+				4BC25BE81545AE730047E1F0 /* libboost_system.a */,
+				4BC25BE91545AE730047E1F0 /* libboost_thread.a */,
+				4B73B96913BCB9BD0079ECA5 /* libpng */,
+				4B4383F61357BE4C00B72068 /* src */,
+				4B4383ED1357BE1F00B72068 /* libTS */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				2514C27610084DB600A42282 /* Shaders */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				4BD993B013598E1D00C3678B /* libpthread.dylib */,
+				4B8062A5135AC4610005E94C /* AudioToolbox.framework */,
+				4BB15762135DF20600EDC5F2 /* AVFoundation.framework */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* RotersPuzzle_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4BC282BB1546D7C20047E1F0 /* gadget-1024.png */,
+				4BC282B71546A0A40047E1F0 /* icon-144.png */,
+				4BC282AD1545D3620047E1F0 /* puzzle-1-1536.png */,
+				4BC282AE1545D3620047E1F0 /* puzzle-2-1536.png */,
+				4BC282AF1545D3620047E1F0 /* puzzle-3-1536.png */,
+				4BC282B01545D3620047E1F0 /* puzzle-4-1536.png */,
+				4B30971413BCE01400510CE3 /* puzzle-6.png */,
+				4B30971513BCE01400510CE3 /* puzzle-7.png */,
+				4B5DC2FB13A36D39000433E3 /* icon-72.png */,
+				4B5DC2FC13A36D39000433E3 /* icon-Small-50.png */,
+				4B5DC2FD13A36D39000433E3 /* icon-Small.png */,
+				4B5DC2FE13A36D39000433E3 /* icon-Small@2x.png */,
+				4B5DC2FF13A36D39000433E3 /* icon@2x.png */,
+				4B5DC2EF13A32077000433E3 /* puzzle-4.png */,
+				4B5DC2F013A32077000433E3 /* puzzle-5.png */,
+				4B5DC26D13A11C8B000433E3 /* Rotors.mp3 */,
+				4B4B7BA413A0E8D300EDD68F /* RiseOut-Transit.aif */,
+				4B71E8281394145600A694EC /* mesh.png */,
+				4B71E7EA13940AFD00A694EC /* bgm1.mp3 */,
+				4B71E7CA1393E96800A694EC /* background.png */,
+				4B71E7CB1393E96800A694EC /* rotatepuzzle.png */,
+				4B87CDB7136B26B600DFD442 /* ssabanner.png */,
+				4B87CDB8136B26B600DFD442 /* puzzle-3.png */,
+				4B87CDB9136B26B600DFD442 /* puzzle-2.png */,
+				4B87CDBA136B26B600DFD442 /* puzzle-1.png */,
+				4B87CDBB136B26B600DFD442 /* gadget.png */,
+				4BDD1490135C2EDC001EE61F /* b213.wav */,
+				4BDD13FC135ADA82001EE61F /* icon.png */,
+				4BDD13F6135AD50A001EE61F /* b214.wav */,
+				4B806293135AABCE0005E94C /* b210.wav */,
+				8D1107310486CEB800E47090 /* RotersPuzzle-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
+				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				4BB156C5135CB2BE00EDC5F2 /* libz.dylib */,
+				4BA349BC138BA37A00A5DF93 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B4383ED1357BE1F00B72068 /* libTS */ = {
+			isa = PBXGroup;
+			children = (
+				4BA348A0138BA1CE00A5DF93 /* ext_mac */,
+				4BFE52241358393B000C59F3 /* math */,
+				4BFE522313583933000C59F3 /* appfw */,
+				4BFE52221358392D000C59F3 /* util */,
+			);
+			name = libTS;
+			sourceTree = "<group>";
+		};
+		4B4383F61357BE4C00B72068 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4BBC0D241365CE1E00F6D5D3 /* GameResource.hpp */,
+				4BBC0D251365CE1E00F6D5D3 /* ChipObj.hpp */,
+				4B4383F71357BE5C00B72068 /* AppMain.cpp */,
+				4B4383F81357BE5C00B72068 /* GameLogic.hpp */,
+				4B4383FA1357BE5C00B72068 /* AppMain.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		4B73B96913BCB9BD0079ECA5 /* libpng */ = {
+			isa = PBXGroup;
+			children = (
+				4B73B96A13BCB9F30079ECA5 /* png.c */,
+				4B73B96B13BCB9F30079ECA5 /* pngerror.c */,
+				4B73B96C13BCB9F30079ECA5 /* pngget.c */,
+				4B73B96D13BCB9F30079ECA5 /* pngmem.c */,
+				4B73B96E13BCB9F30079ECA5 /* pngpread.c */,
+				4B73B96F13BCB9F30079ECA5 /* pngread.c */,
+				4B73B97013BCB9F30079ECA5 /* pngrio.c */,
+				4B73B97113BCB9F30079ECA5 /* pngrtran.c */,
+				4B73B97213BCB9F30079ECA5 /* pngrutil.c */,
+				4B73B97313BCB9F30079ECA5 /* pngset.c */,
+				4B73B97513BCB9F30079ECA5 /* pngtrans.c */,
+				4B73B97613BCB9F30079ECA5 /* pngwio.c */,
+				4B73B97713BCB9F30079ECA5 /* pngwrite.c */,
+				4B73B97813BCB9F30079ECA5 /* pngwtran.c */,
+				4B73B97913BCB9F30079ECA5 /* pngwutil.c */,
+				4B73B97A13BCB9F30079ECA5 /* png.h */,
+				4B73B97B13BCB9F30079ECA5 /* pngconf.h */,
+				4B73B97C13BCB9F30079ECA5 /* pngpriv.h */,
+			);
+			name = libpng;
+			sourceTree = "<group>";
+		};
+		4BA348A0138BA1CE00A5DF93 /* ext_mac */ = {
+			isa = PBXGroup;
+			children = (
+				4BA348A1138BA1F200A5DF93 /* GLView.h */,
+				4BA348A2138BA1F200A5DF93 /* GLView.mm */,
+				4BA348A3138BA1F200A5DF93 /* ios_control.hpp */,
+				4BA348A4138BA1F200A5DF93 /* ios_device.hpp */,
+				4BA348A5138BA1F200A5DF93 /* render_control.cpp */,
+				4BA348A6138BA1F200A5DF93 /* render_control.hpp */,
+			);
+			name = ext_mac;
+			sourceTree = "<group>";
+		};
+		4BFE52221358392D000C59F3 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				4BFE522E1358398C000C59F3 /* Logger.cpp */,
+				4BFE522F1358398C000C59F3 /* Logger.h */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		4BFE522313583933000C59F3 /* appfw */ = {
+			isa = PBXGroup;
+			children = (
+				4B508FC413745C1900B18476 /* drawframe_app.hpp */,
+				4BFE52311358399B000C59F3 /* sound */,
+				4BFE52281358395E000C59F3 /* gl */,
+				4BFE522513583958000C59F3 /* appfw.hpp */,
+				4BFE522613583958000C59F3 /* inputfw.hpp */,
+				4BFE522713583958000C59F3 /* exception.hpp */,
+			);
+			name = appfw;
+			sourceTree = "<group>";
+		};
+		4BFE52241358393B000C59F3 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				4BB156D2135DB05500EDC5F2 /* rect.hpp */,
+				4BB156D3135DB05500EDC5F2 /* pos.hpp */,
+				4BB156D4135DB05500EDC5F2 /* vec.hpp */,
+				4BB156D5135DB05500EDC5F2 /* arithmetic_operations.hpp */,
+				4BB156D6135DB05500EDC5F2 /* size.hpp */,
+				4BB156D7135DB05500EDC5F2 /* geometric.hpp */,
+			);
+			name = math;
+			sourceTree = "<group>";
+		};
+		4BFE52281358395E000C59F3 /* gl */ = {
+			isa = PBXGroup;
+			children = (
+				4B71E5AA138E92B800A694EC /* positioning.hpp */,
+				4B87CB621369B60800DFD442 /* draw_object.hpp */,
+				4B87CB631369B60800DFD442 /* button.hpp */,
+				4B87CA741369B5ED00DFD442 /* rectangle.hpp */,
+				4B94BAC21369B4A500C11F6D /* effect.hpp */,
+				4B94BAC31369B4A500C11F6D /* layer.hpp */,
+				4BFE522913583979000C59F3 /* show_image.hpp */,
+				4BFE522A13583979000C59F3 /* image.hpp */,
+				4BFE522B13583979000C59F3 /* glfw.hpp */,
+				4BFE522C13583979000C59F3 /* context.hpp */,
+				4BFE522D13583979000C59F3 /* common.hpp */,
+			);
+			name = gl;
+			sourceTree = "<group>";
+		};
+		4BFE52311358399B000C59F3 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				4BFE523313583A07000C59F3 /* soundfw.hpp */,
+			);
+			name = sound;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* RotatePuzzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "RotatePuzzle" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RotatePuzzle;
+			productName = RotersPuzzle;
+			productReference = 1D6058910D05DD3D006BFB54 /* RotersPuzzle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RotersPuzzle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* RotatePuzzle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2514C27B10084DCA00A42282 /* Shader.fsh in Resources */,
+				2514C27C10084DCA00A42282 /* Shader.vsh in Resources */,
+				4B806294135AABCE0005E94C /* b210.wav in Resources */,
+				4BDD13F7135AD50A001EE61F /* b214.wav in Resources */,
+				4BDD13FD135ADA82001EE61F /* icon.png in Resources */,
+				4BDD1491135C2EDC001EE61F /* b213.wav in Resources */,
+				4B87CDBC136B26B600DFD442 /* ssabanner.png in Resources */,
+				4B87CDBD136B26B600DFD442 /* puzzle-3.png in Resources */,
+				4B87CDBE136B26B600DFD442 /* puzzle-2.png in Resources */,
+				4B87CDBF136B26B600DFD442 /* puzzle-1.png in Resources */,
+				4B87CDC0136B26B600DFD442 /* gadget.png in Resources */,
+				4B71E7CC1393E96800A694EC /* background.png in Resources */,
+				4B71E7CD1393E96800A694EC /* rotatepuzzle.png in Resources */,
+				4B71E7EB13940AFD00A694EC /* bgm1.mp3 in Resources */,
+				4B71E8291394145600A694EC /* mesh.png in Resources */,
+				4B4B7BA513A0E8D300EDD68F /* RiseOut-Transit.aif in Resources */,
+				4B5DC26E13A11C8B000433E3 /* Rotors.mp3 in Resources */,
+				4B5DC2F113A32077000433E3 /* puzzle-4.png in Resources */,
+				4B5DC2F213A32077000433E3 /* puzzle-5.png in Resources */,
+				4B5DC30013A36D39000433E3 /* icon-72.png in Resources */,
+				4B5DC30113A36D39000433E3 /* icon-Small-50.png in Resources */,
+				4B5DC30213A36D39000433E3 /* icon-Small.png in Resources */,
+				4B5DC30313A36D39000433E3 /* icon-Small@2x.png in Resources */,
+				4B5DC30413A36D39000433E3 /* icon@2x.png in Resources */,
+				4B30971613BCE01400510CE3 /* puzzle-6.png in Resources */,
+				4B30971713BCE01400510CE3 /* puzzle-7.png in Resources */,
+				4BC282B11545D3620047E1F0 /* puzzle-1-1536.png in Resources */,
+				4BC282B21545D3620047E1F0 /* puzzle-2-1536.png in Resources */,
+				4BC282B31545D3620047E1F0 /* puzzle-3-1536.png in Resources */,
+				4BC282B41545D3620047E1F0 /* puzzle-4-1536.png in Resources */,
+				4BC282B81546A0A40047E1F0 /* icon-144.png in Resources */,
+				4BC282BA1546A0C20047E1F0 /* icon-144.png in Resources */,
+				4BC282BC1546D7C20047E1F0 /* gadget-1024.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* RotersPuzzleAppDelegate.mm in Sources */,
+				4B4383FB1357BE5C00B72068 /* AppMain.cpp in Sources */,
+				4BFE52301358398C000C59F3 /* Logger.cpp in Sources */,
+				4BA348A7138BA1F200A5DF93 /* GLView.mm in Sources */,
+				4BA348A8138BA1F200A5DF93 /* render_control.cpp in Sources */,
+				4B73B97D13BCB9F30079ECA5 /* png.c in Sources */,
+				4B73B97E13BCB9F30079ECA5 /* pngerror.c in Sources */,
+				4B73B97F13BCB9F30079ECA5 /* pngget.c in Sources */,
+				4B73B98013BCB9F30079ECA5 /* pngmem.c in Sources */,
+				4B73B98113BCB9F30079ECA5 /* pngpread.c in Sources */,
+				4B73B98213BCB9F30079ECA5 /* pngread.c in Sources */,
+				4B73B98313BCB9F30079ECA5 /* pngrio.c in Sources */,
+				4B73B98413BCB9F30079ECA5 /* pngrtran.c in Sources */,
+				4B73B98513BCB9F30079ECA5 /* pngrutil.c in Sources */,
+				4B73B98613BCB9F30079ECA5 /* pngset.c in Sources */,
+				4B73B98813BCB9F30079ECA5 /* pngtrans.c in Sources */,
+				4B73B98913BCB9F30079ECA5 /* pngwio.c in Sources */,
+				4B73B98A13BCB9F30079ECA5 /* pngwrite.c in Sources */,
+				4B73B98B13BCB9F30079ECA5 /* pngwtran.c in Sources */,
+				4B73B98C13BCB9F30079ECA5 /* pngwutil.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = RotersPuzzle_Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../../lib/lpng140,
+				);
+				INFOPLIST_FILE = "RotersPuzzle-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../lib/lpng140/Debug\"",
+					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/i386\"",
+					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/armv7\"",
+					"\"$(SRCROOT)/../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib\"",
+				);
+				PRODUCT_NAME = RotersPuzzle;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WARNING_CFLAGS = "";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = RotersPuzzle_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../../lib/lpng140,
+				);
+				INFOPLIST_FILE = "RotersPuzzle-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../lib/lpng140/Debug\"",
+					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/i386\"",
+					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/armv7\"",
+					"\"$(SRCROOT)/../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib\"",
+				);
+				PRODUCT_NAME = RotersPuzzle;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = "";
+			};
+			name = Release;
+		};
+		4B5DC4DC13A92786000433E3 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: TECHNICAL ARTS Corporation";
+				COMPRESS_PNG_FILES = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../../lib/lpng140,
+					/usr/local/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-fvisibility=hidden",
+					"$(OTHER_CFLAGS)",
+				);
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BBD2241B-290D-4118-B3A4-BC8289EDFD54";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../.. ../../.. ../..";
+			};
+			name = Distribution;
+		};
+		4B5DC4DD13A92786000433E3 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = RotersPuzzle_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../../lib/lpng140,
+				);
+				INFOPLIST_FILE = "RotersPuzzle-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../lib/lpng140/Debug\"",
+					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/i386\"",
+					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/armv7\"",
+					"\"$(SRCROOT)/../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib\"",
+				);
+				PRODUCT_NAME = RotersPuzzle;
+				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = "";
+			};
+			name = Distribution;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: KOUHEI IKEDA (NV9ZBU23YK)";
+				COMPRESS_PNG_FILES = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../../lib/lpng140,
+					/usr/local/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-fvisibility=hidden",
+					"$(OTHER_CFLAGS)",
+				);
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5FA36F94-A19B-42AF-A649-E4922476EDFD";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../.. ../../.. ../..";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../../lib/lpng140,
+					/usr/local/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-fvisibility=hidden",
+					"$(OTHER_CFLAGS)",
+				);
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../.. ../../.. ../..";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "RotatePuzzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				4B5DC4DD13A92786000433E3 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RotersPuzzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				4B5DC4DC13A92786000433E3 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

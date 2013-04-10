@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PerformanceTest", "PerformanceTest.vcproj", "{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA} = {C73D6F2C-A332-47C8-8B08-2CBB481B45AA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlatformDependent", "..\..\..\libTS\PlatformDependent\build_vc9\PlatformDependent.vcproj", "{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Unicode|Win32 = Debug_Unicode|Win32
+		Debug|Win32 = Debug|Win32
+		Release(staticMFC)|Win32 = Release(staticMFC)|Win32
+		Release_Unicode|Win32 = Release_Unicode|Win32
+		Release|Win32 = Release|Win32
+		Static|Win32 = Static|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Debug_Unicode|Win32.ActiveCfg = Debug|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Debug_Unicode|Win32.Build.0 = Debug|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Debug|Win32.Build.0 = Debug|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Release(staticMFC)|Win32.ActiveCfg = Release|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Release(staticMFC)|Win32.Build.0 = Release|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Release_Unicode|Win32.ActiveCfg = Release|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Release_Unicode|Win32.Build.0 = Release|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Release|Win32.ActiveCfg = Release|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Release|Win32.Build.0 = Release|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Static|Win32.ActiveCfg = Release|Win32
+		{14086E76-1025-4DB3-9CFE-8FE200E2C8AE}.Static|Win32.Build.0 = Release|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Debug_Unicode|Win32.ActiveCfg = Debug_Unicode|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Debug_Unicode|Win32.Build.0 = Debug_Unicode|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Debug|Win32.Build.0 = Debug|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Release(staticMFC)|Win32.ActiveCfg = Release_Unicode|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Release(staticMFC)|Win32.Build.0 = Release_Unicode|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Release_Unicode|Win32.ActiveCfg = Release_Unicode|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Release_Unicode|Win32.Build.0 = Release_Unicode|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Release|Win32.ActiveCfg = Release|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Release|Win32.Build.0 = Release|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Static|Win32.ActiveCfg = Static|Win32
+		{C73D6F2C-A332-47C8-8B08-2CBB481B45AA}.Static|Win32.Build.0 = Static|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

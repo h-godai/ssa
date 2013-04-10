@@ -1,0 +1,86 @@
+/** rect.hpp -*-tab-width:4;mode:C++-*-
+
+
+
+
+
+*/
+
+
+#ifndef TS_MATH_RECT_HPP
+#define TS_MATH_RECT_HPP
+
+#include "libTS/Common/Common.h"
+
+namespace ts {
+namespace math {
+
+  
+  template <typename T>
+  struct rect {
+	pos2<T> pos_;
+	size<T> size_;
+	rect() {}
+	rect(const pos2<T>& pos, const size<T>& size) 
+	  : pos_(pos)
+	  , size_(size)
+	{}
+	template <typename TT>
+    rect(TT l, TT t, TT w, TT h) 
+	  : pos_(static_cast<T>(l), static_cast<T>(t))
+	  , size_(static_cast<T>(w), static_cast<T>(h))
+	{}
+
+	T left() const { return pos_.x_; }
+	T top() const { return pos_.y_; }
+	T right() const { return pos_.x_ + size_.width_; }
+	T bottom() const { return pos_.y_ + size_.height_; }
+	T width() const { return size_.width_; }
+	T height() const { return size_.height_; }
+	
+	T cx() const { return (left() + right()) / 2; }
+	T cy() const { return (top() + bottom()) / 2; }
+	pos2<T> cpos() const { return pos2<T>(cx,cy); }
+
+	void set_size(size<T> size) {
+	  size_.swap(size);
+	}
+	// pÇ™rectÇÃì‡ë§Ç…Ç†ÇÈÇ©í≤Ç◊ÇÈ
+	template <typename PosT>
+	bool is_inside(const PosT& p) const {
+	  return p.x_ >= left() && p.x_ < right() && p.y_ >= top() && p.y_ < bottom();
+	}
+
+	bool empty() const { return size_.width_ == 0 && size_.height_ == 0; }
+
+    // widthÇ∆heightÇ™ê≥Ç…Ç»ÇÈÇÊÇ§í≤êÆÇ∑ÇÈ
+    void correct() { 
+      if (size_.width_ < 0) { pos_.x_ -= size_.width_; size_.width_ = -size_.width_; }
+      if (size_.height_ < 0) { pos_.y_  -= size_.height_; size_.height_ = -size_.height_; }
+    }
+
+
+	// szï™ÇæÇØrectÇëÂÇ´Ç≠Ç∑ÇÈ
+	rect operator + (const size<T>& sz) const {
+	  return rect(pos_ - (sz/2), size_ + sz);
+	}
+	// szï™ÇæÇØrectÇè¨Ç≥Ç≠Ç∑ÇÈ
+	rect operator - (const size<T>& sz) const {
+	  return rect(pos_ + (sz/2), size_ + sz);
+	}
+
+	void swap(const rect& s) { 
+	  pos_.swap(s.pos_);
+	  size_.swap(s.size_);
+	}
+  };
+
+
+  typedef rect<float> rect_f;
+  typedef rect<int32_t> rect_i;
+
+
+}
+
+#endif
+

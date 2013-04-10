@@ -1,0 +1,46 @@
+/** size.hpp -*-tab-width:4;mode:C++-*-
+
+
+
+
+
+*/
+
+
+#ifndef TS_MATH_SIZE_HPP
+#define TS_MATH_SIZE_HPP
+
+#include "arithmetic_operations.hpp"
+
+namespace ts {
+namespace math {
+  
+  template <typename T>
+  struct size : arithmetic_operations2<size<T>, T> {
+	union {
+	  T x_;
+	  T width_;
+	};
+	union {
+	  T y_;
+	  T height_;
+	};
+	size() : width_(0), height_(0) {}
+	template <typename TT>
+	size(TT w, TT h) : width_(static_cast<T>(w)), height_(static_cast<T>(h)) {}
+	bool operator == (const size& dst) const {
+	  return width_ == dst.width_ && height_ == dst.height_;
+	}
+	void swap(size& sz) {
+	  std::swap(width_, sz.width_);
+	  std::swap(height_, sz.height_);
+	}
+  };
+
+  typedef size<double> size_d;
+  typedef size<float> size_f;
+  typedef size<uint32_t> size_i;
+
+}}
+#endif
+

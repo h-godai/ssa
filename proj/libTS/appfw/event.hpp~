@@ -1,0 +1,26 @@
+/* event.hpp -*-tab-width:4-*-
+
+
+ */
+
+#ifndef TS_APPFW_EVENT_HPP
+#define TS_APPFW_EVENT_HPP
+
+namespace ts {
+namespace appfw {
+namespace event {
+
+
+  struct event_t {
+	typedef shared_ptr<event_t> ptr;
+	ptime ptime_;
+	uint32_t devnum_; // デバイス番号
+	event_t(uint32_t devnum=0) : ptime_(microsec_clock::universal_time()), devnum_(devnum) {}
+	virtual input_device_type device_type() const = 0;
+  };
+
+  
+
+
+}}} // ts::appfw::event
+#endif

@@ -1,0 +1,309 @@
+# depslib dependency file v1.0
+1332397995 source:/home/godai/proj/ssa/trunk/source/proj/libTS/PlatformDependent/Socket/TSSocket.cpp
+	"TSSocket.h"
+	<stdio.h>
+	<string.h>
+	<sys/ioctl.h>
+	<net/if.h>
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/PlatformDependent/Socket/TSSocket.h
+	<map>
+	<vector>
+	<string>
+	"../../Common/PlatformType.hpp"
+	<windows.h>
+	<process.h>
+	<Winsock.h>
+	<pthread.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<netinet/tcp.h>
+	<sys/time.h>
+	<sys/poll.h>
+	<sys/resource.h>
+	<unistd.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<fcntl.h>
+	<ctype.h>
+	<signal.h>
+	<time.h>
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/Common/PlatformType.hpp
+	"Common.h"
+
+1332666300 /home/godai/proj/ssa/trunk/source/proj/libTS/Common/Common.h
+	"StdTypes.h"
+	<cstdint>
+	<stdint.h>
+	<boost/cstdint.hpp>
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/Common/StdTypes.h
+	"Common.h"
+	<limits.h>
+	<stdint.h>
+
+1333052094 source:/home/godai/proj/ssa/trunk/source/proj/libTS/appfw/ext_linux/glview.cpp
+	"glview.hpp"
+	"libTS/appfw/drawframe_app.hpp"
+	"libTS/Util/Logger.h"
+	"render_control.hpp"
+
+1332697704 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/ext_linux/glview.hpp
+	<GL/gl.h>
+	<GL/glut.h>
+	"libTS/appfw/ext_mac/ios_control.hpp"
+	"libTS/appfw/appfw.hpp"
+	"libTS/math/geometric.hpp"
+	"libTS/Util/timer.hpp"
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/ext_mac/ios_control.hpp
+	"ios_device.hpp"
+	"render_control.hpp"
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/ext_mac/ios_device.hpp
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/ext_mac/render_control.hpp
+	"ios_device.hpp"
+	<stdint.h>
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/math/geometric.hpp
+	"pos.hpp"
+	"size.hpp"
+	"rect.hpp"
+	"vec.hpp"
+
+1332941067 /home/godai/proj/ssa/trunk/source/proj/libTS/math/pos.hpp
+	<math.h>
+	<stdint.h>
+	<utility>
+	"arithmetic_operations.hpp"
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/math/arithmetic_operations.hpp
+
+1332510812 /home/godai/proj/ssa/trunk/source/proj/libTS/math/size.hpp
+	<utility>
+	"arithmetic_operations.hpp"
+
+1332510856 /home/godai/proj/ssa/trunk/source/proj/libTS/math/rect.hpp
+	"pos.hpp"
+	"size.hpp"
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/math/vec.hpp
+	"arithmetic_operations.hpp"
+	"pos.hpp"
+
+1332666778 /home/godai/proj/ssa/trunk/source/proj/libTS/Util/timer.hpp
+	"../Common/Common.h"
+	"../PlatformDependent/Timer/timer_win32.hpp"
+	"../PlatformDependent/Timer/timer_posix.hpp"
+
+1332666636 /home/godai/proj/ssa/trunk/source/proj/libTS/PlatformDependent/Timer/timer_win32.hpp
+	<windows.h>
+
+1332666795 /home/godai/proj/ssa/trunk/source/proj/libTS/PlatformDependent/Timer/timer_posix.hpp
+	<time.h>
+	<sys/time.h>
+
+1332663510 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/drawframe_app.hpp
+	"appfw.hpp"
+
+1332397996 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/appfw.hpp
+	"libTS/Common/Common.h"
+	<stdint.h>
+	<iostream>
+	<string>
+	<queue>
+	<stdexcept>
+	<boost/optional.hpp>
+	"libTS/Util/Logger.h"
+	"libTS/math/pos.hpp"
+	"exception.hpp"
+	"inputfw.hpp"
+	"gl/glfw.hpp"
+	"sound/soundfw.hpp"
+
+1333038595 /home/godai/proj/ssa/trunk/source/proj/libTS/Util/Logger.h
+
+1332397996 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/exception.hpp
+	<string>
+
+1332397996 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/inputfw.hpp
+	"libTS/math/vec.hpp"
+	"libTS/math/pos.hpp"
+	"event.hpp"
+
+1332397996 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/event.hpp
+	<iostream>
+	<queue>
+	<string>
+	<boost/date_time/posix_time/posix_time.hpp>
+	<boost/date_time/c_local_time_adjustor.hpp>
+	<boost/thread.hpp>
+	"object_name.hpp"
+
+1332397996 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/object_name.hpp
+	<string>
+
+1333051887 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/gl/glfw.hpp
+	<set>
+	<utility>
+	<boost/ref.hpp>
+	<boost/foreach.hpp>
+	<boost/lambda/lambda.hpp>
+	<boost/mpl/if.hpp>
+	<boost/static_assert.hpp>
+	"common.hpp"
+	"context.hpp"
+	"show_image.hpp"
+	"layer.hpp"
+	"positioning.hpp"
+
+1332397996 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/gl/common.hpp
+	"libTS/Common/Common.h"
+	<math.h>
+	<stdint.h>
+	<iostream>
+	<string>
+	<deque>
+	<stdexcept>
+	<boost/thread.hpp>
+	<OpenGLES/ES1/gl.h>
+	<OpenGLES/ES1/glext.h>
+	<GL/gl.h>
+	"libTS/Util/Logger.h"
+	"libTS/math/geometric.hpp"
+	"../exception.hpp"
+
+1332510514 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/gl/context.hpp
+	"common.hpp"
+
+1333054474 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/gl/show_image.hpp
+	<boost/lambda/lambda.hpp>
+	<boost/mpl/if.hpp>
+	<boost/foreach.hpp>
+	"image.hpp"
+	"context.hpp"
+	"draw_object.hpp"
+	"rectangle.hpp"
+	"effect.hpp"
+
+1332970213 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/gl/image.hpp
+	<boost/gil/gil_concept.hpp>
+	<boost/gil/gil_all.hpp>
+	<boost/gil/extension/io/png_dynamic_io.hpp>
+	<boost/thread.hpp>
+	"common.hpp"
+	"libTS/Util/policy.hpp"
+	"libTS/math/geometric.hpp"
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/Util/policy.hpp
+	"singleton_policy.hpp"
+	"memory.hpp"
+	"pointer_policy.hpp"
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/Util/singleton_policy.hpp
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/Util/memory.hpp
+	"singleton_policy.hpp"
+	<typeinfo>
+	<stdio.h>
+	<map>
+	<string>
+
+1332397995 /home/godai/proj/ssa/trunk/source/proj/libTS/Util/pointer_policy.hpp
+	"libTS/Common/Common.h"
+	<boost/shared_ptr.hpp>
+	<boost/intrusive_ptr.hpp>
+	<boost/smart_ptr/detail/spinlock.hpp>
+	"singleton_policy.hpp"
+	"memory.hpp"
+
+1332397996 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/gl/draw_object.hpp
+	"context.hpp"
+	"../event.hpp"
+	"effect.hpp"
+
+1332397996 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/gl/effect.hpp
+	<boost/intrusive_ptr.hpp>
+	"libTS/math/pos.hpp"
+	"context.hpp"
+	"libTS/Util/pointer_policy.hpp"
+
+1332397996 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/gl/rectangle.hpp
+	"image.hpp"
+	"effect.hpp"
+	"libTS/math/vec.hpp"
+
+1332681280 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/gl/layer.hpp
+	<GL/glut.h>
+	"context.hpp"
+
+1332510705 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/gl/positioning.hpp
+	"context.hpp"
+	"libTS/math/pos.hpp"
+
+1332511353 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/sound/soundfw.hpp
+	"libTS/Common/Common.h"
+	<stdint.h>
+	<iostream>
+	<string>
+	<deque>
+	<stdexcept>
+	<boost/gil/gil_all.hpp>
+	<boost/gil/extension/io/png_io.hpp>
+	<boost/ref.hpp>
+	<boost/thread.hpp>
+	"libTS/Util/Logger.h"
+
+1332666702 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/ext_linux/render_control.hpp
+	<stdint.h>
+	"linux_device.hpp"
+
+1332612804 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/ext_linux/linux_device.hpp
+
+1332693572 source:/home/godai/proj/ssa/trunk/source/proj/libTS/appfw/ext_linux/main.cpp
+	<stdio.h>
+	"libTS/appfw/ext_linux/glview.hpp"
+
+1332681178 source:/home/godai/proj/ssa/trunk/source/proj/libTS/appfw/ext_linux/render_control.cpp
+	<stdio.h>
+	"linux_control.hpp"
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<stdlib.h>
+	"../drawframe_app.hpp"
+
+1332612988 /home/godai/proj/ssa/trunk/source/proj/libTS/appfw/ext_linux/linux_control.hpp
+	"linux_device.hpp"
+	"render_control.hpp"
+
+1332694322 source:/home/godai/proj/ssa/trunk/source/proj/libTS/math/matrix.cpp
+	<math.h>
+	"matrix.hpp"
+	<algorithm>
+
+1332694500 /home/godai/proj/ssa/trunk/source/proj/libTS/math/matrix.hpp
+	<math.h>
+	<boost/foreach.hpp>
+	"libTS/Common/Common.h"
+	"vec.hpp"
+	"rect.hpp"
+
+1332583265 source:/home/godai/proj/ssa/trunk/source/proj/libTS/Util/Logger.cpp
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<stdarg.h>
+	<syslog.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<stdarg.h>
+	<string.h>
+	"libTS/PlatformDependent/Socket/TSSocket.h"
+	"Logger.h"
+

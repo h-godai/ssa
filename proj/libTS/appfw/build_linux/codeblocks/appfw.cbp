@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="appfw" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="libappfw" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DDEBUG" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="libappfw" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DRELEASE" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DLINUX" />
+			<Add directory="../../../.." />
+		</Compiler>
+		<Unit filename="../../../Common/Common.h" />
+		<Unit filename="../../../Common/PlatformType.hpp" />
+		<Unit filename="../../../Common/StdTypes.h" />
+		<Unit filename="../../../PlatformDependent/Socket/TSSocket.cpp" />
+		<Unit filename="../../../PlatformDependent/Socket/TSSocket.h" />
+		<Unit filename="../../../Util/Logger.cpp" />
+		<Unit filename="../../../Util/Logger.h" />
+		<Unit filename="../../appfw.hpp" />
+		<Unit filename="../../drawframe_app.hpp" />
+		<Unit filename="../../event.hpp" />
+		<Unit filename="../../exception.hpp" />
+		<Unit filename="../../ext_linux/glview.cpp" />
+		<Unit filename="../../ext_linux/glview.hpp" />
+		<Unit filename="../../ext_linux/linux_control.hpp" />
+		<Unit filename="../../ext_linux/linux_device.hpp" />
+		<Unit filename="../../ext_linux/render_control.cpp" />
+		<Unit filename="../../ext_linux/render_control.hpp" />
+		<Unit filename="../../ext_mac/GLView.h" />
+		<Unit filename="../../ext_mac/ios_control.hpp" />
+		<Unit filename="../../ext_mac/ios_device.hpp" />
+		<Unit filename="../../ext_mac/render_control.hpp" />
+		<Unit filename="../../gadgets/slide_selector.hpp" />
+		<Unit filename="../../gadgets/slide_switch.hpp" />
+		<Unit filename="../../gadgets/swipe_button.hpp" />
+		<Unit filename="../../gl/button.hpp" />
+		<Unit filename="../../gl/common.hpp" />
+		<Unit filename="../../gl/context.hpp" />
+		<Unit filename="../../gl/draw_object.hpp" />
+		<Unit filename="../../gl/effect.hpp" />
+		<Unit filename="../../gl/glfw.hpp" />
+		<Unit filename="../../gl/image.hpp" />
+		<Unit filename="../../gl/layer.hpp" />
+		<Unit filename="../../gl/positioning.hpp" />
+		<Unit filename="../../gl/rectangle.hpp" />
+		<Unit filename="../../gl/show_image.hpp" />
+		<Unit filename="../../inputfw.hpp" />
+		<Unit filename="../../object_name.hpp" />
+		<Unit filename="../../serialize.hpp" />
+		<Unit filename="../../sound/soundfw.hpp" />
+		<Unit filename="../../../math/arithmetic_operations.hpp" />
+		<Unit filename="../../../math/geometric.hpp" />
+		<Unit filename="../../../math/math.hpp" />
+		<Unit filename="../../../math/matrix.cpp" />
+		<Unit filename="../../../math/matrix.hpp" />
+		<Unit filename="../../../math/pos.hpp" />
+		<Unit filename="../../../math/rect.hpp" />
+		<Unit filename="../../../math/size.hpp" />
+		<Unit filename="../../../math/vec.hpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

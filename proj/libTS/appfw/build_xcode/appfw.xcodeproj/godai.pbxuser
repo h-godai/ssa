@@ -1,0 +1,187 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = D2AAC07D0554694100DB518D /* appfw */;
+		addToTargets = (
+		);
+		codeSenseManager = 4B87CCDF136B04FC00DFD442 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					966,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 325781479;
+			PBXWorkspaceStateSaveDate = 325781479;
+		};
+		perUserProjectItems = {
+			4B87CD60136B094F00DFD442 /* PBXTextBookmark */ = 4B87CD60136B094F00DFD442 /* PBXTextBookmark */;
+			4B87CD61136B094F00DFD442 /* PBXTextBookmark */ = 4B87CD61136B094F00DFD442 /* PBXTextBookmark */;
+			4B87CD62136B094F00DFD442 /* PBXTextBookmark */ = 4B87CD62136B094F00DFD442 /* PBXTextBookmark */;
+			4B87CD63136B094F00DFD442 /* PBXTextBookmark */ = 4B87CD63136B094F00DFD442 /* PBXTextBookmark */;
+			4B87CD77136B09D700DFD442 /* XCBuildMessageTextBookmark */ = 4B87CD77136B09D700DFD442 /* XCBuildMessageTextBookmark */;
+			4B87CD8D136B0B6600DFD442 /* PBXTextBookmark */ = 4B87CD8D136B0B6600DFD442 /* PBXTextBookmark */;
+			4B87CD90136B0B6600DFD442 /* PBXTextBookmark */ = 4B87CD90136B0B6600DFD442 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 4B87CCDE136B04FC00DFD442 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	4B87CCDE136B04FC00DFD442 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	4B87CCDF136B04FC00DFD442 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4B87CD46136B07FE00DFD442 /* ViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {542, 806}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 175}";
+		};
+	};
+	4B87CD47136B07FE00DFD442 /* EAGLView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {542, 585}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 171}";
+		};
+	};
+	4B87CD48136B07FE00DFD442 /* EAGLView.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {542, 2067}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 161}";
+		};
+	};
+	4B87CD49136B07FE00DFD442 /* ViewController.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1144, 6811}}";
+			sepNavSelRange = "{13295, 0}";
+			sepNavVisRange = "{0, 610}";
+		};
+	};
+	4B87CD60136B094F00DFD442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B87CD46136B07FE00DFD442 /* ViewController.h */;
+		name = "ViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 175;
+		vrLoc = 0;
+	};
+	4B87CD61136B094F00DFD442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B87CD47136B07FE00DFD442 /* EAGLView.h */;
+		name = "EAGLView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 171;
+		vrLoc = 0;
+	};
+	4B87CD62136B094F00DFD442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B87CD48136B07FE00DFD442 /* EAGLView.mm */;
+		name = "EAGLView.mm: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 161;
+		vrLoc = 0;
+	};
+	4B87CD63136B094F00DFD442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B87CD49136B07FE00DFD442 /* ViewController.mm */;
+		name = "ViewController.mm: 512";
+		rLen = 0;
+		rLoc = 13295;
+		rType = 0;
+		vrLen = 610;
+		vrLoc = 0;
+	};
+	4B87CD67136B094F00DFD442 /* AppMain.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = AppMain.h;
+		path = /Users/godai/ssa/ssa/trunk/source/proj/libTS/appfw/build_xcode/Classes/AppMain.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1144, 440}}";
+			sepNavSelRange = "{309, 0}";
+			sepNavVisRange = "{0, 309}";
+		};
+	};
+	4B87CD76136B09D700DFD442 /* show_image.hpp */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.h;
+		name = show_image.hpp;
+		path = ../../../libTS/appfw/gl/show_image.hpp;
+		sourceTree = "<group>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1027, 1538}}";
+			sepNavSelRange = "{393, 0}";
+			sepNavVisRange = "{0, 973}";
+			sepNavWindowFrame = "{{314, 23}, {1086, 649}}";
+		};
+	};
+	4B87CD77136B09D700DFD442 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Internal compiler error: in reference_to_unused, at dwarf2out.c:10603";
+		fRef = 4B87CD76136B09D700DFD442 /* show_image.hpp */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 19;
+		rType = 1;
+	};
+	4B87CD8D136B0B6600DFD442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B87CD67136B094F00DFD442 /* AppMain.h */;
+		name = "AppMain.h: 21";
+		rLen = 0;
+		rLoc = 309;
+		rType = 0;
+		vrLen = 309;
+		vrLoc = 0;
+	};
+	4B87CD90136B0B6600DFD442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B87CD76136B09D700DFD442 /* show_image.hpp */;
+		name = "show_image.hpp: 20";
+		rLen = 0;
+		rLoc = 393;
+		rType = 0;
+		vrLen = 973;
+		vrLoc = 0;
+	};
+	D2AAC07D0554694100DB518D /* appfw */ = {
+		activeExec = 0;
+	};
+}

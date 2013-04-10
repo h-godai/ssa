@@ -1,0 +1,7 @@
+/* layer.hpp -*-tab-width:4-*-
+   libTS glfw  Graphics Language Frame Work 
+   layer class
+ */
+
+#ifndef TS_APPGW_COMMON_HPP
+#define TS_APPGW_COMMON_HPP

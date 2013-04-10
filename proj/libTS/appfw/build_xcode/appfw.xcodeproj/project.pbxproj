@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B87CCE4136B051400DFD442 /* appfw.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCE0136B051400DFD442 /* appfw.hpp */; };
+		4B87CCE5136B051400DFD442 /* inputfw.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCE1136B051400DFD442 /* inputfw.hpp */; };
+		4B87CCE6136B051400DFD442 /* event.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCE2136B051400DFD442 /* event.hpp */; };
+		4B87CCE7136B051400DFD442 /* exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCE3136B051400DFD442 /* exception.hpp */; };
+		4B87CCF4136B053F00DFD442 /* positioning.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCE9136B053F00DFD442 /* positioning.hpp */; };
+		4B87CCF5136B053F00DFD442 /* glfw.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCEA136B053F00DFD442 /* glfw.hpp */; };
+		4B87CCF6136B053F00DFD442 /* context.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCEB136B053F00DFD442 /* context.hpp */; };
+		4B87CCF7136B053F00DFD442 /* effect.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCEC136B053F00DFD442 /* effect.hpp */; };
+		4B87CCF8136B053F00DFD442 /* button.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCED136B053F00DFD442 /* button.hpp */; };
+		4B87CCF9136B053F00DFD442 /* rectangle.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCEE136B053F00DFD442 /* rectangle.hpp */; };
+		4B87CCFA136B053F00DFD442 /* show_image.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCEF136B053F00DFD442 /* show_image.hpp */; };
+		4B87CCFB136B053F00DFD442 /* draw_object.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCF0136B053F00DFD442 /* draw_object.hpp */; };
+		4B87CCFC136B053F00DFD442 /* image.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCF1136B053F00DFD442 /* image.hpp */; };
+		4B87CCFD136B053F00DFD442 /* common.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCF2136B053F00DFD442 /* common.hpp */; };
+		4B87CCFE136B053F00DFD442 /* layer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CCF3136B053F00DFD442 /* layer.hpp */; };
+		4B87CD01136B055600DFD442 /* soundfw.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CD00136B055600DFD442 /* soundfw.hpp */; };
+		4B87CD4A136B07FE00DFD442 /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CD46136B07FE00DFD442 /* ViewController.h */; };
+		4B87CD4B136B07FE00DFD442 /* EAGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B87CD47136B07FE00DFD442 /* EAGLView.h */; };
+		4B87CD4C136B07FE00DFD442 /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B87CD48136B07FE00DFD442 /* EAGLView.mm */; };
+		4B87CD4D136B07FE00DFD442 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B87CD49136B07FE00DFD442 /* ViewController.mm */; };
+		AA747D9F0F9514B9006C5449 /* appfw_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* appfw_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B87CCE0136B051400DFD442 /* appfw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = appfw.hpp; path = ../../appfw.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCE1136B051400DFD442 /* inputfw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = inputfw.hpp; path = ../../inputfw.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCE2136B051400DFD442 /* event.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = event.hpp; path = ../../event.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCE3136B051400DFD442 /* exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = exception.hpp; path = ../../exception.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCE9136B053F00DFD442 /* positioning.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = positioning.hpp; path = ../../gl/positioning.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCEA136B053F00DFD442 /* glfw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = glfw.hpp; path = ../../gl/glfw.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCEB136B053F00DFD442 /* context.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = context.hpp; path = ../../gl/context.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCEC136B053F00DFD442 /* effect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = effect.hpp; path = ../../gl/effect.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCED136B053F00DFD442 /* button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = button.hpp; path = ../../gl/button.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCEE136B053F00DFD442 /* rectangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rectangle.hpp; path = ../../gl/rectangle.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCEF136B053F00DFD442 /* show_image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = show_image.hpp; path = ../../gl/show_image.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCF0136B053F00DFD442 /* draw_object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = draw_object.hpp; path = ../../gl/draw_object.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCF1136B053F00DFD442 /* image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = image.hpp; path = ../../gl/image.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCF2136B053F00DFD442 /* common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = common.hpp; path = ../../gl/common.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CCF3136B053F00DFD442 /* layer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = layer.hpp; path = ../../gl/layer.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CD00136B055600DFD442 /* soundfw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = soundfw.hpp; path = ../../sound/soundfw.hpp; sourceTree = SOURCE_ROOT; };
+		4B87CD46136B07FE00DFD442 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Classes/ViewController.h; sourceTree = "<group>"; };
+		4B87CD47136B07FE00DFD442 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EAGLView.h; path = Classes/EAGLView.h; sourceTree = "<group>"; };
+		4B87CD48136B07FE00DFD442 /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EAGLView.mm; path = Classes/EAGLView.mm; sourceTree = "<group>"; };
+		4B87CD49136B07FE00DFD442 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ViewController.mm; path = Classes/ViewController.mm; sourceTree = "<group>"; };
+		4B87CD86136B0AA600DFD442 /* window-iphone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "window-iphone.xib"; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* appfw_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appfw_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libappfw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libappfw.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libappfw.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* appfw */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				4B87CD86136B0AA600DFD442 /* window-iphone.xib */,
+			);
+			name = appfw;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4B87CD46136B07FE00DFD442 /* ViewController.h */,
+				4B87CD47136B07FE00DFD442 /* EAGLView.h */,
+				4B87CD48136B07FE00DFD442 /* EAGLView.mm */,
+				4B87CD49136B07FE00DFD442 /* ViewController.mm */,
+				4B87CCDD136B04FC00DFD442 /* appfw */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* appfw_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		4B87CCDD136B04FC00DFD442 /* appfw */ = {
+			isa = PBXGroup;
+			children = (
+				4B87CCFF136B054500DFD442 /* sound */,
+				4B87CCE8136B051A00DFD442 /* gl */,
+				4B87CCE0136B051400DFD442 /* appfw.hpp */,
+				4B87CCE1136B051400DFD442 /* inputfw.hpp */,
+				4B87CCE2136B051400DFD442 /* event.hpp */,
+				4B87CCE3136B051400DFD442 /* exception.hpp */,
+			);
+			name = appfw;
+			sourceTree = "<group>";
+		};
+		4B87CCE8136B051A00DFD442 /* gl */ = {
+			isa = PBXGroup;
+			children = (
+				4B87CCE9136B053F00DFD442 /* positioning.hpp */,
+				4B87CCEA136B053F00DFD442 /* glfw.hpp */,
+				4B87CCEB136B053F00DFD442 /* context.hpp */,
+				4B87CCEC136B053F00DFD442 /* effect.hpp */,
+				4B87CCED136B053F00DFD442 /* button.hpp */,
+				4B87CCEE136B053F00DFD442 /* rectangle.hpp */,
+				4B87CCEF136B053F00DFD442 /* show_image.hpp */,
+				4B87CCF0136B053F00DFD442 /* draw_object.hpp */,
+				4B87CCF1136B053F00DFD442 /* image.hpp */,
+				4B87CCF2136B053F00DFD442 /* common.hpp */,
+				4B87CCF3136B053F00DFD442 /* layer.hpp */,
+			);
+			name = gl;
+			sourceTree = "<group>";
+		};
+		4B87CCFF136B054500DFD442 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				4B87CD00136B055600DFD442 /* soundfw.hpp */,
+			);
+			name = sound;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* appfw_Prefix.pch in Headers */,
+				4B87CCE4136B051400DFD442 /* appfw.hpp in Headers */,
+				4B87CCE5136B051400DFD442 /* inputfw.hpp in Headers */,
+				4B87CCE6136B051400DFD442 /* event.hpp in Headers */,
+				4B87CCE7136B051400DFD442 /* exception.hpp in Headers */,
+				4B87CCF4136B053F00DFD442 /* positioning.hpp in Headers */,
+				4B87CCF5136B053F00DFD442 /* glfw.hpp in Headers */,
+				4B87CCF6136B053F00DFD442 /* context.hpp in Headers */,
+				4B87CCF7136B053F00DFD442 /* effect.hpp in Headers */,
+				4B87CCF8136B053F00DFD442 /* button.hpp in Headers */,
+				4B87CCF9136B053F00DFD442 /* rectangle.hpp in Headers */,
+				4B87CCFA136B053F00DFD442 /* show_image.hpp in Headers */,
+				4B87CCFB136B053F00DFD442 /* draw_object.hpp in Headers */,
+				4B87CCFC136B053F00DFD442 /* image.hpp in Headers */,
+				4B87CCFD136B053F00DFD442 /* common.hpp in Headers */,
+				4B87CCFE136B053F00DFD442 /* layer.hpp in Headers */,
+				4B87CD01136B055600DFD442 /* soundfw.hpp in Headers */,
+				4B87CD4A136B07FE00DFD442 /* ViewController.h in Headers */,
+				4B87CD4B136B07FE00DFD442 /* EAGLView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* appfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "appfw" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = appfw;
+			productName = appfw;
+			productReference = D2AAC07E0554694100DB518D /* libappfw.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "appfw" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* appfw */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* appfw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B87CD4C136B07FE00DFD442 /* EAGLView.mm in Sources */,
+				4B87CD4D136B07FE00DFD442 /* ViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/appfw.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = appfw_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = appfw;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/appfw.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = appfw_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = appfw;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../lib/lpng140,
+					/usr/local/include,
+					../../..,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../lib/lpng140,
+					/usr/local/include,
+					../../..,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "appfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "appfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

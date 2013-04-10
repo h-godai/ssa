@@ -1,0 +1,74 @@
+glview.o: ../ext_linux/glview.cpp ../ext_linux/../platform.hpp \
+  ../../../libTS/Common/Common.h \
+  ../ext_linux/../ext_glut/render_control.hpp \
+  ../ext_linux/../ext_glut/../gl/render_control.hpp \
+  ../../../libTS/math/pos.hpp \
+  ../../../libTS/math/arithmetic_operations.hpp \
+  ../../../libTS/math/size.hpp ../ext_linux/glview.hpp \
+  ../../../libTS/appfw/appfw.hpp ../../../libTS/Common/Common.h \
+  ../../../libTS/Util/Logger.h ../../../libTS/math/pos.hpp \
+  ../../../libTS/appfw/exception.hpp ../../../libTS/appfw/inputfw.hpp \
+  ../../../libTS/math/vec.hpp ../../../libTS/math/pos.hpp \
+  ../../../libTS/appfw/event.hpp ../../../libTS/appfw/object_name.hpp \
+  ../../../libTS/appfw/gl/glfw.hpp ../../../libTS/appfw/gl/common.hpp \
+  ../../../libTS/Common/Common.h ../../../libTS/Util/Logger.h \
+  ../../../libTS/math/geometric.hpp ../../../libTS/math/size.hpp \
+  ../../../libTS/math/rect.hpp ../../../libTS/math/vec.hpp \
+  ../../../libTS/appfw/gl/../exception.hpp \
+  ../../../libTS/appfw/gl/context.hpp \
+  ../../../libTS/appfw/gl/show_image.hpp \
+  ../../../libTS/appfw/gl/image.hpp ../../../libTS/Util/policy.hpp \
+  ../../../libTS/Util/singleton_policy.hpp ../../../libTS/Util/memory.hpp \
+  ../../../libTS/Util/pointer_policy.hpp ../../../libTS/Common/Common.h \
+  ../../../libTS/appfw/gl/draw_object.hpp \
+  ../../../libTS/appfw/gl/../event.hpp ../../../libTS/appfw/gl/effect.hpp \
+  ../../../libTS/math/pos.hpp ../../../libTS/Util/pointer_policy.hpp \
+  ../../../libTS/appfw/gl/rectangle.hpp ../../../libTS/math/vec.hpp \
+  ../../../libTS/appfw/gl/text.hpp \
+  ../../../libTS/appfw/gl/../platform.hpp ../../../libTS/Image/Color.hpp \
+  ../../../libTS/Image/../Common/Common.h ../../../libTS/Image/pixel.hpp \
+  ../../../libTS/Image/pixel_types.hpp \
+  ../../../libTS/Image/image_common.hpp \
+  ../../../libTS/Image/rgb_pixel.hpp ../../../libTS/Image/gray_pixel.hpp \
+  ../../../libTS/Image/any_pixel.hpp ../../../libTS/appfw/gl/layer.hpp \
+  ../../../libTS/appfw/gl/positioning.hpp \
+  ../../../libTS/appfw/sound/soundfw.hpp ../../../libTS/Common/Common.h \
+  ../../../libTS/Util/Logger.h ../../../libTS/math/geometric.hpp \
+  ../../../libTS/Util/timer.hpp ../../../libTS/Util/../Common/Common.h \
+  ../../../libTS/Util/../PlatformDependent/Timer/timer_posix.hpp \
+  ../../../libTS/appfw/drawframe_app.hpp ../../../libTS/appfw/appfw.hpp \
+  ../../../libTS/Util/Logger.h
+render_control.o: ../ext_linux/render_control.cpp \
+  ../ext_linux/linux_control.hpp ../ext_linux/linux_device.hpp \
+  ../ext_linux/render_control.hpp ../ext_linux/../gl/render_control.hpp \
+  ../../../libTS/math/pos.hpp \
+  ../../../libTS/math/arithmetic_operations.hpp \
+  ../../../libTS/math/size.hpp ../ext_linux/../drawframe_app.hpp \
+  ../ext_linux/../appfw.hpp ../../../libTS/Common/Common.h \
+  ../../../libTS/Util/Logger.h ../../../libTS/math/pos.hpp \
+  ../ext_linux/../exception.hpp ../ext_linux/../inputfw.hpp \
+  ../../../libTS/math/vec.hpp ../../../libTS/math/pos.hpp \
+  ../ext_linux/../event.hpp ../ext_linux/../object_name.hpp \
+  ../ext_linux/../gl/glfw.hpp ../ext_linux/../gl/common.hpp \
+  ../../../libTS/Common/Common.h ../../../libTS/Util/Logger.h \
+  ../../../libTS/math/geometric.hpp ../../../libTS/math/size.hpp \
+  ../../../libTS/math/rect.hpp ../../../libTS/math/vec.hpp \
+  ../ext_linux/../gl/../exception.hpp ../ext_linux/../gl/context.hpp \
+  ../ext_linux/../gl/show_image.hpp ../ext_linux/../gl/image.hpp \
+  ../../../libTS/Util/policy.hpp ../../../libTS/Util/singleton_policy.hpp \
+  ../../../libTS/Util/memory.hpp ../../../libTS/Util/pointer_policy.hpp \
+  ../../../libTS/Common/Common.h ../ext_linux/../gl/draw_object.hpp \
+  ../ext_linux/../gl/../event.hpp ../ext_linux/../gl/effect.hpp \
+  ../../../libTS/math/pos.hpp ../../../libTS/Util/pointer_policy.hpp \
+  ../ext_linux/../gl/rectangle.hpp ../../../libTS/math/vec.hpp \
+  ../ext_linux/../gl/text.hpp ../ext_linux/../gl/../platform.hpp \
+  ../../../libTS/Common/Common.h \
+  ../ext_linux/../gl/../ext_glut/render_control.hpp \
+  ../../../libTS/Image/Color.hpp ../../../libTS/Image/../Common/Common.h \
+  ../../../libTS/Image/pixel.hpp ../../../libTS/Image/pixel_types.hpp \
+  ../../../libTS/Image/image_common.hpp \
+  ../../../libTS/Image/rgb_pixel.hpp ../../../libTS/Image/gray_pixel.hpp \
+  ../../../libTS/Image/any_pixel.hpp ../ext_linux/../gl/layer.hpp \
+  ../ext_linux/../gl/positioning.hpp ../ext_linux/../sound/soundfw.hpp \
+  ../../../libTS/Common/Common.h ../../../libTS/Util/Logger.h
+Logger.o: ../../Util/Logger.cpp ../../Util/Logger.h

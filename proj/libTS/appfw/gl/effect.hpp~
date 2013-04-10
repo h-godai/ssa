@@ -1,0 +1,28 @@
+/* effect.hpp -*-tab-width:4-*-
+   libTS glfw  Graphics Language Frame Work
+ */
+
+#ifndef TS_APPGW_GL_EFFECT_HPP
+#define TS_APPGW_GL_EFFECT_HPP
+
+namespace ts {
+namespace appfw {
+namespace gl {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}}} // ts:appfw::gl
+#endif

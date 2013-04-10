@@ -1,0 +1,35 @@
+
+
+
+// イメージの位置を決めるためのクラス
+	struct image_rect {
+	  rect_f rect_;
+	  positioning_type postype_;
+	  float subpos_;
+	  image_rect(const rect_f& rect) : rect_(rect), postype_(position_immidiately) {}
+	  image_rect(const pos2_f& pos) : postype_(position_immidiately){ rect_.pos_ = pos; }
+	  image_rect(const pos2_f& pos, const size_f& size) : rect_(pos, size), postype_(position_immidiately) {}
+	  image_rect(positioning_type st, float subpos=0.0f) : postype_(st), subpos_(subpos) {}
+	  
+	  // スクリーンサイズとイメージサイズから位置を決定する
+	  rect_f& rect(context& gc, const size_i& imgsz) {
+		switch (postype_) {
+		case fit_to_width:
+		  rect_.size_ = size_f(gc.screen_size_.width_, imgsz.height_ * gc.screen_size_.width_/imgsz.width_);
+		  rect_.pos_.x_ = 0.0f;
+		  break;
+		case fit_to_height:
+		  rect_.size_ = size_f(imgsz.width_ * gc.screen_size_.height_/imgsz.height_, gc.screen_size_.height_);
+		  rect_.pos_.y_ = 0.0f;
+		  break;
+		case stretch_screen:
+		  rect_.size_ = size_f(gc.screen_size_.width_, gc.screen_size_.height_);
+		  rect_.pos_.x_ = 0.0f;
+		  rect_.pos_.y_ = 0.0f;
+		  break;
+		default:
+		  break;
+		}
+		return rect_;
+	  }
+	};

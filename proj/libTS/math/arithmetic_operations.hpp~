@@ -1,0 +1,13 @@
+
+
+
+  template <typename C, typename VT>
+  struct arithmetic_operations2 {
+	typedef const C CC;
+	C operator + (C p) const { CC& t = static_cast<CC&>(*this); p.x_ += t.x_; p.y_ += t.y_; return p; }
+	C operator - (C p) const { CC& t = static_cast<CC&>(*this); p.x_ = t.x_ - p.x_; p.y_ = t.y_ - p.y_; return p; }
+	C operator / (VT d) const { CC& t = static_cast<CC&>(*this); return C(t.x_ / d, t.y_ / d); }
+	C operator * (VT d) const { CC& t = static_cast<CC&>(*this); return C(t.x_ * d, t.y_ * d); }
+	C& operator /= (VT d) { C& t = static_cast<C&>(*this); t.x_ /= d; t.y_ /= d; return t; }
+	C& operator *= (VT d) { C& t = static_cast<C&>(*this); t.x_ *= d; t.y_ *= d; return t; }
+  };

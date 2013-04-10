@@ -1,0 +1,6 @@
+
+
+INCL = ../../..
+
+all:
+	g++ -I$(INCL) -Wall -o test/gl_test test/gl_test.cpp

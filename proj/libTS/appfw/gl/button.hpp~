@@ -1,0 +1,81 @@
+/* -*-tab-width:4-*-
+   libTS glfw  Graphics Language Frame Work
+ */
+
+#ifndef TS_APPFW_GL_SHOWIMAGE_PP
+#define TS_APPFW_GL_SHOWIMAGE_PP
+
+#include "image.hpp"
+#include "context.hpp"
+#include "draw_object.hpp"
+#include "rectangle.hpp"
+
+namespace ts {
+namespace appfw {
+namespace gl {
+  using math::size_f;
+  
+  enum effect_type {
+	ef_none
+	, ef_highlights
+  };
+
+
+  template <typename GObj>
+  struct show_images_cmd : draw_object {
+	typedef shared_ptr<show_images_cmd> ptr;
+	bool show_;
+	//vector<GLfloat> vertices_;
+	//vector<GLfloat> texcoords_;
+	std::vector<GObj> rects_;
+
+	show_images_cmd(uint32_t id, uint32_t layer) 
+	  : draw_object(id, layer)
+	  , show_(true)
+	{}
+
+	show_images_cmd(uint32_t id, uint32_t layer, tex_image_t img, const pos2_f& pos, const size_f& size=size_f(0,0))
+	  : draw_object(id, layer)
+	  , show_(true)
+	{
+	  rects_.push_back(GObj(img, pos, size));
+	}
+	show_images_cmd(uint32_t id, uint32_t layer, const std::vector<GObj>& rects)
+	  : draw_object(id, layer)
+	  , show_(true)
+	  , rects_(rects)
+	{
+	}
+	
+	void operator += (const GObj& rec) {
+	  rects_.push_back(rec);
+	}
+	GObj& operator [] (size_t idx) {
+	  assert(idx < rects_.size());
+	  return rects_[idx];
+	}
+	GObj& at(size_t idx) {
+	  assert(idx < rects_.size());
+	  return rects_[idx];
+	}
+	std::vector<GObj>& objs() { return rects_; }
+
+
+	virtual bool execute(context& gc) {
+	  if (!show_) return false;
+	  BOOST_FOREACH(GObj& rec, rects_) {
+		rec.render(gc);
+	  }
+	  return show_;
+	}
+
+	void hide() {
+	  show_ = false;
+	}
+  };
+  
+  typedef show_images_cmd<rectangle2d> show_image_cmd;
+
+
+}}} // ts::appfw::gl
+#endif

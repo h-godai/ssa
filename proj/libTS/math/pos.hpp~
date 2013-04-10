@@ -1,0 +1,40 @@
+/** pos.hpp -*-tab-width:4;mode:C++-*-
+
+
+
+
+
+*/
+
+
+#ifndef TS_MATH_POS_HPP
+#define TS_MATH_POS_HPP
+
+#include "arithmetic_operations.hpp"
+
+namespace ts {
+namespace math {
+  
+
+    template <typename T>
+  struct pos2d : arithmetic_operations2<pos2d<T>, T>{
+	typedef T value_type;
+	T x_;
+	T y_;
+	pos2d() : x_(0), y_(0) {}
+	pos2d(const pos2d& pos) : x_(pos.x_), y_(pos.y_) {}
+	template <typename TT>
+	pos2d(TT x, TT y) : x_(static_cast<T>(x)), y_(static_cast<T>(y)) {}
+	template <typename TT>
+	pos2d(const TT& pos) : x_(static_cast<T>(pos.x_)), y_(static_cast<T>(pos.y_)) {}
+
+
+  };
+
+  typedef pos2d<double> pos2d_d;
+  typedef pos2d<float> pos2d_f;
+  typedef pos2d<int32_t> pos2d_i;
+
+}}
+#endif
+

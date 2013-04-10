@@ -1,0 +1,5 @@
+
+
+
+all: test/math_test
+	g++ -DDEBUG -o test/math_test test/math_test.cpp

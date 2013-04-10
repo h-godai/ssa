@@ -1,0 +1,53 @@
+/* draw_object.hpp -*-tab-width:4-*-
+   libTS glfw  Graphics Language Frame Work 
+   draw_object class
+ */
+
+#ifndef TS_APPFW_GL_DRAWOBJECT_HPP
+#define TS_APPFW_GL_DRAWOBJECT_HPP
+
+#include "context.hpp"
+
+namespace ts {
+namespace appfw {
+namespace gl {
+
+
+  struct object_id {
+	static const uint32_t id_bits = 24;
+	static const uint32_t layer_bits = 8;
+	static const uint32_t id_mask = (1 << id_bits) - 1;
+	uint32_t id_;
+	object_id(uint32_t id, uint32_t layer) 
+	  : id_((id & id_mask) | (layer << id_bits))
+	{
+	  assert(id < (1 << id_bits));
+	  assert(layer < (1 << layer_bits));
+	}
+	object_id(const object_id& o) : id_(o.id_) {}
+	uint32_t layer() const { id_ >> id_bits; }
+	uint32_t id() const { return id_ & id_mask; }
+	void set_layer(uint32_t layer) { object_id tmp(id_, layer); swap(tmp); }
+	void swap(object_id& s) { std::swap(id_, s.id_); }
+	object_id& operator = (object_id o) { swap(o); return *this; }
+	bool operator < (const object_id& a) const { return id_ < a.id_; }
+  };
+
+  struct draw_object {
+	typedef shared_ptr<draw_object> ptr;
+	object_id id_;
+	draw_object(object_id id) : id_(id)  {}
+	draw_object(uint32_t id, uint32_t layer) : id_(id, layer)  {}
+	uint32_t layer_id() const { return id_.layer(); }
+	uint32_t id() const { return id_.id();}
+	bool operator < (const draw_object& t) const { return id_ < t.id_;	}
+	virtual bool execute(context& ) = 0;
+  };
+  inline bool operator < (const draw_object::ptr& a,const draw_object::ptr& b) {
+	return *a < *b;
+  }
+
+
+
+}}} // ts::appfw::gl
+#endif

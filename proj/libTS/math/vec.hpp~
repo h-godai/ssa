@@ -1,0 +1,60 @@
+/** vec.hpp -*-tab-width:4;mode:C++-*-
+
+
+
+
+
+*/
+
+
+#ifndef TS_MATH_VEC_HPP
+#define TS_MATH_VEC_HPP
+
+#include "arithmetic_operations.hpp"
+
+namespace ts {
+namespace math {
+  
+
+
+  
+  template <typename T>
+  struct vec2 : arithmetic_operations2<vec2<T>, T>{
+	typedef T value_type;
+	T x_;
+	T y_;
+	vec2() : x_(0), y_(0) {}
+	vec2(const vec2& v) : x_(v.x_), y_(v.y_) {}
+	template <typename TT>
+	vec2(TT x, TT y) : x_(static_cast<T>(x)), y_(static_cast<T>(y)) {}
+	template <typename TT>
+	vec2(const TT& v) : x_(static_cast<T>(v.x_)), y_(static_cast<T>(v.y_)) {}
+	template <typename TT>
+	vec2(const pos2d<TT>& v1, const pos2d<TT>& v2) : x_(static_cast<T>(v2.x_-v1.x_)), y_(static_cast<T>(v2.y_-v1.y_)) {}
+
+	operator bool () const {
+	  return !(x_ == 0 && y_ == 0);
+	}
+
+	void clear() { x_ = 0; y_ = 0; }
+
+  	T length() const {
+	  return sqrt(x_*x_ + y_*y_);
+	}
+	void set_length(T len) {
+	  T l = length();
+	  x_ = x_ * len / l;
+	  y_ = y_ * len / l;
+	}
+  };
+
+
+  
+
+  typedef vec2<double> vec2_d;
+  typedef vec2<float> vec2_f;
+  typedef vec2<int32_t> vec2_i;
+
+}}
+#endif
+

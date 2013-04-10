@@ -1,0 +1,94 @@
+// swipe_button.hpp -*-tab-width:4-*-
+// 
+// ドラッグすると左右に動いて消えるボタン
+//
+//
+
+#ifndef TS_APPFW_GADGET_SWIPE_BUTTON_HPP
+#define TS_APPFW_GADGET_SWIPE_BUTTON_HPP
+
+#include "libTS/appfw/gl/glfw.hpp"
+#include "libTS/appfw/gl/button.hpp"
+#include "libTS/appfw/gl/effect.hpp"
+#include "libTS/math/math.hpp"
+
+namespace ts {
+namespace appfw {
+  using namespace std;
+  using namespace boost;
+  
+  struct swipe_button {
+    glfw& gr_;
+    button2d* buttons_;
+    const size_t btncount_;
+    uint32_t current_;
+    
+    // 左右にWipeする動作
+    struct default_wipe_effect {
+		glfw& gr_;
+		pos2_f pos_;
+		default_wipe_effect(glfw& gr, const pos2_f& pos) : gr_(gr), pos_(pos)
+		{}
+		effect wipeout(int32_t direction, uint32_t /*outnumber*/) const {
+		  if (direction == 0) return effect(fade_out(1.0f));
+		  float xpos = gr_.screen_size().width_;
+		  if (direction < 0) xpos = -xpos + pos_.x_;
+		  return effect(move_to(pos2_f(xpos, pos_.y_), 0.2f)|fade_out(1.0f));
+		}
+		effect wipein(int32_t /*direction*/, uint32_t /*innumber*/) const {
+		  return effect(fade_in(0.1f));
+		}
+		pos2_f get_pos(uint32_t direction) const { return pos_; }
+	  };
+
+	  template <size_t N>
+	  swipe_button(glfw& gl, button2d (&btns)[N]) 
+		: gr_(gl)
+		, buttons_(&btns[0])
+		, btncount_(N)
+		, current_(0)
+	  {}
+
+	  bool check(const string& result, const pos2_f& pos) {
+		return check(result, default_wipe_effect(gr_, pos));
+	  }
+	  template <typename WipeEffect>
+	  bool check(const string& result, const WipeEffect& wef) {
+		assert(current_ < btncount_);
+		button2d& hitbtn = buttons_[current_];
+		if (hitbtn.name() != result) return false;
+		int32_t direction = 0;
+		uint32_t newcur = current_ + 1;
+		if (hitbtn.action() == button2d::dragged) {
+		  hitbtn.clear_action();
+		  float vecx = hitbtn.get_drag_vec().x_;
+		  if (fabs(vecx) > 1000.0f) {
+			if (vecx > 0) {
+			  newcur = current_ + btncount_ - 1;
+			  direction = -1;
+			}
+			else {
+			  direction = 1;
+			}
+		  }
+		  else {
+			return true;
+		  }
+		}
+		gr_.hide_image(hitbtn, wef.wipeout(direction, current_));
+		//gr_.hide_image(hitbtn, move_to(pos2_f(xpos, pos_[0].y_), 0.2f)|fade_out(1.0f));
+
+		current_ = newcur % btncount_;
+		buttons_[current_].set_pos(wef.get_pos(0));
+		gr_.show_image(buttons_[current_], MenuLayer, wef.wipein(direction, current_));
+		//gr_.show_image(buttons_[current_], MenuLayer, fade_in(0.1f));
+		return  true;
+	  }
+
+	  button2d& current_btn() { return buttons_[current_]; }
+	};
+
+
+
+}}
+#endif

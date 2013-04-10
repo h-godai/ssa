@@ -1,0 +1,16 @@
+/** math.hpp -*-tab-width:4;mode:C++-*-
+
+
+
+ */
+
+
+#ifndef TS_MATH_MATH_HPP
+#define TS_MATH_MATH_HPP
+
+namespace ts {
+
+
+
+} // namespace ts;
+#endif

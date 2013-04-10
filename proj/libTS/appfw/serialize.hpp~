@@ -1,0 +1,11 @@
+/* -*-tab-width:4-*-
+   libTS appfw/serialize.hpp
+ */
+#ifndef TS_APPFW_SERIALIZE_HPP
+#define TS_APPFW_SERIALIZE_HPP
+
+namespace ts {
+namespace appfw {
+
+}} // ts::appfw
+#endif

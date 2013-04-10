@@ -1,0 +1,41 @@
+/* -*-tab-width:4-*-
+ *  render_control.hpp
+ *  RiseOut
+ *
+ *  Created by IKEDA KOHEI on 11/05/02.
+ *  Copyright 2011 __MyCompanyName__. All rights reserved.
+ *
+ */
+
+#ifndef TS_APPFW_IOS_RENDER_CONTROL_HPP
+#define TS_APPFW_IOS_RENDER_CONTROL_HPP
+
+#include "ios_device.hpp"
+
+#include <stdint.h>
+
+namespace ts {
+namespace appfw {
+namespace ios {
+
+  // render control
+  struct render_control {
+    typedef render_control* ptr;
+    virtual void initialize(uint32_t width, uint32_t height, float scf=1.0f) = 0;
+    virtual void render(float time_stamp) const = 0;
+    virtual void update_animation(float time_stamp) = 0;
+    virtual void on_rotate(device_orientation orientation) = 0;
+    virtual ~render_control() {}
+  };
+  
+  // create render control object
+  struct render_control_factory {
+    static render_control::ptr create(uint32_t param=0);
+  };
+  
+  
+  
+}}} // ts::appfw::ios
+#endif
+
+  

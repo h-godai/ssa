@@ -1,3 +1,4 @@
+
 // ITestForm.h
 //
 // PerformanceTestのユーザーインターフェイスを定義する仮想クラス
@@ -52,11 +53,13 @@ namespace app {
       return p.get() == 0;
     }
 
-
+    virtual void setResultMsg(const std::string& msg)  = 0;
     virtual void setEvent(ITestFormEvent::ptr event) = 0;
     virtual void outputMessage(const string& msg) = 0;
-    virtual void setResultMsg(int num, const string& msg) = 0;
+    virtual void setResultMsg(int num, const string& msg, const string& sub) = 0;
     virtual void addTestName(const string& name) = 0;
+	virtual void showResultMessages(const string& msg) {}
+
   };
 
 

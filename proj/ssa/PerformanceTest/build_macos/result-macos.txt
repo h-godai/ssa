@@ -1,0 +1,98 @@
+020 Container Push Test (SmallObject) : 6000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:using std::vector,51.925,100.000,1,40.000,60.000,12,11
+#2:using boost::container::vector,63.807,122.882,2,46.844,78.078,20,19
+#3:using std::deque,34.281,66.0204,3,39.969,39.969,15,4
+#4:using boost::container::deque,55.231,106.367,4,41.734,41.734,86,4
+#5:using boost::fibonacci_heap,143.979,277.281,5,156.250,156.250,2000,0
+#6:using std::priority_queue,146.105,281.375,6,40.000,60.000,12,11
+#7:using boost::stable_vector,496.690,956.547,7,81.234,81.234,2017,16
+021 Container Push Test (LargeObject) : 20000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:using std::vector,3246.900,100.000,1,4096.000,6144.000,12,11
+#2:using boost::container::vector,6154.700,189.556,2,4796.000,7994.000,20,19
+#3:using std::deque,1547.350,47.6562,3,4033.000,4033.000,134,7
+#4:using boost::container::deque,2028.500,62.475,4,4041.984,4041.984,2011,9
+#5:using boost::fibonacci_heap,1827.700,56.2906,5,4125.000,4125.000,2000,0
+#6:using std::priority_queue,4731.650,145.728,6,4096.000,6144.000,12,11
+#7:using boost::stable_vector,2523.400,77.7172,7,4049.984,4049.984,2017,16
+022 Container Push vs Emplace Test (SmallObject) : 20000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:push_back with std::vector,50.818,100.000,1,40.000,60.000,12,11
+#2:emplace_back with std::vector,41.938,82.5257,2,40.000,60.000,12,11
+#3:push_back with boost::vector,64.072,126.081,3,46.844,78.078,20,19
+#4:emplace_back with boost::vector,55.086,108.397,4,46.844,78.078,20,19
+#5:push_back with std::deque,33.784,66.4802,5,39.969,39.969,15,4
+#6:emplace_back with std::deque,29.424,57.8999,6,39.969,39.969,15,4
+#7:push_back with boost::deque,55.920,110.04,7,41.734,41.734,86,4
+#8:emplace_back with boost:deque,41.401,81.4692,8,41.734,41.734,86,4
+023 Container Push vs Emplace Test (LargeObject) : 40000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:push_back with std::vector,2883.925,100.000,1,4096.000,6144.000,12,11
+#2:emplace_back with std::vector,2587.425,89.7189,2,4096.000,6144.000,12,11
+#3:push_back with boost::vector,5509.150,191.03,3,4796.000,7994.000,20,19
+#4:emplace_back with boost::vector,5258.750,182.347,4,4796.000,7994.000,20,19
+#5:push_back with std::deque,1324.200,45.9166,5,4033.000,4033.000,134,7
+#6:emplace_back with std::deque,1046.475,36.2865,6,4033.000,4033.000,134,7
+#7:push_back with boost::deque,1750.875,60.7115,7,4041.984,4041.984,2011,9
+#8:emplace_back with boost:deque,1276.925,44.2773,8,4041.984,4041.984,2011,9
+024 Container Insert Test (SmallObject) : 20000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:insert to std::vector,13.739,100.000,1,320.000,480.000,15,14
+#2:insert to boost::vector,24.043,174.996,2,237.078,395.125,24,23
+#3:insert to boost::stable_vector,65.036,473.359,3,438.578,438.578,11021,20
+#4:insert to std::deque,1.534,11.1655,4,219.641,219.641,62,6
+#5:insert to boost::deque,3.598,26.1856,5,230.484,230.484,449,7
+#6:insert to std::list,0.319,2.32036,6,515.625,515.625,11000,0
+025 Container Insert Test (LargeObject) : 600000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:insert to std::vector,246.898,100.000,1,4096.000,6144.000,12,11
+#2:insert to boost::vector,237.523,96.2029,2,3198.000,5330.000,19,18
+#3:insert to boost::stable_vector,11.435,4.63146,3,2632.812,2632.812,1316,15
+#4:insert to std::deque,122.062,49.438,4,2625.000,2625.000,90,7
+#5:insert to boost::deque,123.597,50.0597,5,2621.984,2621.984,1310,8
+#6:insert to std::list,3.688,1.49387,6,2620.312,2620.312,1300,0
+026 Make Sorted Container Test (SmallObject) : 4000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::vector,337.751,100.000,1,40.000,60.000,12,11
+#2:std::deque,459.290,135.985,2,39.969,39.969,15,4
+#3:boost::stable_vector,1002.769,296.896,3,81.234,81.234,2017,16
+#4:std::multiset,805.165,238.39,4,93.750,93.750,2000,0
+#5:boost::multiset,941.855,278.861,5,93.750,93.750,2000,0
+#6:std::priority_queue,148.645,44.0102,6,40.000,60.000,12,11
+#7:boost::priority_queue,152.286,45.0884,7,40.000,60.000,12,11
+#8:boost::fibonacci_heap,154.624,45.7804,8,156.250,156.250,2000,0
+027 Make Sorted Container Test (LargeObject) : 40000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::vector,8527.800,100.000,1,4096.000,6144.000,12,11
+#2:std::deque,6749.700,79.1494,2,4033.000,4033.000,134,7
+#3:boost::stable_vector,7919.025,92.8613,3,4049.984,4049.984,2017,16
+#4:std::multiset,2749.650,32.2434,4,4062.500,4062.500,2000,0
+#5:boost::multiset,3107.700,36.442,5,4062.500,4062.500,2000,0
+#6:std::priority_queue,4404.100,51.644,6,4096.000,6144.000,12,11
+#7:boost::priority_queue,4847.500,56.8435,7,4096.000,6144.000,12,11
+#8:boost::fibonacci_heap,1543.525,18.0999,8,4125.000,4125.000,2000,0
+028 Enumlate Sorted Container Test (SmallObject) : 1000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::vector,7.150,100.000,1,40.000,60.000,12,11
+#2:std::deque,12.872,180.028,2,39.969,39.969,15,4
+#3:boost::stable_vector,118.381,1655.68,3,81.234,81.234,2017,16
+#4:std::multiset,198.340,2773.99,4,93.750,93.750,2000,0
+#5:boost::multiset,180.080,2518.6,5,93.750,93.750,2000,0
+#6:std::priority_queue,437.883,6124.24,6,40.000,60.000,12,11
+#7:boost::priority_queue,456.481,6384.35,7,40.000,60.000,12,11
+#8:boost::fibonacci_heap,685.100,9581.82,8,156.250,180.250,2012,12
+029 Enumlate Sorted Container Test (LargeObject) : 40000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::vector,40.850,100.000,1,4096.000,6144.000,12,11
+#2:std::deque,55.550,135.985,2,4033.000,4033.000,134,7
+#3:boost::stable_vector,343.350,840.514,3,4049.984,4049.984,2017,16
+#4:std::multiset,313.975,768.605,4,4062.500,4062.500,2000,0
+#5:boost::multiset,315.475,772.277,5,4062.500,4062.500,2000,0
+#6:std::priority_queue,8238.975,20168.8,6,4096.000,6144.000,12,11
+#7:boost::priority_queue,8719.075,21344.1,7,4096.000,6144.000,12,11
+#8:make boost::fibonacci_heap,1308.675,3203.61,8,4125.000,4149.000,2012,12
+030 Search Test (SmallObject) : 2000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::vector,4944.540,100.000,1,40.000,60.000,12,11
+#2:std::vector (sorted),464.654,9.39732,2,40.000,60.000,12,11
+#3:std::multiset,483.056,9.76949,3,93.750,93.750,2000,0
+#4:boost::multiset,502.222,10.1571,4,93.750,93.750,2000,0
+#5:flat_multiset,441.031,8.91956,5,46.844,78.078,20,19
+#6:unordered_multiset,102.773,2.07851,6,109.766,109.766,2008,7
+031 Search Test (LargeObject) : 200000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::vector,23359.570,100.000,1,4096.000,6144.000,12,11
+#2:std::vector (sorted),2085.605,8.92827,2,4096.000,6144.000,12,11
+#3:std::multiset,1017.695,4.35665,3,4062.500,4062.500,2000,0
+#4:boost::multiset,1029.595,4.40759,4,4062.500,4062.500,2000,0
+#5:flat_multiset,1245.435,5.33158,5,4796.000,7994.000,20,19
+#6:unordered_multiset,337.960,1.44677,6,4078.516,4078.516,2008,7

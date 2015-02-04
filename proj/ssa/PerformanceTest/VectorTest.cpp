@@ -95,7 +95,7 @@ namespace app {
     int* v = vec;
     int sum = 0;
     time.start();
-    for (int n = 0; n < LOOPS; ++n, ++v) {
+    for (uint32_t n = 0; n < LOOPS; ++n, ++v) {
      TICK(*v);
       sum += *v;
     }

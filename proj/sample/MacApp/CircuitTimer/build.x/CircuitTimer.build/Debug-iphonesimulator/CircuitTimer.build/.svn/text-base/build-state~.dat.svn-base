@@ -1,381 +1,0 @@
-TCircuitTimer
-v7
-r0
-t305002373.628601
-cCheck dependencies
-cProcessInfoPlistFile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/Info.plist CircuitTimer-Info.plist
-cCompileXIB /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow.xib
-cCompileXIB /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow-iPad.xib
-cProcessPCH /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-ghzxrkwxfwvurvfuhakylwtduvje/CircuitTimer_Prefix.pch.gch CircuitTimer_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cProcessPCH++ /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-eqqbmhqtmkunhxfhonafxsutrvzd/CircuitTimer_Prefix.pch.gch CircuitTimer_Prefix.pch normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cCompileC build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/main.o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimerAppDelegate.o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/MCircuitTimer.o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MCircuitTimer.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cCompileC build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/MyTableView.o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MyTableView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer normal i386
-cGenerateDSYMFile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app.dSYM /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer
-cTouch /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk
-c000000004BD236930000000000000110
-t1272067731
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004BD1CD90000000000026F020
-t1272040848
-s2551840
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004BD1FFC200000000002A96A0
-t1272053698
-s2791072
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004BD1FF9E0000000000001355
-t1272053662
-s4949
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004BD20412000000000000098F
-t1272054802
-s2447
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004BD20471000000000222E640
-t1272054897
-s35841600
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk
-c000000004C4583F70000000000000132
-t1279624183
-s306
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004BFDFE39000000000027C7D0
-t1274936889
-s2607056
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004BFDFE7C000000000029D5D0
-t1274936956
-s2741712
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004BFDFE6E0000000000001466
-t1274936942
-s5222
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004C0470BB00000000000009CD
-t1275359419
-s2509
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004C0471620000000001D47210
-t1275359586
-s30700048
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/CircuitTimer.hpp
-c000000004C7DBFA40000000000000143
-t1283309476
-s323
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/CircuitTimer_Prefix.pch
-c000000004C5999C000000000000000C1
-t1280940480
-s193
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.h
-c000000004C749DB20000000000000186
-t1282710962
-s390
-i<UIKit/UIKit.h>
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm
-c000000004C7DBB180000000000000131
-t1283308312
-s305
-i"CircuitTimer.h"
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.h
-c000000004C7DBD6C0000000000000340
-t1283308908
-s832
-i<UIKit/UIKit.h>
-i"MCircuitTimer.h"
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m
-c000000004C7DBD7C0000000000000FFB
-t1283308924
-s4091
-i"CircuitTimerAppDelegate.h"
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MCircuitTimer.h
-c000000004C7DBF0C000000000000019F
-t1283309324
-s415
-i<UIKit/UIKit.h>
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MCircuitTimer.mm
-c000000004C7DBFE900000000000001B9
-t1283309545
-s441
-i"MCircuitTimer.h"
-i"CircuitTimer.hpp"
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MyTableView.h
-c000000004C73B4320000000000000185
-t1282651186
-s389
-i<UIKit/UIKit.h>
-i<Foundation/Foundation.h>
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MyTableView.m
-c000000004C73ACA4000000000000032F
-t1282649252
-s815
-i"MyTableView.h"
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow-iPad.xib
-c000000004C7DBA620000000000008B6B
-t1283308130
-s35691
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow.xib
-c000000004C59AF2B000000000000617A
-t1280945963
-s24954
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimer.LinkFileList
-c000000004C7DC003000000000000029F
-t1283309571
-s671
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimer.o
-t2
-s0
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimerAppDelegate.o
-t1283309573
-s46172
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/MCircuitTimer.o
-t1283309573
-s10764
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/MyTableView.o
-t1283309573
-s32752
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/main.o
-t1283309573
-s6356
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app
-t1283309573
-s238
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app.dSYM
-t1283309573
-s102
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer
-t1283309573
-s25116
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/Info.plist
-t1283309571
-s618
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/MainWindow-iPad.nib
-t1283309571
-s2887
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/MainWindow.nib
-t1283309571
-s1993
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/PkgInfo
-t1283309571
-s8
-
-N/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/main.m
-c000000004C5999C0000000000000016E
-t1280940480
-s366
-i<UIKit/UIKit.h>
-
-N/var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-culkwkcutcvewleftujclpqzpcoq/CircuitTimer_Prefix.pch.gch
-t2
-s0
-
-N/var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-eqqbmhqtmkunhxfhonafxsutrvzd/CircuitTimer_Prefix.pch.gch
-t1283309573
-s14788464
-
-N/var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-ghzxrkwxfwvurvfuhakylwtduvje/CircuitTimer_Prefix.pch.gch
-t1283309573
-s13825936
-
-NCircuitTimer-Info.plist
-c000000004C59B4F90000000000000392
-t1280947449
-s914
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies305002371#305002371#0(0"0(0#1#0"8641930880#0"0#
-
-CCompileC build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimer.o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s305001112.987915
-e305001113.648646
-r0
-xCompileC
-xbuild/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimer.o
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-o/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm: In function 'NSDate* -[CircuitTimer getCurrentTime](CircuitTimer*, objc_selector*)':
-o/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm:24: error: invalid conversion from 'int' to 'NSDate*'
-lSLF07#2@97"Compile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm305001112#305001113#0(320"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm: In function 'NSDate* -[CircuitTimer getCurrentTime](CircuitTimer*, objc_selector*)':/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm:24: error: invalid conversion from 'int' to 'NSDate*'1(4@42"Invalid conversion from 'int' to 'NSDate*'305001113#176#144#0(6@89"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm305001112#24#0#24#0#34"invalid conversion from '*' to '*'0(0#0#89"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm8614101856#2344"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-generated-files.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-own-target-headers.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-all-target-headers.hmap -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-project-headers.hmap -F/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/include -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources/i386 -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources -include /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-eqqbmhqtmkunhxfhonafxsutrvzd/CircuitTimer_Prefix.pch -c /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimer.mm -o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimer.o1#
-
-CCompileC build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimerAppDelegate.o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s305002373.429609
-e305002373.529475
-r1
-xCompileC
-xbuild/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimerAppDelegate.o
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m: In function '-[CircuitTimerAppDelegate tableView:cellForRowAtIndexPath:]':
-o/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m:138: warning: local declaration of 'label' hides instance variable
-lSLF07#2@107"Compile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m305002373#305002373#0(343"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m: In function '-[CircuitTimerAppDelegate tableView:cellForRowAtIndexPath:]':/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m:138: warning: local declaration of 'label' hides instance variable1(22@52"Local declaration of 'label' hides instance variable305002373#176#167#0(6@99"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m305001724#138#0#138#0#0"0(0#0#99"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m8646177120#2344"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-generated-files.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-own-target-headers.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-all-target-headers.hmap -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-project-headers.hmap -F/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/include -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources/i386 -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources -include /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-ghzxrkwxfwvurvfuhakylwtduvje/CircuitTimer_Prefix.pch -c /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/CircuitTimerAppDelegate.m -o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimerAppDelegate.o0#
-
-CCompileC build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/MCircuitTimer.o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MCircuitTimer.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s305002373.482124
-e305002373.530769
-r1
-xCompileC
-xbuild/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/MCircuitTimer.o
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MCircuitTimer.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@98"Compile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MCircuitTimer.mm305002373#305002373#0(0"0(0#0#90"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MCircuitTimer.mm8642893440#2346"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-generated-files.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-own-target-headers.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-all-target-headers.hmap -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-project-headers.hmap -F/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/include -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources/i386 -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources -include /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-eqqbmhqtmkunhxfhonafxsutrvzd/CircuitTimer_Prefix.pch -c /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MCircuitTimer.mm -o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/MCircuitTimer.o0#
-
-CCompileC build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/MyTableView.o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MyTableView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s305002373.529576
-e305002373.587398
-r1
-xCompileC
-xbuild/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/MyTableView.o
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MyTableView.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@95"Compile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MyTableView.m305002373#305002373#0(0"0(0#0#87"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MyTableView.m8631983968#2320"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-generated-files.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-own-target-headers.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-all-target-headers.hmap -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-project-headers.hmap -F/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/include -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources/i386 -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources -include /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-ghzxrkwxfwvurvfuhakylwtduvje/CircuitTimer_Prefix.pch -c /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/Classes/MyTableView.m -o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/MyTableView.o0#
-
-CCompileC build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/main.o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s305002373.427915
-e305002373.482013
-r1
-xCompileC
-xbuild/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/main.o
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/main.m305002373#305002373#0(0"0(0#0#72"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/main.m8603230912#2298"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-generated-files.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-own-target-headers.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-all-target-headers.hmap -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-project-headers.hmap -F/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/include -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources/i386 -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources -include /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-ghzxrkwxfwvurvfuhakylwtduvje/CircuitTimer_Prefix.pch -c /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/main.m -o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow-iPad.xib
-s305002371.290895
-e305002371.926050
-r1
-xCompileXIB
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow-iPad.xib
-lSLF07#2@30"CompileXIB MainWindow-iPad.xib305002371#305002371#0(0"0(0#0#85"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow-iPad.xib8602421024#666"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/MainWindow-iPad.nib /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow-iPad.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk0#
-
-CCompileXIB /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow.xib
-s305002371.290067
-e305002371.903465
-r1
-xCompileXIB
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib305002371#305002371#0(0"0(0#0#80"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow.xib8603635968#656"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/MainWindow.nib /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk0#
-
-CGenerateDSYMFile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app.dSYM /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer
-s305002373.611030
-e305002373.625737
-r1
-xGenerateDSYMFile
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app.dSYM
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer
-lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/CircuitTimer.app.dSYM build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer305002373#305002373#0(0"0(0#0#123"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer8600338400#479"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer -o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app.dSYM0#
-
-CLd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer normal i386
-s305002373.587512
-e305002373.610931
-r1
-xLd
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer
-xnormal
-xi386
-lSLF07#2@128"Link /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer305002373#305002373#0(0"0(0#0#0"8612267168#1060"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/g++-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator -F/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator -filelist /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/Objects-normal/i386/CircuitTimer.LinkFileList -mmacosx-version-min=10.5 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/CircuitTimer0#
-
-CProcessInfoPlistFile /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/Info.plist CircuitTimer-Info.plist
-s305002371.285317
-e305002371.289956
-r1
-xProcessInfoPlistFile
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/Info.plist
-xCircuitTimer-Info.plist
-lSLF07#2@31"Process CircuitTimer-Info.plist305002371#305002371#0(0"0(0#0#89"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/CircuitTimer-Info.plist8624735776#575"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility CircuitTimer-Info.plist -genpkginfo /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app/Info.plist0#
-
-CProcessPCH /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-culkwkcutcvewleftujclpqzpcoq/CircuitTimer_Prefix.pch.gch CircuitTimer_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CProcessPCH /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-ghzxrkwxfwvurvfuhakylwtduvje/CircuitTimer_Prefix.pch.gch CircuitTimer_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s305002371.926175
-e305002373.373900
-r1
-xProcessPCH
-x/var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-ghzxrkwxfwvurvfuhakylwtduvje/CircuitTimer_Prefix.pch.gch
-xCircuitTimer_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@34"Precompile CircuitTimer_Prefix.pch305002371#305002373#0(0"0(0#0#89"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/CircuitTimer_Prefix.pch8624785216#2158"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-generated-files.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-own-target-headers.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-all-target-headers.hmap -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-project-headers.hmap -F/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/include -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources/i386 -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources -c /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/CircuitTimer_Prefix.pch -o /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-ghzxrkwxfwvurvfuhakylwtduvje/CircuitTimer_Prefix.pch.gch0#
-
-CProcessPCH++ /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-eqqbmhqtmkunhxfhonafxsutrvzd/CircuitTimer_Prefix.pch.gch CircuitTimer_Prefix.pch normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s305002371.927125
-e305002373.427662
-r1
-xProcessPCH++
-x/var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-eqqbmhqtmkunhxfhonafxsutrvzd/CircuitTimer_Prefix.pch.gch
-xCircuitTimer_Prefix.pch
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@34"Precompile CircuitTimer_Prefix.pch305002371#305002373#0(0"0(0#0#89"/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/CircuitTimer_Prefix.pch8612870624#2179"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-generated-files.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-own-target-headers.hmap -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-all-target-headers.hmap -iquote /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/CircuitTimer-project-headers.hmap -F/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/include -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources/i386 -I/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/CircuitTimer.build/Debug-iphonesimulator/CircuitTimer.build/DerivedSources -c /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/CircuitTimer_Prefix.pch -o /var/folders/Fy/FycTk3uDF+WKcCA3nVnNhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CircuitTimer_Prefix-eqqbmhqtmkunhxfhonafxsutrvzd/CircuitTimer_Prefix.pch.gch0#
-
-CTouch /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app
-s305002373.625832
-e305002373.628567
-r1
-xTouch
-x/Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app
-lSLF07#2@116"Touch /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app305002373#305002373#0(0"0(0#0#0"8599302752#337"    cd /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/godai/ssa/ssa/trunk/source/proj/sample/MacApp/CircuitTimer/build/Debug-iphonesimulator/CircuitTimer.app0#
-

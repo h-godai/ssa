@@ -1,0 +1,573 @@
+031 Element Test (LargeObject) : 2000000 samples ,average, %
+#1:construct,490.851,100.000
+#2:copy,2062.837,420.257
+031 Element Test (LargeObject) : 2000000 samples ,average, %
+#1:construct,415.109,100.000
+#2:copy,1912.115,460.629
+031 Search Test (LargeObject) : 200000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::vector,59262.776,100.000,1,4796.000,7994.000,20,19
+#2:std::vector (sorted),4136.837,6.9805,2,4796.000,7994.000,20,19
+#3:std::multiset,1372.303,2.31562,3,4033.266,4033.266,2001,0
+#4:boost::multiset,1387.455,2.34119,4,4031.250,4031.250,2000,0
+#5:flat_multiset,2236.486,3.77385,5,4096.000,6144.000,12,11
+#6:unordered_multiset,647.765,1.09304,6,4043.281,4043.281,2009,8
+031 Search Test (LargeObject) : 200000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::vector,57392.459,100.000,1,4796.000,7994.000,20,19
+#2:std::vector (sorted),4194.973,7.30927,2,4796.000,7994.000,20,19
+#3:std::multiset,1371.881,2.39035,3,4033.266,4033.266,2001,0
+#4:boost::multiset,1389.361,2.42081,4,4031.250,4031.250,2000,0
+#5:flat_multiset,2257.607,3.93363,5,4096.000,6144.000,12,11
+#6:unordered_multiset,651.235,1.1347,6,4043.281,4043.281,2009,8
+301 Allocator2 Test (SmallObject) : 6000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator push_back performance,97.646,100.000,1,46.844,78.078,20,19
+#2:boost::allocator2 push_back performance,97.896,100.256,2,46.844,78.078,20,19
+301 Allocator2 Test (SmallObject) : 6000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator push_back performance,100.327,100.000,1,46.844,78.078,20,19
+#2:boost::allocator2 push_back performance,56.765,56.5793,2,40.000,60.000,12,11
+301 Allocator2 Test (SmallObject) : 6000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator push_back performance,1324.781,100.000,1,0.000,0.000,0,0
+#2:boost::allocator2 push_back performance,831.662,62.7773,2,0.000,0.000,0,0
+301 Allocator2 Test (SmallObject) : 6000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator push_back performance,1324.675,100.000,1,0.000,0.000,0,0
+#2:boost::allocator2 push_back performance,39.387,2.97337,2,0.000,0.000,0,0
+301 Allocator2 Test (SmallObject) : 6000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back performance,1328.426,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back performance,98.498,7.41463,2,46.844,78.078,20,19
+#3:boost::vector  push_back performance,814.027,61.2776,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back performance,56.507,4.2537,4,40.000,60.000,12,11
+#5:boost::allocator2 boost::vector push_back performance,38.388,2.88974,5,0.000,0.000,0,0
+031 Search Test (LargeObject) : 20000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::vector,690878.677,100.000,1,4796.016,7994.016,21,19
+#2:std::vector (sorted),52064.672,7.53601,2,4796.016,7994.016,21,19
+#3:std::multiset,61526.713,8.90557,3,4033.281,4033.281,2002,0
+#4:boost::multiset,59964.297,8.67943,4,4031.250,4031.250,2000,0
+#5:flat_multiset,30988.851,4.48543,5,4096.000,6144.000,12,11
+#6:unordered_multiset,9968.715,1.4429,6,4043.281,4043.281,2009,8
+301 Allocator2 Test (SmallObject) : 600000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back performance,10034.794,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back performance,9786.423,97.5249,2,46.859,78.094,21,19
+#3:boost::vector  push_back performance,5747.437,57.2751,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back performance,5605.852,55.8641,4,40.000,60.000,12,11
+#5:boost::allocator2 boost::vector push_back performance,3280.262,32.6889,5,0.000,0.000,0,0
+301 Allocator2 Test (SmallObject) : 6000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back performance,633.898,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back performance,74.842,11.8066,2,46.844,78.078,20,19
+#3:boost::vector  push_back performance,481.909,76.023,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back performance,48.516,7.65362,4,40.000,60.000,12,11
+#5:boost::allocator2 boost::vector push_back performance,35.107,5.53824,5,0.000,0.000,0,0
+301 Allocator2 Test (SmallObject) : 6000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back performance,642.332,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back performance,77.715,12.0989,2,46.844,78.078,20,19
+#3:boost::vector  push_back performance,479.453,74.6426,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back performance,48.580,7.56304,4,40.000,60.000,12,11
+#5:boost::allocator2 boost::vector push_back performance,50.172,7.81099,5,0.000,0.000,0,0
+301 Allocator2 Test (SmallObject) : 6000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back performance,645.310,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back performance,78.795,12.2105,2,46.844,78.078,20,19
+#3:boost::vector  push_back performance,486.388,75.3728,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back performance,48.410,7.50176,4,40.000,60.000,12,11
+#5:boost::allocator1 boost::vector push_back performance,50.049,7.75579,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back performance,35.772,5.54339,6,0.000,0.000,0,0
+303 Allocator2 UnitTime Test (SmallObject) : 60000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,1333.084,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,68.191,5.11526,2,46.844,78.078,20,19
+#3:boost::vector  push_back unit time,511.156,38.3438,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,48.911,3.66901,4,40.000,60.000,12,11
+#5:boost::allocator1 boost::vector push_back unit time,43.866,3.29058,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,28.702,2.15309,6,0.000,0.000,0,0
+303 Allocator2 UnitTime Test (SmallObject) : 600000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,1148.104,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,60.684,5.28555,2,46.844,78.078,20,19
+#3:boost::vector  push_back unit time,436.995,38.0623,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,45.350,3.95001,4,40.000,60.000,12,11
+#5:boost::allocator1 boost::vector push_back unit time,42.365,3.68996,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,28.414,2.47487,6,0.000,0.000,0,0
+303 Allocator2 UnitTime Test (SmallObject) : 600000 samples ,average, %
+#1:std::allocator vector push_back unit time,11810.150,100.000
+#2:oreore allocator vector push_back unit time,10634.847,90.0484
+#3:boost::vector  push_back unit time,11224.961,95.045
+#4:oreore allocator boost::vector  push_back unit time,10451.498,88.4959
+#5:boost::allocator1 boost::vector push_back unit time,10561.006,89.4231
+#6:boost::allocator2 boost::vector push_back unit time,10447.394,88.4612
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,11909.952,100.000
+#2:oreore allocator vector push_back unit time,10583.608,88.8636
+#3:boost::vector  push_back unit time,11201.753,94.0537
+#4:oreore allocator boost::vector  push_back unit time,10718.452,89.9958
+#5:boost::allocator1 boost::vector push_back unit time,10671.254,89.5995
+#6:boost::allocator2 boost::vector push_back unit time,10417.747,87.4709
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12216.231,100.000
+#2:oreore allocator vector push_back unit time,10818.055,88.5548
+#3:boost::vector  push_back unit time,11301.922,92.5156
+#4:oreore allocator boost::vector  push_back unit time,10580.287,86.6084
+#5:boost::allocator1 boost::vector push_back unit time,10584.898,86.6462
+#6:boost::allocator2 boost::vector push_back unit time,10818.827,88.5611
+303 Allocator2 UnitTime Test (SmallObject) : 50000 samples ,average, %
+#1:std::allocator vector push_back unit time,11521.017,100.000
+#2:oreore allocator vector push_back unit time,10863.392,94.2919
+#3:boost::vector  push_back unit time,11721.156,101.737
+#4:oreore allocator boost::vector  push_back unit time,10676.802,92.6724
+#5:boost::allocator1 boost::vector push_back unit time,10781.623,93.5822
+#6:boost::allocator2 boost::vector push_back unit time,10762.204,93.4137
+303 Allocator2 UnitTime Test (SmallObject) : 50000 samples ,average, %
+#1:std::allocator vector push_back unit time,11721.997,100.000
+#2:oreore allocator vector push_back unit time,10793.104,92.0756
+#3:boost::vector  push_back unit time,11560.994,98.6265
+#4:oreore allocator boost::vector  push_back unit time,10565.886,90.1373
+#5:boost::allocator1 boost::vector push_back unit time,10621.765,90.614
+#6:boost::allocator2 boost::vector push_back unit time,10631.781,90.6994
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12046.949,100.000
+#2:oreore allocator vector push_back unit time,10774.634,89.4387
+#3:boost::vector  push_back unit time,11285.857,93.6823
+#4:oreore allocator boost::vector  push_back unit time,10752.721,89.2568
+#5:boost::allocator1 boost::vector push_back unit time,10602.823,88.0125
+#6:boost::allocator2 boost::vector push_back unit time,10746.251,89.2031
+304 Allocator2 UnitTime Test (LargeObject) : 20000 samples ,average, %
+#1:std::allocator vector push_back unit time,35934.564,100.000
+#2:oreore allocator vector push_back unit time,19415.917,54.0313
+#3:boost::vector  push_back unit time,24615.967,68.5022
+#4:oreore allocator boost::vector  push_back unit time,15398.067,42.8503
+#5:boost::allocator1 boost::vector push_back unit time,21472.506,59.7545
+#6:boost::allocator2 boost::vector push_back unit time,26219.387,72.9643
+304 Allocator2 UnitTime Test (LargeObject) : 20000 samples ,average, %
+#1:std::allocator vector push_back unit time,25938.562,100.000
+#2:oreore allocator vector push_back unit time,35105.160,135.34
+#3:boost::vector  push_back unit time,18845.974,72.6562
+#4:oreore allocator boost::vector  push_back unit time,24948.824,96.1843
+#5:boost::allocator1 boost::vector push_back unit time,15858.824,61.14
+#6:boost::allocator2 boost::vector push_back unit time,23188.645,89.3983
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12637.988,100.000
+#2:oreore allocator vector push_back unit time,10432.165,82.5461
+#3:boost::vector  push_back unit time,11454.927,90.6388
+#4:oreore allocator boost::vector  push_back unit time,10605.240,83.9156
+#5:boost::allocator1 boost::vector push_back unit time,10465.604,82.8107
+#6:boost::allocator2 boost::vector push_back unit time,10395.727,82.2578
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12858.397,100.000
+#2:oreore allocator vector push_back unit time,10594.514,82.3937
+#3:boost::vector  push_back unit time,11277.243,87.7033
+#4:oreore allocator boost::vector  push_back unit time,10573.196,82.2279
+#5:boost::allocator1 boost::vector push_back unit time,10691.973,83.1517
+#6:boost::allocator2 boost::vector push_back unit time,10632.217,82.687
+302 Allocator2 Test (LargeObject) : 20000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back performance,18372.775,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back performance,2309.246,12.5688,2,2398.000,3997.000,20,19
+#3:boost::vector  push_back performance,8016.591,43.633,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back performance,2014.460,10.9644,4,2048.000,3072.000,12,11
+#5:boost::allocator1 boost::vector push_back performance,5921.461,32.2295,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back performance,7609.448,41.417,6,0.000,0.000,0,0
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,7425.320,100.000
+#2:oreore allocator vector push_back unit time,5698.878,76.7493
+#3:boost::vector  push_back unit time,6836.878,92.0752
+#4:oreore allocator boost::vector  push_back unit time,5513.368,74.2509
+#5:boost::allocator1 boost::vector push_back unit time,5587.957,75.2554
+#6:boost::allocator2 boost::vector push_back unit time,5458.033,73.5057
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,7443.850,100.000
+#2:oreore allocator vector push_back unit time,5433.704,72.9959
+#3:boost::vector  push_back unit time,6233.811,83.7444
+#4:oreore allocator boost::vector  push_back unit time,5354.960,71.938
+#5:boost::allocator1 boost::vector push_back unit time,5342.625,71.7723
+#6:boost::allocator2 boost::vector push_back unit time,5332.069,71.6305
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12744.108,100.000
+#2:oreore allocator vector push_back unit time,10562.448,82.881
+#3:boost::vector  push_back unit time,11453.828,89.8755
+#4:oreore allocator boost::vector  push_back unit time,10885.145,85.4132
+#5:boost::allocator1 boost::vector push_back unit time,10559.691,82.8594
+#6:boost::allocator2 boost::vector push_back unit time,10560.010,82.8619
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12761.456,100.000
+#2:oreore allocator vector push_back unit time,10710.322,83.9271
+#3:boost::vector  push_back unit time,11593.640,90.8489
+#4:oreore allocator boost::vector  push_back unit time,10606.465,83.1133
+#5:boost::allocator1 boost::vector push_back unit time,10494.707,82.2375
+#6:boost::allocator2 boost::vector push_back unit time,10527.849,82.4972
+301 Allocator2 Test (SmallObject) : 600000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back performance,9571.614,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back performance,9581.631,100.105,2,46.859,78.094,21,19
+#3:boost::vector  push_back performance,5306.444,55.4394,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back performance,5268.004,55.0378,4,40.000,60.000,12,11
+#5:boost::allocator1 boost::vector push_back performance,4724.505,49.3595,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back performance,2728.114,28.5021,6,0.000,0.000,0,0
+303 Allocator2 UnitTime Test (SmallObject) : 10000 samples ,average, %
+#1:std::allocator vector push_back unit time,21639.538,100.000
+#2:oreore allocator vector push_back unit time,21219.219,98.0576
+#3:boost::vector  push_back unit time,17482.578,80.79
+#4:oreore allocator boost::vector  push_back unit time,16603.018,76.7254
+#5:boost::allocator1 boost::vector push_back unit time,16645.342,76.921
+#6:boost::allocator2 boost::vector push_back unit time,14354.087,66.3327
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12787.432,100.000
+#2:oreore allocator vector push_back unit time,10771.041,84.2315
+#3:boost::vector  push_back unit time,11405.660,89.1943
+#4:oreore allocator boost::vector  push_back unit time,10675.891,83.4874
+#5:boost::allocator1 boost::vector push_back unit time,10526.339,82.3178
+#6:boost::allocator2 boost::vector push_back unit time,10425.451,81.5289
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12717.873,100.000
+#2:oreore allocator vector push_back unit time,10754.959,84.5657
+#3:boost::vector  push_back unit time,11450.958,90.0383
+#4:oreore allocator boost::vector  push_back unit time,10525.030,82.7578
+#5:boost::allocator1 boost::vector push_back unit time,10845.633,85.2787
+#6:boost::allocator2 boost::vector push_back unit time,10786.905,84.8169
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12931.952,100.000
+#2:oreore allocator vector push_back unit time,10899.883,84.2864
+#3:boost::vector  push_back unit time,11406.811,88.2064
+#4:oreore allocator boost::vector  push_back unit time,10702.563,82.7606
+#5:boost::allocator1 boost::vector push_back unit time,10711.343,82.8285
+#6:boost::allocator2 boost::vector push_back unit time,10644.129,82.3088
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12678.479,100.000
+#2:oreore allocator vector push_back unit time,10563.746,83.3203
+#3:boost::vector  push_back unit time,11341.671,89.4561
+#4:oreore allocator boost::vector  push_back unit time,10929.860,86.208
+#5:boost::allocator1 boost::vector push_back unit time,10877.220,85.7928
+#6:boost::allocator2 boost::vector push_back unit time,10604.972,83.6455
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,12881.692,100.000
+#2:oreore allocator vector push_back unit time,10764.543,83.5647
+#3:boost::vector  push_back unit time,11590.820,89.979
+#4:oreore allocator boost::vector  push_back unit time,10938.999,84.919
+#5:boost::allocator1 boost::vector push_back unit time,10780.842,83.6912
+#6:boost::allocator2 boost::vector push_back unit time,10831.954,84.088
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,7593.851,100.000
+#2:oreore allocator vector push_back unit time,5533.419,72.8671
+#3:boost::vector  push_back unit time,6297.231,82.9254
+#4:oreore allocator boost::vector  push_back unit time,5526.160,72.7715
+#5:boost::allocator1 boost::vector push_back unit time,5617.334,73.9721
+#6:boost::allocator2 boost::vector push_back unit time,5615.630,73.9497
+303 Allocator2 UnitTime Test (SmallObject) : 100000 samples ,average, %
+#1:std::allocator vector push_back unit time,7486.998,100.000
+#2:oreore allocator vector push_back unit time,5527.386,73.8265
+#3:boost::vector  push_back unit time,6254.999,83.5448
+#4:oreore allocator boost::vector  push_back unit time,5544.345,74.053
+#5:boost::allocator1 boost::vector push_back unit time,5600.052,74.797
+#6:boost::allocator2 boost::vector push_back unit time,5686.006,75.9451
+303 Allocator2 UnitTime Test (SmallObject) : 400000 samples ,average, %
+#1:std::allocator vector push_back unit time,7273.049,100.000
+#2:oreore allocator vector push_back unit time,5426.118,74.6058
+#3:boost::vector  push_back unit time,6119.693,84.1421
+#4:oreore allocator boost::vector  push_back unit time,5436.253,74.7452
+#5:boost::allocator1 boost::vector push_back unit time,5398.813,74.2304
+#6:boost::allocator2 boost::vector push_back unit time,5275.541,72.5355
+303 Allocator2 UnitTime Test (SmallObject) : 400000 samples ,average, %
+#1:std::allocator vector push_back unit time,12729.596,100.000
+#2:oreore allocator vector push_back unit time,10796.052,84.8106
+#3:boost::vector  push_back unit time,11506.698,90.3933
+#4:oreore allocator boost::vector  push_back unit time,10762.121,84.5441
+#5:boost::allocator1 boost::vector push_back unit time,10743.359,84.3967
+#6:boost::allocator2 boost::vector push_back unit time,10785.995,84.7316
+303 Allocator2 UnitTime Test (SmallObject) : 600000 samples ,average, %
+#1:std::allocator vector push_back unit time,12571.275,100.000
+#2:oreore allocator vector push_back unit time,10565.377,84.0438
+#3:boost::vector  push_back unit time,11381.013,90.5319
+#4:oreore allocator boost::vector  push_back unit time,10604.640,84.3561
+#5:boost::allocator1 boost::vector push_back unit time,10499.240,83.5177
+#6:boost::allocator2 boost::vector push_back unit time,10487.445,83.4239
+303 Allocator2 UnitTime Test (SmallObject) : 600000 samples ,average, %
+#1:std::allocator vector push_back unit time,12629.553,100.000
+#2:oreore allocator vector push_back unit time,10638.924,84.2383
+#3:boost::vector  push_back unit time,11503.684,91.0854
+#4:oreore allocator boost::vector  push_back unit time,10548.796,83.5247
+#5:boost::allocator1 boost::vector push_back unit time,10617.056,84.0652
+#6:boost::allocator2 boost::vector push_back unit time,10621.921,84.1037
+303 Allocator2 UnitTime Test (SmallObject) : 600000 samples ,average, %
+#1:std::allocator vector push_back unit time,12358.903,100.000
+#2:oreore allocator vector push_back unit time,10555.986,85.412
+#3:boost::vector  push_back unit time,11288.612,91.3399
+#4:oreore allocator boost::vector  push_back unit time,10485.900,84.8449
+#5:boost::allocator1 boost::vector push_back unit time,10619.187,85.9234
+#6:boost::allocator2 boost::vector push_back unit time,10374.503,83.9436
+303 Allocator2 UnitTime Test (SmallObject) : 600000 samples ,average, %
+#1:std::allocator vector push_back unit time,12669.906,100.000
+#2:oreore allocator vector push_back unit time,10607.406,83.7213
+#3:boost::vector  push_back unit time,11575.535,91.3624
+#4:oreore allocator boost::vector  push_back unit time,10684.096,84.3266
+#5:boost::allocator1 boost::vector push_back unit time,10643.837,84.0088
+#6:boost::allocator2 boost::vector push_back unit time,10599.444,83.6584
+303 Allocator2 UnitTime Test (SmallObject) : 600000 samples ,average, %
+#1:std::allocator vector push_back unit time,12530.174,100.000
+#2:oreore allocator vector push_back unit time,10425.750,83.2051
+#3:boost::vector  push_back unit time,11239.036,89.6958
+#4:oreore allocator boost::vector  push_back unit time,10415.256,83.1214
+#5:boost::allocator1 boost::vector push_back unit time,10432.609,83.2599
+#6:boost::allocator2 boost::vector push_back unit time,10396.057,82.9682
+303 Allocator2 UnitTime Test (SmallObject) : 400000 samples ,average, %
+#1:std::allocator vector push_back unit time,12566.072,100.000
+#2:oreore allocator vector push_back unit time,10544.022,83.9087
+#3:boost::vector  push_back unit time,11438.561,91.0273
+#4:oreore allocator boost::vector  push_back unit time,10519.602,83.7143
+#5:boost::allocator1 boost::vector push_back unit time,10660.113,84.8325
+#6:boost::allocator2 boost::vector push_back unit time,10636.370,84.6436
+303 Allocator2 UnitTime Test (SmallObject) : 400000 samples ,average, %
+#1:std::allocator vector push_back unit time,6515.879,100.000
+#2:oreore allocator vector push_back unit time,5258.383,80.701
+#3:boost::vector  push_back unit time,5936.931,91.1148
+#4:oreore allocator boost::vector  push_back unit time,5230.021,80.2658
+#5:boost::allocator1 boost::vector push_back unit time,5247.113,80.5281
+#6:boost::allocator2 boost::vector push_back unit time,5274.676,80.9511
+303 Allocator2 UnitTime Test (SmallObject) : 400000 samples ,average, %
+#1:std::allocator vector push_back unit time,7288.370,100.000
+#2:oreore allocator vector push_back unit time,5333.036,73.1719
+#3:boost::vector  push_back unit time,6076.943,83.3786
+#4:oreore allocator boost::vector  push_back unit time,5284.879,72.5111
+#5:boost::allocator1 boost::vector push_back unit time,5302.110,72.7475
+#6:boost::allocator2 boost::vector push_back unit time,5251.952,72.0593
+303 Allocator2 UnitTime Test (SmallObject) : 400000 samples ,average, %
+#1:std::allocator vector push_back unit time,12701.199,100.000
+#2:oreore allocator vector push_back unit time,10621.063,83.6225
+#3:boost::vector  push_back unit time,11336.518,89.2555
+#4:oreore allocator boost::vector  push_back unit time,10472.199,82.4505
+#5:boost::allocator1 boost::vector push_back unit time,10431.169,82.1274
+#6:boost::allocator2 boost::vector push_back unit time,10635.319,83.7348
+303 Allocator2 UnitTime Test (SmallObject) : 500000 samples ,average, %
+#1:std::allocator vector push_back unit time,12240.376,100.000
+#2:oreore allocator vector push_back unit time,10665.277,87.1319
+#3:boost::vector  push_back unit time,11152.281,91.1106
+#4:oreore allocator boost::vector  push_back unit time,10536.152,86.077
+#5:boost::allocator1 boost::vector push_back unit time,10553.425,86.2181
+#6:boost::allocator2 boost::vector push_back unit time,10649.977,87.007
+303 Allocator2 UnitTime Test (SmallObject) : 500000 samples ,average, %
+#1:std::allocator vector push_back unit time,12112.301,100.000
+#2:oreore allocator vector push_back unit time,10433.452,86.1393
+#3:boost::vector  push_back unit time,11018.226,90.9672
+#4:oreore allocator boost::vector  push_back unit time,10538.608,87.0075
+#5:boost::allocator1 boost::vector push_back unit time,10435.809,86.1588
+#6:boost::allocator2 boost::vector push_back unit time,10438.108,86.1777
+303 Allocator2 UnitTime Test (SmallObject) : 500000 samples ,average, %
+#1:std::allocator vector push_back unit time,12121.117,100.000
+#2:oreore allocator vector push_back unit time,10389.830,85.7168
+#3:boost::vector  push_back unit time,11038.366,91.0672
+#4:oreore allocator boost::vector  push_back unit time,10399.641,85.7977
+#5:boost::allocator1 boost::vector push_back unit time,10457.363,86.2739
+#6:boost::allocator2 boost::vector push_back unit time,10418.947,85.957
+304 Allocator2 UnitTime Test (LargeObject) : 30000 samples ,average, %
+#1:std::allocator vector push_back unit time,38677.185,100.000
+#2:oreore allocator vector push_back unit time,16520.750,42.7145
+#3:boost::vector  push_back unit time,27073.248,69.998
+#4:oreore allocator boost::vector  push_back unit time,14797.805,38.2598
+#5:boost::allocator1 boost::vector push_back unit time,21608.619,55.8692
+#6:boost::allocator2 boost::vector push_back unit time,20930.994,54.1172
+301 Allocator2 Test (SmallObject) : 3000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back performance,1229.216,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back performance,59.453,4.83664,2,20.828,34.719,18,17
+#3:boost::vector  push_back performance,704.629,57.3235,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back performance,64.823,5.27353,4,20.000,30.000,11,10
+#5:boost::allocator1 boost::vector push_back performance,46.563,3.78801,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back performance,30.306,2.46547,6,0.000,0.000,0,0
+303 Allocator2 UnitTime Test (SmallObject) : 500000 samples ,average, %
+#1:std::allocator vector push_back unit time,2249.722,100.000
+#2:oreore allocator vector push_back unit time,543.938,24.178
+#3:boost::vector  push_back unit time,1164.621,51.7674
+#4:oreore allocator boost::vector  push_back unit time,534.045,23.7383
+#5:boost::allocator1 boost::vector push_back unit time,541.448,24.0673
+#6:boost::allocator2 boost::vector push_back unit time,533.216,23.7014
+303 Allocator2 UnitTime Test (SmallObject) : 500000 samples ,average, %
+#1:std::allocator vector push_back unit time,1759.226,100.000
+#2:oreore allocator vector push_back unit time,554.401,31.5139
+#3:boost::vector  push_back unit time,1223.408,69.5424
+#4:oreore allocator boost::vector  push_back unit time,529.841,30.1179
+#5:boost::allocator1 boost::vector push_back unit time,533.502,30.3259
+#6:boost::allocator2 boost::vector push_back unit time,522.785,29.7167
+304 Allocator2 UnitTime Test (LargeObject) : 30000 samples ,average, %
+#1:std::allocator vector push_back unit time,41971.413,100.000
+#2:oreore allocator vector push_back unit time,10072.074,23.9975
+#3:boost::vector  push_back unit time,26263.919,62.5757
+#4:oreore allocator boost::vector  push_back unit time,6760.904,16.1084
+#5:boost::allocator1 boost::vector push_back unit time,20060.305,47.7952
+#6:boost::allocator2 boost::vector push_back unit time,21668.201,51.6261
+303 Allocator2 UnitTime Test (SmallObject) : 50000 samples ,average, %
+#1:std::allocator vector push_back unit time,22357.407,100.000
+#2:oreore allocator vector push_back unit time,22292.851,99.7113
+#3:boost::vector  push_back unit time,18126.740,81.0771
+#4:oreore allocator boost::vector  push_back unit time,18106.398,80.9861
+#5:boost::allocator1 boost::vector push_back unit time,17722.412,79.2686
+#6:boost::allocator2 boost::vector push_back unit time,15606.777,69.8058
+304 Allocator2 UnitTime Test (LargeObject) : 3000 samples ,average, %
+#1:std::allocator vector push_back unit time,59447.500,100.000
+#2:oreore allocator vector push_back unit time,35325.928,59.4237
+#3:boost::vector  push_back unit time,52287.558,87.9559
+#4:oreore allocator boost::vector  push_back unit time,38009.673,63.9382
+#5:boost::allocator1 boost::vector push_back unit time,44995.174,75.6889
+#6:boost::allocator2 boost::vector push_back unit time,37764.134,63.5252
+304 Allocator2 UnitTime Test (LargeObject) : 30000 samples ,average, %
+#1:std::allocator vector push_back unit time,37321.096,100.000
+#2:oreore allocator vector push_back unit time,17471.518,46.8141
+#3:boost::vector  push_back unit time,28102.492,75.2992
+#4:oreore allocator boost::vector  push_back unit time,15841.506,42.4465
+#5:boost::allocator1 boost::vector push_back unit time,22696.618,60.8144
+#6:boost::allocator2 boost::vector push_back unit time,21775.065,58.3452
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,388.582,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,289.294,74.4486,2,29.297,48.828,2,1
+#3:boost::vector  push_back unit time,417.052,107.327,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,69.334,17.8429,4,39.063,58.594,2,1
+#5:boost::allocator1 boost::vector push_back unit time,70.598,18.1682,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,59.278,15.255,6,0.000,0.000,0,0
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,1002.821,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,784.651,78.2444,2,87.891,107.422,6,3
+#3:boost::vector  push_back unit time,539.119,53.7602,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,206.255,20.5674,4,117.188,136.719,6,3
+#5:boost::allocator1 boost::vector push_back unit time,203.615,20.3042,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,201.090,20.0524,6,0.000,0.000,0,0
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,1599.142,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,1392.595,87.0839,2,87.891,107.422,6,3
+#3:boost::vector  push_back unit time,674.064,42.1516,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,361.450,22.6027,4,117.188,136.719,6,3
+#5:boost::allocator1 boost::vector push_back unit time,363.345,22.7213,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,360.791,22.5615,6,0.000,0.000,0,0
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,1600.978,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,1375.493,85.9158,2,87.891,107.422,6,3
+#3:boost::vector  push_back unit time,674.353,42.1213,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,362.210,22.6243,4,117.188,136.719,6,3
+#5:boost::allocator1 boost::vector push_back unit time,364.152,22.7456,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,359.841,22.4763,6,0.000,0.000,0,0
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,1577.438,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,1405.393,89.0934,2,87.891,107.422,6,3
+#3:boost::vector  push_back unit time,676.658,42.896,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,364.217,23.0892,4,117.188,136.719,6,3
+#5:boost::allocator1 boost::vector push_back unit time,364.022,23.0768,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,358.871,22.7502,6,0.000,0.000,0,0
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,2941.406,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,2671.964,90.8397,2,43.969,53.734,6,3
+#3:boost::vector  push_back unit time,900.339,30.6091,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,708.831,24.0984,4,58.594,68.359,6,3
+#5:boost::allocator1 boost::vector push_back unit time,730.280,24.8276,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,713.683,24.2633,6,0.000,0.000,0,0
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,2238.233,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,2037.681,91.0397,2,18.281,22.344,15,12
+#3:boost::vector  push_back unit time,770.398,34.4199,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,574.588,25.6715,4,29.063,33.906,12,9
+#5:boost::allocator1 boost::vector push_back unit time,557.381,24.9027,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,563.256,25.1652,6,0.000,0.000,0,0
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,2658.810,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,2380.157,89.5196,2,18.281,22.344,15,12
+#3:boost::vector  push_back unit time,776.611,29.209,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,577.241,21.7105,4,29.063,33.906,12,9
+#5:boost::allocator1 boost::vector push_back unit time,549.911,20.6826,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,569.591,21.4228,6,0.000,0.000,0,0
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,2221.461,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,2082.475,93.7435,2,18.281,22.344,15,12
+#3:boost::vector  push_back unit time,771.125,34.7125,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,570.670,25.6889,4,29.063,33.906,12,9
+#5:boost::allocator1 boost::vector push_back unit time,551.357,24.8196,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,569.756,25.6478,6,0.000,0.000,0,0
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,2250.906,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,2062.800,91.6431,2,18.281,22.344,15,12
+#3:boost::vector  push_back unit time,772.189,34.3057,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,571.094,25.3717,4,29.063,33.906,12,9
+#5:boost::allocator1 boost::vector push_back unit time,564.173,25.0643,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,564.224,25.0665,6,0.000,0.000,0,0
+305 Allocator2 Insert Test (SmallObject) : 500000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,7519.862,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,6147.115,81.745,2,60.969,65.031,50,40
+#3:boost::vector  push_back unit time,2379.218,31.6391,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,1675.818,22.2852,4,96.938,101.781,40,30
+#5:boost::allocator1 boost::vector push_back unit time,1688.785,22.4577,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,1673.567,22.2553,6,0.000,0.000,0,0
+306 Allocator2 Insert Test (LargeObject) : 30000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,657297.382,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,595407.147,90.5841,2,6240.000,6656.000,50,40
+#3:boost::vector  push_back unit time,374025.945,56.9036,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,326552.842,49.6811,4,9920.063,10416.063,40,30
+#5:boost::allocator1 boost::vector push_back unit time,350747.600,53.3621,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,347885.111,52.9266,6,0.000,0.000,0,0
+304 Allocator2 UnitTime Test (LargeObject) : 30000 samples ,average, %
+#1:std::allocator vector push_back unit time,43850.259,100.000
+#2:oreore allocator vector push_back unit time,10076.477,22.9793
+#3:boost::vector  push_back unit time,25567.437,58.3062
+#4:oreore allocator boost::vector  push_back unit time,6825.447,15.5654
+#5:boost::allocator1 boost::vector push_back unit time,20334.198,46.3719
+#6:boost::allocator2 boost::vector push_back unit time,19194.585,43.773
+306 Allocator2 Insert Test (LargeObject) : 30000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back unit time,1582964.227,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back unit time,1491717.566,94.2357,2,6240.000,6656.000,50,40
+#3:boost::vector  push_back unit time,622568.839,39.3293,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back unit time,557377.299,35.211,4,9920.063,10416.063,40,30
+#5:boost::allocator1 boost::vector push_back unit time,569574.338,35.9815,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back unit time,565982.441,35.7546,6,0.000,0.000,0,0
+301 Allocator2 Test (SmallObject) : 3000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector push_back performance,482.803,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector push_back performance,57.682,11.9473,2,20.828,34.719,18,17
+#3:boost::vector  push_back performance,335.921,69.5772,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  push_back performance,59.086,12.238,4,20.000,30.000,11,10
+#5:boost::allocator1 boost::vector push_back performance,46.762,9.68548,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector push_back performance,31.226,6.46761,6,0.000,0.000,0,0
+306 Allocator2 Insert Test (LargeObject) : 10000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector insert performance,1581139.998,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector insert performance,1510606.372,95.5391,2,6240.000,6656.000,50,40
+#3:boost::vector  insert performance,628318.397,39.7383,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  insert performance,558449.916,35.3194,4,9920.063,10416.063,40,30
+#5:boost::allocator1 boost::vector insert performance,575377.334,36.39,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector insert performance,568907.981,35.9809,6,0.000,0.000,0,0
+306 Allocator2 Insert Test (LargeObject) : 10000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector insert performance,1561832.044,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector insert performance,1518394.159,97.2188,2,6240.000,6656.000,50,40
+#3:boost::vector  insert performance,618251.405,39.585,3,0.000,0.000,0,0
+#4:oreore allocator boost::vector  insert performance,563704.477,36.0925,4,9920.063,10416.063,40,30
+#5:boost::allocator1 boost::vector insert performance,579208.915,37.0852,5,0.000,0.000,0,0
+#6:boost::allocator2 boost::vector insert performance,565707.328,36.2208,6,0.000,0.000,0,0
+306 Allocator2 Insert Test (LargeObject) : 10000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:std::allocator vector insert performance,1535498.549,100.000,1,0.000,0.000,0,0
+#2:oreore allocator vector insert performance,1518118.346,98.8681
+#3:boost::vector  insert performance,641162.522,41.756
+#4:oreore allocator boost::vector  insert performance,557464.084,36.3051
+#5:boost::allocator1 boost::vector insert performance,570212.940,37.1354
+#6:boost::allocator2 boost::vector insert performance,568244.937,37.0072
+301 Allocator2 Test (SmallObject) : 3000000 samples ,average, %,boost::container::vector analysis
+#1:std::allocator vector push_back performance,1213.063,100.000
+#2:oreore allocator vector push_back performance,57.083,4.70573
+#3:boost::vector  push_back performance,814.189,67.1185,BoostContainerAnalayzer: num_expand_fwd:0, num_expand_bwd:0, num_shrink:0, num_alloc:11
+
+#4:oreore allocator boost::vector  push_back performance,54.305,4.47669,BoostContainerAnalayzer: num_expand_fwd:0, num_expand_bwd:0, num_shrink:0, num_alloc:11
+
+#5:boost::allocator1 boost::vector push_back performance,46.761,3.8548,BoostContainerAnalayzer: num_expand_fwd:0, num_expand_bwd:0, num_shrink:0, num_alloc:11
+
+#6:boost::allocator2 boost::vector push_back performance,30.158,2.48607,BoostContainerAnalayzer: num_expand_fwd:10, num_expand_bwd:0, num_shrink:0, num_alloc:1
+
+301 Allocator2 Test (SmallObject) : 3000000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector push_back performance,1207.100,100.000
+#2:oreore allocator vector push_back performance,57.844,4.79199
+#3:boost::vector  push_back performance,817.381,67.7145,0,0,0,11
+#4:oreore allocator boost::vector  push_back performance,54.126,4.48397,0,0,0,11
+#5:boost::allocator1 boost::vector push_back performance,46.503,3.85247,0,0,0,11
+#6:boost::allocator2 boost::vector push_back performance,30.324,2.51215,10,0,0,1
+301 Allocator2 Test (SmallObject) : 5000000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector push_back performance,1214.138,100.000
+#2:oreore allocator vector push_back performance,57.853,4.76498
+#3:boost::vector  push_back performance,817.840,67.3597,0,0,0,11
+#4:oreore allocator boost::vector  push_back performance,54.138,4.45901,0,0,0,11
+#5:boost::allocator1 boost::vector push_back performance,46.493,3.82931,0,0,0,11
+#6:boost::allocator2 boost::vector push_back performance,30.126,2.48129,10,0,0,1
+--------------------------------------------------------------------------------
+
+302 Allocator2 Test (LargeObject) : 300000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector push_back performance,35818.417,100.000
+#2:oreore allocator vector push_back performance,8931.890,24.9366
+#3:boost::vector  push_back performance,22396.078,62.5267,0,0,0,11
+#4:oreore allocator boost::vector  push_back performance,5818.954,16.2457,0,0,0,11
+#5:boost::allocator1 boost::vector push_back performance,17007.516,47.4826,0,0,0,11
+#6:boost::allocator2 boost::vector push_back performance,17786.281,49.6568,7,0,0,5
+302 Allocator2 Test (LargeObject) : 300000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector push_back performance,35689.966,100.000
+#2:oreore allocator vector push_back performance,8973.321,25.1424
+#3:boost::vector  push_back performance,22409.421,62.7891,0,0,0,11
+#4:oreore allocator boost::vector  push_back performance,5781.426,16.199,0,0,0,11
+#5:boost::allocator1 boost::vector push_back performance,16933.257,47.4454,0,0,0,11
+#6:boost::allocator2 boost::vector push_back performance,17801.645,49.8786,7,0,0,5

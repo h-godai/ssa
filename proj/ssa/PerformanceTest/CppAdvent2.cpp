@@ -74,7 +74,7 @@ namespace app {
 	}
     virtual ~CppAdventTest2() {}
 
-    virtual const char* getTestName() const { return "C++ Advent 2012 part2"; }
+    virtual const char* getTestName() const { return "011 C++ Advent 2012 part2"; }
     virtual size_t getTestLoops(int testnum) const {
       if (testnum < 4)
     	return LOOPS3; 

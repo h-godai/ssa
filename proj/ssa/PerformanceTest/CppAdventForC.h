@@ -3,7 +3,6 @@
 #pragma once
 #include <stdint.h>
 
-
 #define IMAGE_WIDTH 19200
 #define IMAGE_HEIGHT 1200
 
@@ -18,7 +17,7 @@ void test_bitmap_color_transform_macro_c(unsigned short* buffer);
 #include <vector>
 
 namespace app {
-  using std::tr1::uint16_t;  
+  //  using std::uint16_t;  
 
   template <int PixelBits>
   struct pixel_t {};

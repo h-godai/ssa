@@ -1,0 +1,6 @@
+031 Element Test (LargeObject) : 2000000 samples ,average, %
+#1:construct,490.851,100.000
+#2:copy,2062.837,420.257
+031 Element Test (LargeObject) : 2000000 samples ,average, %
+#1:construct,415.109,100.000
+#2:copy,1912.115,460.629

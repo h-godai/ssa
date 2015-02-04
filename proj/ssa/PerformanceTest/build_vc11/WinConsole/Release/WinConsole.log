@@ -1,0 +1,32 @@
+﻿2013/05/31 4:05:55 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "D:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\WinConsole.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\ /ID:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\\..\..\..\.. /ID:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\\..\..\..\..\lib\boost\boost_1_53_0 /ID:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\\..\.. /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\WinConsole.pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /wd4819 /wd4200 /wd4996 /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\ /ID:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\\..\..\..\.. /ID:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\\..\..\..\..\lib\boost\boost_1_53_0 /ID:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\\..\.. /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\WinConsole.pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /wd4819 /wd4200 /wd4996 /analyze- /errorReport:prompt ..\..\..\..\libTS\PlatformDependent\Timer\MeasureTime.cpp ..\..\AllocatorTest.cpp ..\..\ContainerTest.cpp ..\..\SortTest.cpp ..\..\TestMain.cpp ..\..\VectorTest.cpp ..\PerformanceTest.cpp WinConsole.cpp
+         MeasureTime.cpp
+         AllocatorTest.cpp
+         ContainerTest.cpp
+         SortTest.cpp
+         TestMain.cpp
+         VectorTest.cpp
+         PerformanceTest.cpp
+         WinConsole.cpp
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\Release\WinConsole.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:D:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\\..\..\..\..\lib\boost\lib_win kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\Release\WinConsole.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\Release\WinConsole.lib" /MACHINE:X86 /SAFESEH Release\MeasureTime.obj
+         Release\AllocatorTest.obj
+         Release\ContainerTest.obj
+         Release\SortTest.obj
+         Release\TestMain.obj
+         Release\VectorTest.obj
+         Release\PerformanceTest.obj
+         Release\stdafx.obj
+         Release\WinConsole.obj
+         コード生成しています。
+         コード生成が終了しました。
+         WinConsole.vcxproj -> D:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\Release\WinConsole.exe
+     1>プロジェクト "D:\ssa\trunk\source\proj\ssa\PerformanceTest\build_vc11\WinConsole\WinConsole.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:15.04

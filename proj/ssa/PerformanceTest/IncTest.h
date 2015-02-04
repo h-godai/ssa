@@ -16,7 +16,7 @@ namespace app {
   public:
     virtual ~IncTest1() {}
 
-    virtual const char* getTestName() const { return "incliment operator test1 (map<>::iterator)"; }
+    virtual const char* getTestName() const { return "006 incliment operator test1 (map<>::iterator)"; }
     virtual const char* getSubTitle(int num) {
       switch(num) {
         case 1: return "map::iterator++";
@@ -47,7 +47,7 @@ namespace app {
   public:
     virtual ~IncTest2() {}
 
-    virtual const char* getTestName() const { return "incliment operator test2 (vector<>::iterator)"; }
+    virtual const char* getTestName() const { return "007 incliment operator test2 (vector<>::iterator)"; }
     virtual const char* getSubTitle(int num) {
       switch(num) {
         case 1: return "vector::iterator++";

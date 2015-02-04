@@ -48,6 +48,10 @@
 		4B73B98C13BCB9F30079ECA5 /* pngwutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B73B97913BCB9F30079ECA5 /* pngwutil.c */; };
 		4B806294135AABCE0005E94C /* b210.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4B806293135AABCE0005E94C /* b210.wav */; };
 		4B8062A6135AC4610005E94C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8062A5135AC4610005E94C /* AudioToolbox.framework */; };
+		4B80657B1724583A00784D66 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80657A1724583A00784D66 /* libboost_thread.a */; };
+		4B80657F172458FC00784D66 /* libboost_exception.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80657C172458FC00784D66 /* libboost_exception.a */; };
+		4B806580172458FC00784D66 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80657D172458FC00784D66 /* libboost_filesystem.a */; };
+		4B806581172458FC00784D66 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80657E172458FC00784D66 /* libboost_system.a */; };
 		4B87CDBC136B26B600DFD442 /* ssabanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87CDB7136B26B600DFD442 /* ssabanner.png */; };
 		4B87CDBD136B26B600DFD442 /* puzzle-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87CDB8136B26B600DFD442 /* puzzle-3.png */; };
 		4B87CDBE136B26B600DFD442 /* puzzle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87CDB9136B26B600DFD442 /* puzzle-2.png */; };
@@ -58,12 +62,9 @@
 		4BA349BD138BA37A00A5DF93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA349BC138BA37A00A5DF93 /* CoreGraphics.framework */; };
 		4BB156C6135CB2BE00EDC5F2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB156C5135CB2BE00EDC5F2 /* libz.dylib */; };
 		4BB15763135DF20600EDC5F2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB15762135DF20600EDC5F2 /* AVFoundation.framework */; };
-		4BC25BF21545AF240047E1F0 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC25BE81545AE730047E1F0 /* libboost_system.a */; };
-		4BC25BF31545AF240047E1F0 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC25BE91545AE730047E1F0 /* libboost_thread.a */; };
 		4BC25C031545B49D0047E1F0 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC25C021545B49D0047E1F0 /* CoreAudio.framework */; };
 		4BC25C051545B4B70047E1F0 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC25C041545B4B70047E1F0 /* libbz2.dylib */; };
 		4BC25C071545B4C70047E1F0 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC25C061545B4C70047E1F0 /* libz.1.1.3.dylib */; };
-		4BC282AC1545B5DE0047E1F0 /* libboost_exception.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC282AB1545B5DE0047E1F0 /* libboost_exception.a */; };
 		4BC282B11545D3620047E1F0 /* puzzle-1-1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC282AD1545D3620047E1F0 /* puzzle-1-1536.png */; };
 		4BC282B21545D3620047E1F0 /* puzzle-2-1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC282AE1545D3620047E1F0 /* puzzle-2-1536.png */; };
 		4BC282B31545D3620047E1F0 /* puzzle-3-1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC282AF1545D3620047E1F0 /* puzzle-3-1536.png */; };
@@ -129,6 +130,10 @@
 		4B73B97C13BCB9F30079ECA5 /* pngpriv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pngpriv.h; path = ../../../../lib/lpng140/pngpriv.h; sourceTree = SOURCE_ROOT; };
 		4B806293135AABCE0005E94C /* b210.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = b210.wav; path = ../res/b210.wav; sourceTree = SOURCE_ROOT; };
 		4B8062A5135AC4610005E94C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4B80657A1724583A00784D66 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = ../../../../lib/boost/lib/libboost_thread.a; sourceTree = "<group>"; };
+		4B80657C172458FC00784D66 /* libboost_exception.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_exception.a; path = ../../../../lib/boost/lib/libboost_exception.a; sourceTree = "<group>"; };
+		4B80657D172458FC00784D66 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../../../../lib/boost/lib/libboost_filesystem.a; sourceTree = "<group>"; };
+		4B80657E172458FC00784D66 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../lib/boost/lib/libboost_system.a; sourceTree = "<group>"; };
 		4B87CA741369B5ED00DFD442 /* rectangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rectangle.hpp; path = ../../../../libTS/appfw/gl/rectangle.hpp; sourceTree = SOURCE_ROOT; };
 		4B87CB621369B60800DFD442 /* draw_object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = draw_object.hpp; path = ../../../../libTS/appfw/gl/draw_object.hpp; sourceTree = SOURCE_ROOT; };
 		4B87CB631369B60800DFD442 /* button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = button.hpp; path = ../../../../libTS/appfw/gl/button.hpp; sourceTree = SOURCE_ROOT; };
@@ -156,13 +161,9 @@
 		4BB15762135DF20600EDC5F2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4BBC0D241365CE1E00F6D5D3 /* GameResource.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GameResource.hpp; path = ../GameResource.hpp; sourceTree = SOURCE_ROOT; };
 		4BBC0D251365CE1E00F6D5D3 /* ChipObj.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ChipObj.hpp; path = ../ChipObj.hpp; sourceTree = SOURCE_ROOT; };
-		4BC25BE71545AE730047E1F0 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/libboost_filesystem.a; sourceTree = "<group>"; };
-		4BC25BE81545AE730047E1F0 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/libboost_system.a; sourceTree = "<group>"; };
-		4BC25BE91545AE730047E1F0 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = ../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/libboost_thread.a; sourceTree = "<group>"; };
 		4BC25C021545B49D0047E1F0 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		4BC25C041545B4B70047E1F0 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
 		4BC25C061545B4C70047E1F0 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
-		4BC282AB1545B5DE0047E1F0 /* libboost_exception.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_exception.a; path = ../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/libboost_exception.a; sourceTree = "<group>"; };
 		4BC282AD1545D3620047E1F0 /* puzzle-1-1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-1-1536.png"; path = "../res/puzzle-1-1536.png"; sourceTree = "<group>"; };
 		4BC282AE1545D3620047E1F0 /* puzzle-2-1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-2-1536.png"; path = "../res/puzzle-2-1536.png"; sourceTree = "<group>"; };
 		4BC282AF1545D3620047E1F0 /* puzzle-3-1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "puzzle-3-1536.png"; path = "../res/puzzle-3-1536.png"; sourceTree = "<group>"; };
@@ -193,12 +194,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BC282AC1545B5DE0047E1F0 /* libboost_exception.a in Frameworks */,
 				4BC25C071545B4C70047E1F0 /* libz.1.1.3.dylib in Frameworks */,
 				4BC25C051545B4B70047E1F0 /* libbz2.dylib in Frameworks */,
 				4BC25C031545B49D0047E1F0 /* CoreAudio.framework in Frameworks */,
-				4BC25BF21545AF240047E1F0 /* libboost_system.a in Frameworks */,
-				4BC25BF31545AF240047E1F0 /* libboost_thread.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
@@ -207,6 +205,10 @@
 				4BB156C6135CB2BE00EDC5F2 /* libz.dylib in Frameworks */,
 				4BB15763135DF20600EDC5F2 /* AVFoundation.framework in Frameworks */,
 				4BA349BD138BA37A00A5DF93 /* CoreGraphics.framework in Frameworks */,
+				4B80657B1724583A00784D66 /* libboost_thread.a in Frameworks */,
+				4B80657F172458FC00784D66 /* libboost_exception.a in Frameworks */,
+				4B806580172458FC00784D66 /* libboost_filesystem.a in Frameworks */,
+				4B806581172458FC00784D66 /* libboost_system.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,14 +244,14 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				4B80657C172458FC00784D66 /* libboost_exception.a */,
+				4B80657D172458FC00784D66 /* libboost_filesystem.a */,
+				4B80657E172458FC00784D66 /* libboost_system.a */,
+				4B80657A1724583A00784D66 /* libboost_thread.a */,
 				4BC282B91546A0C20047E1F0 /* icon-144.png */,
-				4BC282AB1545B5DE0047E1F0 /* libboost_exception.a */,
 				4BC25C061545B4C70047E1F0 /* libz.1.1.3.dylib */,
 				4BC25C041545B4B70047E1F0 /* libbz2.dylib */,
 				4BC25C021545B49D0047E1F0 /* CoreAudio.framework */,
-				4BC25BE71545AE730047E1F0 /* libboost_filesystem.a */,
-				4BC25BE81545AE730047E1F0 /* libboost_system.a */,
-				4BC25BE91545AE730047E1F0 /* libboost_thread.a */,
 				4B73B96913BCB9BD0079ECA5 /* libpng */,
 				4B4383F61357BE4C00B72068 /* src */,
 				4B4383ED1357BE1F00B72068 /* libTS */,
@@ -473,6 +475,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RotersPuzzle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -570,7 +575,7 @@
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -578,21 +583,24 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RotersPuzzle_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					../../../../lib/lpng140,
 				);
 				INFOPLIST_FILE = "RotersPuzzle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../lib/lpng140/Debug\"",
 					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/i386\"",
 					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/armv7\"",
 					"\"$(SRCROOT)/../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib\"",
+					"\"$(SRCROOT)/../../../../lib/boost/lib\"",
 				);
 				PRODUCT_NAME = RotersPuzzle;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				USER_HEADER_SEARCH_PATHS = "../../../.. ../../.. ../.. /usr/local/include";
 				WARNING_CFLAGS = "";
 			};
 			name = Debug;
@@ -600,7 +608,7 @@
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -608,21 +616,24 @@
 				GCC_PREFIX_HEADER = RotersPuzzle_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					../../../../lib/lpng140,
 				);
 				INFOPLIST_FILE = "RotersPuzzle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../lib/lpng140/Debug\"",
 					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/i386\"",
 					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/armv7\"",
 					"\"$(SRCROOT)/../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib\"",
+					"\"$(SRCROOT)/../../../../lib/boost/lib\"",
 				);
 				PRODUCT_NAME = RotersPuzzle;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				USER_HEADER_SEARCH_PATHS = "../../../.. ../../.. ../.. /usr/local/include";
 				VALIDATE_PRODUCT = YES;
 				WARNING_CFLAGS = "";
 			};
@@ -641,14 +652,13 @@
 					../../../../lib/lpng140,
 					/usr/local/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-fvisibility=hidden",
 					"$(OTHER_CFLAGS)",
 				);
-				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BBD2241B-290D-4118-B3A4-BC8289EDFD54";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -659,27 +669,30 @@
 		4B5DC4DD13A92786000433E3 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RotersPuzzle_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					../../../../lib/lpng140,
 				);
 				INFOPLIST_FILE = "RotersPuzzle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../lib/lpng140/Debug\"",
 					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/i386\"",
 					"\"$(SRCROOT)/../../../../lib/lpng140/Debug/armv7\"",
 					"\"$(SRCROOT)/../../../../../../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib\"",
+					"\"$(SRCROOT)/../../../../lib/boost/lib\"",
 				);
 				PRODUCT_NAME = RotersPuzzle;
+				USER_HEADER_SEARCH_PATHS = "../../../.. ../../.. ../.. /usr/local/include";
 				VALIDATE_PRODUCT = YES;
 				WARNING_CFLAGS = "";
 			};
@@ -700,12 +713,11 @@
 					../../../../lib/lpng140,
 					/usr/local/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-fvisibility=hidden",
 					"$(OTHER_CFLAGS)",
 				);
-				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5FA36F94-A19B-42AF-A649-E4922476EDFD";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -726,14 +738,13 @@
 					../../../../lib/lpng140,
 					/usr/local/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-fvisibility=hidden",
 					"$(OTHER_CFLAGS)",
 				);
-				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

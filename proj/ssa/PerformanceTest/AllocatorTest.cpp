@@ -15,7 +15,7 @@
 #include <boost/pool/object_pool.hpp>
 #include <boost/pool/singleton_pool.hpp>
 #include "libTS/PlatformDependent/Timer/MeasureTime.hpp"
-
+#include "libTS/Util/pool/pool_storage.hpp"
 
 #include <ITestBody.h>
 #include "TestMain.h"
@@ -33,8 +33,8 @@ namespace {
 //  const TestCase TESTCASE = TS_POOL_TEST;
 
   const char* TestTitle[] = {
-    "boost pool performance test"
-  , "TS pool_storage test"
+    "003 boost pool performance test"
+  , "004 TS pool_storage test"
   };
 
 //  typedef double SmallObject;
@@ -94,12 +94,14 @@ namespace app {
 #ifdef _DEBUG
 	  , LOOPS(TESTCASE == TS_POOL_TEST ? 500 : 30)
 #else
-	  , LOOPS(TESTCASE == TS_POOL_TEST ? 3000 : 100)
+	  , LOOPS(TESTCASE == TS_POOL_TEST ? 3000 : 1000)
 #endif
 	{
 
 	}
     virtual ~AllocatorTest() {}
+
+    virtual size_t getTestLoops(int) const { return LOOPS*NumPtrs; }
 
     virtual const char* getTestName() const { return TestTitle[TESTCASE]; }
     virtual const char* getSubTitle(int num) {

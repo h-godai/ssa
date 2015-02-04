@@ -15,7 +15,7 @@ namespace app {
   public:
     virtual ~VectorTest() {}
 
-    virtual const char* getTestName() const { return "integer loop performance test"; }
+    virtual const char* getTestName() const { return "001 vector_performance_test"; }
     virtual const char* getSubTitle(int num) {
       switch(num) {
         case 1: return "iterator for() loop";

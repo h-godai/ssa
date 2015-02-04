@@ -24,7 +24,7 @@ namespace app {
     SortTest();
     virtual ~SortTest() {}
 
-    virtual const char* getTestName() const { return "Quick Sort performance test"; }
+    virtual const char* getTestName() const { return "002 Quick Sort performance test"; }
     virtual size_t getTestLoops(int) const { return 1; }
 
     virtual const char* getSubTitle(int num) {

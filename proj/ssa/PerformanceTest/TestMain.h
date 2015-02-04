@@ -9,6 +9,8 @@ namespace app {
 
   class TestMain {
   public:
+	  static const size_t TestSequenceCount_ = 10;
+
     TestMain(ITestForm::ptr testForm);
     ~TestMain() {
       if (m_testBody != 0) {
@@ -22,7 +24,7 @@ namespace app {
       m_result1 = 0.0;
       m_allResult.clear();
     }
-    void saveResult(const std::string&);
+    void saveResult(const std::string&, bool detail=false);
 
 
     // メッセージ出力
@@ -32,7 +34,7 @@ namespace app {
         m_testForm->outputMessage(msg);
       }
     }
-
+	
     static volatile void tick(int sum = 1);
     static volatile void tick(void*);
 
@@ -44,6 +46,7 @@ namespace app {
     }
 
     static int getTick() { return m_tick; }
+
 
   private:
     ITestForm::ptr m_testForm;

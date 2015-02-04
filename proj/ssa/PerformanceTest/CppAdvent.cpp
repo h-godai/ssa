@@ -39,8 +39,9 @@ using namespace std;
 
 namespace {
    const size_t LOOPS3 = 100000;
-
 }
+
+
 
 namespace app {
 
@@ -57,7 +58,7 @@ namespace app {
       CppAdventTest& self_;
       printpoolresult(CppAdventTest& s) : self_(s) {}
       void operator() (const std::pair<double, uint32_t>& ele) {
-        self_.outputMessage(str(format("%.9lf    %d"ENDL) % ele.first % ele.second));
+        self_.outputMessage(str(format("%.9lf    %d%s") % ele.first % ele.second % ENDL));
       }
     };
 
@@ -69,7 +70,7 @@ namespace app {
 	}
     virtual ~CppAdventTest() {}
 
-    virtual const char* getTestName() const { return "C++ Advent 2012 "; }
+    virtual const char* getTestName() const { return "010 C++ Advent 2012 "; }
     virtual size_t getTestLoops(int testnum) const {
       if (testnum < 3)
     	return LOOPS*10; 
@@ -127,7 +128,7 @@ namespace app {
     template <typename T>
     double test_pool_time_t(int times, T& intpool, ostream& ofs) {
       if (times == 1) {
-        outputMessage("boost pool allocate time"ENDL);
+        outputMessage("boost pool allocate time" ENDL);
         pool_result_.clear();
         pool_result_.resize(LOOPS3);
         pool_result_map_.clear();
@@ -160,14 +161,14 @@ namespace app {
     char* load_text() {
       FILE* f = fopen("textsample.txt", "r");
       if (f == 0) {
-    	outputMessage("search text not found!"ENDL);
+    	outputMessage("search text not found!" ENDL);
     	return 0;
       }
       struct stat st;
       fstat(fileno(f), &st);
       char* buf = new char[st.st_size+1];
-      fread(buf, st.st_size, 1, f);
-      buf[st.st_size] = 0;
+      size_t sz = fread(buf, st.st_size, 1, f);
+      buf[sz] = 0;
       return buf;
     }
 
@@ -179,11 +180,11 @@ namespace app {
       const char* searchtext = "BOOST";
       size_t tlen = strlen(searchtext);
       if (times == 1) {
-        outputMessage(str(format("search text 'BOOST' in boost/foreach.hpp text size = %d"ENDL) % strlen(text)));
+        outputMessage(str(format("search text 'BOOST' in boost/foreach.hpp text size = %d%s") % strlen(text) % ENDL));
       }
       unsigned int found = 0;
       time.start();
-      for (int loop = 0; loop < LOOPS2; ++loop) {
+      for (size_t loop = 0; loop < LOOPS2; ++loop) {
         const char* p = text;
         while (p && *p) {
           p = ::strstr(p, searchtext);
@@ -197,7 +198,7 @@ namespace app {
 
       if (text != 0) delete [] text;
       if (times == 1) {
-	    outputMessage(str(format("%d BOOST found!"ENDL) % found));
+	    outputMessage(str(format("%d BOOST found!" ENDL) % found));
       }
       return time.getTotalTime();
     }
@@ -211,7 +212,7 @@ namespace app {
       string::size_type tlen = search_text.length();
       unsigned int found = 0;
       time.start();
-      for (int loop = 0; loop < LOOPS2; ++loop) {
+      for (size_t loop = 0; loop < LOOPS2; ++loop) {
 	    string::size_type p = 0;
 	    while (p != string::npos) {
 	      p = text.find(search_text, p);
@@ -223,7 +224,7 @@ namespace app {
       }
       time.stop();
       if (times == 1) {
-	outputMessage(str(format("%d BOOST found!"ENDL) % found));
+	outputMessage(str(format("%d BOOST found!" ENDL) % found));
       }
       if (txt != 0) delete [] txt;
       return time.getTotalTime();

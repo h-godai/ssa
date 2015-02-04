@@ -1,0 +1,28 @@
+302 Allocator2 Test (LargeObject) : 300000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector push_back performance,37047.132,100.000
+#2:oreore allocator vector push_back performance,8898.859,24.0204
+#3:boost::vector  push_back performance,22793.777,61.5264,0,0,0,11
+#4:oreore allocator boost::vector  push_back performance,5803.995,15.6665,0,0,0,11
+#5:boost::allocator1 boost::vector push_back performance,17583.951,47.4637,0,0,0,11
+#6:boost::allocator2 boost::vector push_back performance,22234.412,60.0166,7,0,0,5
+302 Allocator2 Test (LargeObject) : 200000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector push_back performance,33220.146,100.000
+#2:oreore allocator vector push_back performance,6555.621,19.7339
+#3:boost::vector  push_back performance,19096.571,57.4849,0,0,0,11
+#4:oreore allocator boost::vector  push_back performance,4442.580,13.3732,0,0,0,11
+#5:boost::allocator1 boost::vector push_back performance,12364.252,37.2191,0,0,0,11
+#6:boost::allocator2 boost::vector push_back performance,13097.221,39.4255,9,0,0,3
+302 Allocator2 Test (LargeObject) : 240000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector push_back performance,35213.055,100.000
+#2:oreore allocator vector push_back performance,8127.516,23.081
+#3:boost::vector  push_back performance,23812.485,67.624,0,0,0,12
+#4:oreore allocator boost::vector  push_back performance,6543.863,18.5836,0,0,0,12
+#5:boost::allocator1 boost::vector push_back performance,18034.525,51.2155,0,0,0,12
+#6:boost::allocator2 boost::vector push_back performance,12604.502,35.795,8,0,0,4
+302 Allocator2 Test (LargeObject) : 240000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector push_back performance,40031.504,100.000
+#2:oreore allocator vector push_back performance,10952.328,27.3593
+#3:boost::vector  push_back performance,27980.872,69.8971,0,0,0,12
+#4:oreore allocator boost::vector  push_back performance,8836.926,22.0749,0,0,0,12
+#5:boost::allocator1 boost::vector push_back performance,24734.442,61.7874,0,0,0,12
+#6:boost::allocator2 boost::vector push_back performance,19540.732,48.8134,7,0,0,5

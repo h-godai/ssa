@@ -379,6 +379,18 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\libTS\math\piml\trigonometric_table.cpp"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
 				RelativePath="..\VectorTest.cpp"
 				>
 			</File>

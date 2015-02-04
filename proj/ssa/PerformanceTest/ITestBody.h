@@ -1,11 +1,15 @@
-// ITestBody.h
+// ITestBody.h -*-c++-*-
 #pragma once
 
+#include <string.h>
+#include <vector>
+#include <string>
 #include <boost/shared_ptr.hpp>
 #include "ITestForm.h"
 
 namespace app {
   using boost::shared_ptr;
+  using std::string;
 
   class ITestBody {
   public:
@@ -32,6 +36,16 @@ namespace app {
     // 1テストあたりのループ数を返す
     virtual size_t getTestLoops(int) const { return 1; }
 
+	bool operator < (const ITestBody& b) const {
+	  return string(getTestName()) < string(b.getTestName());
+	}
+	
+	const string& getAdditionalTitles() const { return additionalTitles_; }
+	string getAdditionalResult(size_t n) const { 
+	  if (n < additionalResults_.size()) return additionalResults_[n];
+	  return "";
+	}
+
   private:
     // テスト実行の実装
     virtual double doTestImpl(int testNum, int sequence) = 0;
@@ -45,12 +59,20 @@ namespace app {
       }
     }
 
+	void setAdditionalTitles(const string& s) { additionalTitles_ = s; }
+	void addAdditionalResults(const string& s)  { additionalResults_.push_back(s); }
+
+
     ITestForm::ptr testForm_;
+	std::string additionalTitles_;
+	std::vector<std::string> additionalResults_;
   
 
   };
 
-
+  inline bool operator < (const ITestBody::ptr& a, const ITestBody::ptr& b) {
+	return *a < *b;
+  }
 
 } // namespace
 

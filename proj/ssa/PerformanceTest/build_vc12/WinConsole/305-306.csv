@@ -1,0 +1,56 @@
+305 Allocator2 Insert Test (SmallObject) : 240000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector insert performance,30971.014,100.000
+#2:oreore allocator vector insert performance,29390.463,94.8967
+#3:boost::vector  insert performance,7060.993,22.7987,0,0,0,30
+#4:oreore allocator boost::vector  insert performance,3974.893,12.8342,0,0,0,30
+#5:boost::allocator1 boost::vector insert performance,4037.433,13.0362,0,0,0,30
+#6:boost::allocator2 boost::vector insert performance,4079.661,13.1725,5,8,0,18
+306 Allocator2 Insert Test (LargeObject) : 12000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector insert performance,1868117.211,100.000
+#2:oreore allocator vector insert performance,1919234.126,102.736
+#3:boost::vector  insert performance,736709.968,39.436,0,0,0,30
+#4:oreore allocator boost::vector  insert performance,705948.957,37.7893,0,0,0,30
+#5:boost::allocator1 boost::vector insert performance,722481.374,38.6743,0,0,0,30
+#6:boost::allocator2 boost::vector insert performance,825512.344,44.1895,6,3,0,23
+305 Allocator2 Insert Test (SmallObject) : 240000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector insert performance,10360.988,100.000
+#2:oreore allocator vector insert performance,9721.017,93.8233
+#3:boost::vector  insert performance,1833.349,17.6947,0,0,0,20
+#4:oreore allocator boost::vector  insert performance,1324.902,12.7874,0,0,0,20
+#5:boost::allocator1 boost::vector insert performance,1300.807,12.5549,0,0,0,20
+#6:boost::allocator2 boost::vector insert performance,1315.966,12.7012,3,5,0,12
+306 Allocator2 Insert Test (LargeObject) : 12000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector insert performance,621295.087,100.000
+#2:oreore allocator vector insert performance,591817.918,95.2555
+#3:boost::vector  insert performance,231911.474,37.3271,0,0,0,20
+#4:oreore allocator boost::vector  insert performance,210281.008,33.8456,0,0,0,20
+#5:boost::allocator1 boost::vector insert performance,219669.612,35.3567,0,0,0,20
+#6:boost::allocator2 boost::vector insert performance,223726.721,36.0097,6,3,0,16
+305 Allocator2 Insert Test (SmallObject) : 240000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector insert performance,3641.314,100.000
+#2:oreore allocator vector insert performance,3370.976,92.5758
+#3:boost::vector  insert performance,647.225,17.7745,0,0,0,10
+#4:oreore allocator boost::vector  insert performance,478.065,13.1289,0,0,0,10
+#5:boost::allocator1 boost::vector insert performance,482.860,13.2606,0,0,0,10
+#6:boost::allocator2 boost::vector insert performance,485.207,13.3251,0,3,0,7
+306 Allocator2 Insert Test (LargeObject) : 12000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector insert performance,217590.882,100.000
+#2:oreore allocator vector insert performance,197371.024,90.7074
+#3:boost::vector  insert performance,81587.851,37.496,0,0,0,10
+#4:oreore allocator boost::vector  insert performance,69843.147,32.0984,0,0,0,10
+#5:boost::allocator1 boost::vector insert performance,72428.641,33.2866,0,0,0,10
+#6:boost::allocator2 boost::vector insert performance,74033.625,34.0242,3,2,0,8
+305 Allocator2 Insert Test (SmallObject) : 240000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector insert performance,10503.100,100.000
+#2:oreore allocator vector insert performance,9722.361,92.5666
+#3:boost::vector  insert performance,1859.963,17.7087,0,0,0,20
+#4:oreore allocator boost::vector  insert performance,1322.118,12.5879,0,0,0,20
+#5:boost::allocator1 boost::vector insert performance,1301.383,12.3905,0,0,0,20
+#6:boost::allocator2 boost::vector insert performance,1315.763,12.5274,3,5,0,12
+306 Allocator2 Insert Test (LargeObject) : 12000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector insert performance,620956.736,100.000
+#2:oreore allocator vector insert performance,584352.388,94.1052
+#3:boost::vector  insert performance,231403.535,37.2656,0,0,0,20
+#4:oreore allocator boost::vector  insert performance,210386.763,33.8811,0,0,0,20
+#5:boost::allocator1 boost::vector insert performance,218754.962,35.2287,0,0,0,20
+#6:boost::allocator2 boost::vector insert performance,218192.094,35.1381,5,2,0,14

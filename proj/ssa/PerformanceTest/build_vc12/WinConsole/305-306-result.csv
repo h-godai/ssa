@@ -1,0 +1,14 @@
+305 Allocator2 Insert Test (SmallObject) : 240000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector insert performance,689.367,100.000
+#2:oreore allocator vector insert performance,49.342,7.15757
+#3:boost::vector  insert performance,662.019,96.0329,0,0,0,31
+#4:oreore allocator boost::vector  insert performance,47.248,6.85387,0,0,0,31
+#5:boost::allocator1 boost::vector insert performance,57.604,8.35603,0,0,0,31
+#6:boost::allocator2 boost::vector insert performance,42.844,6.21491,14,0,0,17
+306 Allocator2 Insert Test (LargeObject) : 12000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector insert performance,33038.570,100.000
+#2:oreore allocator vector insert performance,6470.188,19.5837
+#3:boost::vector  insert performance,50000.760,151.341,0,0,0,31
+#4:oreore allocator boost::vector  insert performance,6500.428,19.6753,0,0,0,31
+#5:boost::allocator1 boost::vector insert performance,6996.386,21.1764,0,0,0,31
+#6:boost::allocator2 boost::vector insert performance,4312.591,13.0532,14,0,0,17

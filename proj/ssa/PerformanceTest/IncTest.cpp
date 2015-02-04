@@ -22,7 +22,7 @@ namespace {
   
 
   static ElementType mapElement;
-  bool initialized = false;
+  //bool initialized = false;
 }
 
 

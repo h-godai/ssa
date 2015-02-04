@@ -1,0 +1,27 @@
+020 Container Push Test (SmallObject) : 6000000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:using std::vector,50.529,100.000,1,0.000,0.000,0,0
+#2:using boost::container::vector,68.290,135.149,2,0.000,0.000,0,0
+#3:using std::deque,43.970,87.0188,3,0.000,0.000,0,0
+#4:using boost::container::deque,57.584,113.961,4,0.000,0.000,0,0
+#5:using boost::fibonacci_heap,258.406,511.397,5,0.000,0.000,0,0
+#6:using std::priority_queue,110.797,219.274,6,0.000,0.000,0,0
+#7:using boost::stable_vector,429.208,849.423,7,81.234,81.234,2017,16
+021 Container Push Test (LargeObject) : 20000 samples ,average, %,num,allocated(Kb),peak_allocated(Kb),alloc count, free count
+#1:using std::vector,14889.050,100.000,1,0.000,0.000,0,0
+#2:using boost::container::vector,7114.450,47.7831,2,0.000,0.000,0,0
+#3:using std::deque,2014.250,13.5284,3,0.000,0.000,0,0
+#4:using boost::container::deque,1917.050,12.8756,4,0.000,0.000,0,0
+#5:using boost::fibonacci_heap,2995.950,20.1218,5,0.000,0.000,0,0
+#6:using std::priority_queue,6961.150,46.7535,6,0.000,0.000,0,0
+#7:using boost::stable_vector,2846.800,19.1201,7,4049.984,4049.984,2017,16
+030 Element Test (SmallObject) : 20000000 samples ,average, %
+#1:construct,7.218,100.000
+#2:copy,7.189,99.5961
+031 Element Test (LargeObject) : 2000000 samples ,average, %
+#1:construct,444.451,100.000
+#2:copy,55.118,12.4014
+003 boost pool performance test : 1 samples ,average, %
+#1:standerd new/delete,180827000.000,100.000
+#2:TS simple allocator,31089000.000,17.1927
+#3:boost pool,20222000.000,11.1831
+#4:TS pool,11157000.000,6.16999

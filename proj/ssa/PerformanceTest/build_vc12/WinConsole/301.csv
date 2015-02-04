@@ -1,0 +1,7 @@
+301 Allocator2 Test (SmallObject) : 6000000 samples ,average, %,num_expand_fwd,num_expand_bwd,num_shrink,num_alloc
+#1:std::allocator vector push_back performance,1898.509,100.000
+#2:oreore allocator vector push_back performance,65.203,3.43443
+#3:boost::vector  push_back performance,1248.609,65.7679,0,0,0,12
+#4:oreore allocator boost::vector  push_back performance,64.070,3.37473,0,0,0,12
+#5:boost::allocator1 boost::vector push_back performance,61.381,3.23312,0,0,0,12
+#6:boost::allocator2 boost::vector push_back performance,30.082,1.58453,11,0,0,1

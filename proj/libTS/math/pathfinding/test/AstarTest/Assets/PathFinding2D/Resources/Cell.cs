@@ -11,7 +11,7 @@ namespace Tsl.UI.Pathfinder
         public Text Text;
         public Image Image;
         public AstarCell AstarCell;
-        public Color[] CellColor = new Color[8];
+        public Color[] CellColor = new Color[9];
 
         public AstarCell.Type CellType
         {

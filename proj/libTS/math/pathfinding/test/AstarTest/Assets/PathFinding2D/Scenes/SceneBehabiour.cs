@@ -13,6 +13,7 @@ public class SceneBehabiour : MonoBehaviour {
     public int GridHeight = 16;
     public Vector2 StartPoint = new Vector2(0, 0);
     public Vector2 GoalPoint = new Vector2(15, 15);
+    public UnityEngine.UI.Text MessageText;
 
     private bool goled = false;
 
@@ -36,16 +37,47 @@ public class SceneBehabiour : MonoBehaviour {
         }
     }
 
+    private void Update()
+    {
+        this.MessageText.text = string.Format("{0}Nodes\n{1}Links\n{2}Paths",
+            AStarPathfinder2D.Instance.NumOfNodes,
+            AStarPathfinder2D.Instance.NumOfLinks,
+            AStarPathfinder2D.Instance.PathCount);
+
+    }
+
+    public void Reset()
+    {
+        AStarPathfinder2D.Instance.Reset();
+        this.goled = false;
+    }
+
     public void OnClickStartButton()
     {
         if (this.goled)
         {
-            AStarPathfinder2D.Instance.Reset();
-            this.goled = false;
+            Reset();
         }
         else
         {
-            AStarPathfinder2D.Instance.PathFind(this.StartPoint, this.GoalPoint, r => { this.goled = true; });
+            AStarPathfinder2D.Instance.PathFind(this.StartPoint, this.GoalPoint, r => 
+            {
+                DrawLine(r);
+                this.goled = true;
+            });
+        }
+    }
+
+    private void DrawLine(List<Vector2> lines)
+    {
+        for (int i = 0; i < lines.Count - 1; ++i)
+        {
+            AStarPathfinder2D.Instance.RaycastCell(lines[i], lines[i + 1], (x, y) =>
+              {
+                  var cell = AStarPathfinder2D.Instance.CellMap(x, y);
+                  if (cell.CellType == AstarCell.Type.Removed) cell.CellType = AstarCell.Type.SkipPoint;
+                  return false;
+              });
         }
     }
 

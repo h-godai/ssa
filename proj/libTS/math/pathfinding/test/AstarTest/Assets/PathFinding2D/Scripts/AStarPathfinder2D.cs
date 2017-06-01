@@ -7,6 +7,8 @@ namespace Tsl.Math.Pathfinder
 {
     public class AStarPathfinder2D : MonoBehaviour
     {
+        public float TileSize = 1.0f;
+
         public static AStarPathfinder2D Instance;
 
         public enum ExecuteMode
@@ -24,7 +26,7 @@ namespace Tsl.Math.Pathfinder
         private Vector2 StartPoint = new Vector2(0, 0);
         private Vector2 GoalPoint = new Vector2(15, 15);
 
-        public float TileSize = 1.0f;
+        private int pathCount;
         private int GridWidth {  get {  return (int)(this.MapRect.width / this.TileSize);} }
         private int GridHeight {  get {  return (int)(this.MapRect.height / this.TileSize);} }
 
@@ -54,6 +56,20 @@ namespace Tsl.Math.Pathfinder
         void Update()
         {
 
+        }
+
+        public int NumOfNodes
+        {
+            get { return this.cellMapBody.Where(c => c.CellType != AstarCell.Type.Removed && c.CellType != AstarCell.Type.Block).Count();}
+        }
+        public int NumOfLinks
+        {
+            get { return this.cellMapBody.Where(c => c.CellType != AstarCell.Type.Removed && c.CellType != AstarCell.Type.Block).Select(c => c.Related.Count).Sum(); }
+        }
+
+        public int PathCount
+        {
+            get { return this.pathCount; }
         }
 
         // intで評価されるmapRectのグリッドセルで初期化
@@ -126,6 +142,7 @@ namespace Tsl.Math.Pathfinder
             this.GoalPoint = goal;
             this.CellMap(start.x, start.y).CellType = AstarCell.Type.Start;
             this.CellMap(goal.x, goal.y).CellType = AstarCell.Type.Goal;
+            this.pathCount = 0;
 
             if (this.first)
             {   // スタートマスの回りをスキャン
@@ -164,9 +181,9 @@ namespace Tsl.Math.Pathfinder
             }
             if (onEnd != null) onEnd(this.pathList);
         }
-
         private void pathFindProcess()
-        { 
+        {
+            ++this.pathCount;
             var cells = this.cellMapBody.Where(c => c.CellType == AstarCell.Type.Open)
                         .OrderBy(c => c.Score)
                         .ThenBy(c => c.Cost);
@@ -190,8 +207,8 @@ namespace Tsl.Math.Pathfinder
         List<Vector2> pathList;
         private void Goal(AstarCell cell)
         {
-            this.pathfindFinished = true;
             this.pathList = new List<Vector2>();
+            this.pathList.Add(this.GoalPoint);
             var parent = cell;
             while (parent.Parent != null)
             {
@@ -199,7 +216,9 @@ namespace Tsl.Math.Pathfinder
                 parent.CellType = AstarCell.Type.Correct;
                 parent = parent.Parent;
             }
+            this.pathList.Add(this.StartPoint);
             this.pathList.Reverse();
+            this.pathfindFinished = true;
         }
 
         private void ScanAround(AstarCell parent)
@@ -265,11 +284,23 @@ namespace Tsl.Math.Pathfinder
                 for (int i = 0; i < ((step == 0 || step == 2) ? this.GridWidth : this.GridHeight); ++i)
                 {
                     // raycast
-                    var rcell = raycastCell(parent.Position, new Vector2(x, y));
-                    if (rcell != null && rcell.CellType == AstarCell.Type.Empty && !parent.Related.Contains(rcell))
-                    {
-                        parent.Related.Add(rcell);
-                    }
+                    RaycastCell(parent.Position, new Vector2(x, y),
+                        (cx, cy) =>
+                        {
+                            var rcell = this.CellMap(cx, cy);
+                            if (rcell.CellType != AstarCell.Type.Removed)
+                            {
+                                if (rcell.CellType == AstarCell.Type.Empty && !parent.Related.Contains(rcell))
+                                {
+                                    parent.Related.Add(rcell);
+                                }
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        });
                     x += dxy[step,0] * this.TileSize;
                     y += dxy[step,1] * this.TileSize;
                 }
@@ -277,7 +308,8 @@ namespace Tsl.Math.Pathfinder
         }
 
         // DDAでレイキャスト
-        private AstarCell raycastCell(Vector2 src, Vector2 target)
+        // (src,target] までDDAでトレースする
+        public void RaycastCell(Vector2 src, Vector2 target, System.Func<float,float, bool> act)
         {   
             float x = src.x;
             float y = src.y;
@@ -293,8 +325,7 @@ namespace Tsl.Math.Pathfinder
                     y += sy;
                     dx -= this.TileSize;
                     if (dx < 0.0f) break;
-                    var cell = this.CellMap(x, y);
-                    if (cell.CellType != AstarCell.Type.Removed) return cell;
+                    if (act(x, y)) return;
                 }
             }
             else if (dx > dy)
@@ -309,8 +340,7 @@ namespace Tsl.Math.Pathfinder
                         r += dx;
                         y += sy;
                     }
-                    var cell = this.CellMap(x, y);
-                    if (cell.CellType != AstarCell.Type.Removed) return cell;
+                    if (act(x, y)) return;
                 }
             }
             else
@@ -325,11 +355,9 @@ namespace Tsl.Math.Pathfinder
                         r += dy;
                         x += sx;
                     }
-                    var cell = this.CellMap(x, y);
-                    if (cell.CellType != AstarCell.Type.Removed) return cell;
+                    if (act(x, y)) return;
                 }
             }
-            return null;
         }
     }
 }

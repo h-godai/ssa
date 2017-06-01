@@ -15,7 +15,8 @@ namespace Tsl.Math.Pathfinder
             Close,
             Block,
             Correct,
-            Removed
+            Removed,
+            SkipPoint,
         }
         public Vector2 Position;
         public Type CellType = Type.Removed;

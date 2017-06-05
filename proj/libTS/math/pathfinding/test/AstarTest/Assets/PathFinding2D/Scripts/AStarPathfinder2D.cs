@@ -8,6 +8,7 @@ namespace Tsl.Math.Pathfinder
     public class AStarPathfinder2D : MonoBehaviour
     {
         public float TileSize = 1.0f;
+        public bool GridMode = true; // 最適化時に、結果をグリッドのリストに変換する
 
         public static AStarPathfinder2D Instance;
 
@@ -34,11 +35,26 @@ namespace Tsl.Math.Pathfinder
         {
             int ix = (int)((x - this.MapRect.x) / this.TileSize + 0.5f);
             int iy = (int)((y - this.MapRect.y) / this.TileSize + 0.5f);
+            if ( x < this.MapRect.x || y < this.MapRect.y) return -1;
+            if (ix < 0 || ix >= this.GridWidth || iy < 0 || iy >= this.GridHeight) return -1;
             return iy * this.GridWidth + ix;
         }
         public AstarCell CellMap(float x, float y)
         {
-            return cellMapBody[cellIndex(x, y)];
+            int index = cellIndex(x, y);
+            if (index < 0 || index >= cellMapBody.Count())
+            {
+                Debug.LogError(string.Format("Invalid position: ({0},{1})", x, y));
+                return null;
+            }
+            return cellMapBody[index];
+        }
+
+        public AstarCell.Type CellType(float x, float y)
+        {
+            int index = cellIndex(x, y);
+            if (index < 0) return AstarCell.Type.Block;
+            return CellMap(x, y).CellType;
         }
 
         void Awake()
@@ -109,30 +125,94 @@ namespace Tsl.Math.Pathfinder
             {
                 if (cell.CellType != AstarCell.Type.Block)
                     cell.CellType = AstarCell.Type.Empty;
-                setGridRelated(cell);
+                if (!optimizing)
+                {
+                    setGridRelated(cell);
+                }
+                else
+                {
+                    cell.Related.Clear();
+                }
             }
 
+            // 基本的なAStartでは処理が冗長のため、最適化を行う
             if (optimizing)
             {
-                // 8方向全部リンクがあるセルを削除
-                var octcells = this.cellMapBody.Where(c => c.Related.Count == 8);
+                // 8方向全部がEmptyであるセルを削除
+                var octcells = this.cellMapBody.Where(c =>
+                {
+                    if (c.CellType != AstarCell.Type.Empty) return false;
+                    for (int ix = -1; ix < 2; ++ix)
+                    {
+                        for (int iy = -1; iy < 2; ++iy)
+                        {
+                            if (ix == 0 && iy == 0) continue;
+                            if (this.CellType(c.Position.x + (ix * this.TileSize), c.Position.y + (iy * this.TileSize))
+                            != AstarCell.Type.Empty) return false;
+                        }
+                    }
+                    return true;
+                }
+                ).ToList();
                 foreach (var cell in octcells)
                 {
                     cell.CellType = AstarCell.Type.Removed;
                 }
-                var allcell = this.cellMapBody.Where(c => c.CellType != AstarCell.Type.Removed);
-                foreach (var cell in allcell)
+
+                // 角以外のセルを削除
+                List<AstarCell> removeList = new List<AstarCell>();
+                foreach(var cell in this.cellMapBody.Where(c => c.CellType == AstarCell.Type.Empty))
                 {
-                    setGridRelatedSearchLink(cell);
+                    var pos = cell.Position;
+                    AstarCell.Type[,] ar = new AstarCell.Type[3,3]; // check around
+                    for (int ix = -1; ix < 2; ++ix)
+                    {
+                        for (int iy = -1; iy < 2; ++iy)
+                        {
+                            if (ix == 0 && iy == 0) continue;
+                            float x = pos.x + (ix * this.TileSize);
+                            float y = pos.y + (iy * this.TileSize);
+                            ar[ix+1,iy+1] = this.CellType(x, y);
+                        }
+                    }
+                    // 縦横3連ブロックチェック
+                    for (int inv = 0; inv < 2; ++inv)
+                    {
+                        System.Func<int, int, AstarCell.Type> m = (x, y) =>
+                          {
+                              return inv == 0 ? ar[x, y] : ar[y, x];
+                          };
+
+                        for (int s = 0; s <= 2; s += 2)
+                        {
+                            int u = 2 - s;
+                            if (m(s, 0) == m(s, 1) && m(s, 1) == m(s, 2) && m(s, 0) == AstarCell.Type.Block)
+                            {
+                                if (m(1, 0) == AstarCell.Type.Empty && m(1, 2) == AstarCell.Type.Empty)
+                                {
+                                    if (m(u, 0) != AstarCell.Type.Block
+                                     && m(u, 1) != AstarCell.Type.Block
+                                     && m(u, 2) != AstarCell.Type.Block)
+                                    {
+                                        removeList.Add(cell);
+                                    }
+                                }
+                                if (m(1, 0) == AstarCell.Type.Empty || m(1, 2) == AstarCell.Type.Empty)
+                                {
+                                    if ((m(1, 2) == AstarCell.Type.Block && m(u, 2) == AstarCell.Type.Block && m(u, 0) != AstarCell.Type.Block) 
+                                    ||  (m(1, 0) == AstarCell.Type.Block && m(u, 0) == AstarCell.Type.Block && m(u, 2) != AstarCell.Type.Block))
+                                    {
+                                        removeList.Add(cell);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-            }
-        }
-        private void mergeLink(AstarCell src, AstarCell dst)
-        {
-            foreach(var r in src.Related)
-            {
-                if (r == src || r == dst) continue;
-                if (!dst.Related.Contains(r)) dst.Related.Add(r);
+                foreach (var cell in removeList)
+                {
+                    cell.CellType = AstarCell.Type.Removed;
+                }
             }
         }
 
@@ -218,33 +298,61 @@ namespace Tsl.Math.Pathfinder
             }
             this.pathList.Add(this.StartPoint);
             this.pathList.Reverse();
+            if (this.GridMode)
+            {
+                this.pathList = fillGrid(this.pathList);
+            }
             this.pathfindFinished = true;
         }
 
+        private List<Vector2> fillGrid(List<Vector2> lines)
+        {
+            List<Vector2> result = new List<Vector2>();
+            for (int i = 0; i < lines.Count - 1; ++i)
+            {
+                if (i == 0) result.Add(lines[i]);
+                AStarPathfinder2D.Instance.RaycastCell(lines[i], lines[i + 1], (x, y) =>
+                  {
+                      var cell = AStarPathfinder2D.Instance.CellMap(x, y);
+                      if (cell.CellType == AstarCell.Type.Removed) cell.CellType = AstarCell.Type.SkipPoint;
+                      result.Add(new Vector2(x,y));
+                      return false;
+                  });
+            }
+            return result;
+        }
+
+
         private void ScanAround(AstarCell parent)
         {
-            foreach(var cell in parent.Related)
+            if (parent.Related.Count == 0)
+            {   // 接続情報がない場合は作成する
+                setGridRelatedSearchRaycast(parent);
+            }
+            foreach(var related in parent.Related)
             { 
-                if (cell.CellType == AstarCell.Type.Goal)
+                if (related.cell.CellType == AstarCell.Type.Goal)
                 {   // !! GOAL!
                     Goal(parent);
                     return;
                 }
 
-                float cost = parent.Cost + (cell.Position - parent.Position).magnitude;
-                float hint = (this.GoalPoint - cell.Position).magnitude;
+                //float cost = parent.Cost + (related.cell.Position - parent.Position).magnitude;
+                float cost = parent.Cost + related.cost;
+                float hint = (this.GoalPoint - related.cell.Position).magnitude;
                 float score = cost + hint;
-                if (cell.CellType == AstarCell.Type.Empty || cell.Score > score)
+                if (related.cell.CellType == AstarCell.Type.Empty || related.cell.Score > score)
                 {
-                    cell.Cost = cost;
-                    cell.Hint = hint;
-                    cell.Score = score;
-                    cell.Parent = parent;
-                    cell.CellType = AstarCell.Type.Open;
+                    related.cell.Cost = cost;
+                    related.cell.Hint = hint;
+                    related.cell.Score = score;
+                    related.cell.Parent = parent;
+                    related.cell.CellType = AstarCell.Type.Open;
                 }
             }
         }
 
+        // 上下左右斜めのグリッドに対してリンクを作成する
         private void setGridRelated(AstarCell parent)
         {
             parent.Related.Clear();
@@ -263,16 +371,70 @@ namespace Tsl.Math.Pathfinder
                     var cell = this.CellMap(nx, ny);
                     if (cell != null && cell.CellType != AstarCell.Type.Block)
                     {
-                        parent.Related.Add(this.CellMap(nx, ny));
+                        parent.AddRelated(this.CellMap(nx, ny), (cell.Position - parent.Position).magnitude);
                     }
                 }
             }
         }
 
-        // 全方位に有効なセルをスキャンして接続先とする
-        private void setGridRelatedSearchLink(AstarCell parent)
+        // 到達可能なノードを全ノードからレイキャストして調べる
+        public void setGridRelatedSearchRaycast(AstarCell parent)
         {
-            parent.Related.Clear();
+            parent.ClearRelated();
+            foreach (var cell in this.cellMapBody.Where(c => c.IsValidCell()))
+            {
+                if (cell == parent) continue;
+                var fromCell = cell.Find(parent);
+                if (fromCell.cell != null)
+                {   // 相手から自分が見えている場合
+                    if (!parent.Contains(cell))
+                    {
+                        parent.AddRelated(cell, fromCell.cost);
+                    }
+                    continue;
+                }
+                // raycast
+                float cost = 0;
+                var prevPos = parent.Position;
+                RaycastCell(parent.Position, cell.Position,
+                        (cx, cy) =>
+                        {
+                            if (this.GridMode)
+                            {
+                                var nowpos = new Vector2(cx, cy);
+                                cost += (nowpos - prevPos).magnitude;
+                                prevPos = nowpos;
+                            }
+                            var type = this.CellType(cx, cy);
+                            if (type != AstarCell.Type.Removed)
+                            {   // 何かあった
+                                if (type != AstarCell.Type.Block)
+                                {   // ブロックもしくは圏外ではない場合
+                                    var rcell = this.CellMap(cx, cy);
+                                    if (rcell == cell)
+                                    {   // 見つかった!
+                                        if (!parent.Contains(cell))
+                                        {
+                                            if (!this.GridMode) cost = (cell.Position - parent.Position).magnitude;
+                                            parent.AddRelated(cell, cost);
+                                        }
+                                    }
+                                }
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        });
+            }
+        }
+
+        // 全方位に有効なセルをスキャンして接続先とする
+        private void setGridRelatedSearchAround(AstarCell parent)
+        {
+            parent.ClearRelated();
+
             float[,] dxy = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { -1, -1 } };
             float x = 0.0f;
             float y = 0.0f;
@@ -287,12 +449,16 @@ namespace Tsl.Math.Pathfinder
                     RaycastCell(parent.Position, new Vector2(x, y),
                         (cx, cy) =>
                         {
-                            var rcell = this.CellMap(cx, cy);
-                            if (rcell.CellType != AstarCell.Type.Removed)
+                            var type = this.CellType(cx, cy);
+                            if (type != AstarCell.Type.Removed)
                             {
-                                if (rcell.CellType == AstarCell.Type.Empty && !parent.Related.Contains(rcell))
+                                if (type == AstarCell.Type.Empty)
                                 {
-                                    parent.Related.Add(rcell);
+                                    var rcell = this.CellMap(cx, cy);
+                                    if (rcell.CellType == AstarCell.Type.Empty && !parent.Contains(rcell))
+                                    {
+                                        parent.AddRelated(rcell, (new Vector2(x, y) - parent.Position).magnitude);
+                                    }
                                 }
                                 return true;
                             }

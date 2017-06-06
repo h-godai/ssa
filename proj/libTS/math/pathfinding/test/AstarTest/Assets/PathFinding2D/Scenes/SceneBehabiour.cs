@@ -14,6 +14,7 @@ public class SceneBehabiour : MonoBehaviour {
     public Vector2 StartPoint = new Vector2(0, 0);
     public Vector2 GoalPoint = new Vector2(15, 15);
     public UnityEngine.UI.Text MessageText;
+    public UnityEngine.UI.Text TestText;
 
     private bool goled = false;
 
@@ -131,6 +132,9 @@ public class SceneBehabiour : MonoBehaviour {
     }
     private IEnumerator AutoTest()
     {
+        double basicTime = 0.0;
+        double optimizedTime = 0.0;
+        int testCount = 0;
         for (int cnt = 0; cnt < 100; ++cnt)
         {
             OnClickClear();
@@ -139,39 +143,47 @@ public class SceneBehabiour : MonoBehaviour {
             OnClickRandomMake();
             Reset();
             OnClickMapMakeButton(false);
+            yield return null;
 
-            this.StartPoint = new Vector2(Random.Range(0, this.GridWidth/2), Random.Range(0, this.GridHeight/2));
-            this.GoalPoint = new Vector2(Random.Range(0, this.GridWidth/2) + this.GridWidth/2, Random.Range(0, this.GridHeight/2)+this.GridHeight/2);
+            this.StartPoint = new Vector2(Random.Range(0, this.GridWidth/3), Random.Range(0, this.GridHeight/3));
+            this.GoalPoint = new Vector2(Random.Range(0, this.GridWidth/3) + this.GridWidth*2/3, Random.Range(0, this.GridHeight/3)+this.GridHeight*2/3);
             this.goled = false;
+            var now = System.DateTime.Now;
             AStarPathfinder2D.Instance.PathFind(this.StartPoint, this.GoalPoint, r => 
             {
-                if (r == null) Debug.LogError("r is null");
+                basicTime += (System.DateTime.Now - now).TotalSeconds;
                 DrawLine(r);
                 this.goled = true;
             }, Tsl.Math.Pathfinder.AStarPathfinder2D.ExecuteMode.Sync);
 
             while (!this.goled) yield return null;
             yield return null;
-            yield return new WaitForSeconds(0.2f);
             var dis = this.distance;
-            //if (dis == 0.0f) break;
             Reset();
             this.goled = false;
             OnClickMapMakeButton(true);
+            now = System.DateTime.Now;
             AStarPathfinder2D.Instance.PathFind(this.StartPoint, this.GoalPoint, r => 
             {
+                optimizedTime += (System.DateTime.Now - now).TotalSeconds;
                 DrawLine(r);
                 this.goled = true;
             }, Tsl.Math.Pathfinder.AStarPathfinder2D.ExecuteMode.Sync);
             while (!this.goled) yield return null;
             yield return null;
 
-
-            if (dis != 0.0f && Mathf.Abs(dis - this.distance) > 0.01f)
+            if (dis != 0.0f)
             {
-                Debug.Log(string.Format("distance not equal opt:{0} as {1}", dis, this.distance));
-                break;
+                ++testCount;
+                if (Mathf.Abs(dis - this.distance) > 0.01f)
+                {
+                    Debug.Log(string.Format("distance not equal opt:{0} as {1}", dis, this.distance));
+                    break;
+                }
             }
+
+            TestText.text = string.Format("{0} tests\n       basic: {1:0.000} / {2:0.000}\noptimized: {3:0.000} / {4:0.000}",
+                             testCount, basicTime, basicTime/testCount, optimizedTime,  optimizedTime/testCount);
 
             yield return null;
             Reset();

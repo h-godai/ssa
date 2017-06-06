@@ -213,8 +213,16 @@ namespace Tsl.Math.Pathfinder
                 {
                     cell.CellType = AstarCell.Type.Removed;
                 }
+
+                foreach(var cell in this.cellMapBody.Where(c => c.CellType == AstarCell.Type.Empty))
+                {
+                    setGridRelatedSearchRaycast(cell);
+                }
+
             }
         }
+
+        private AstarCell goalCell;
 
         public void PathFind(Vector2 start, Vector2 goal, System.Action<List<Vector2>> onEnd = null, ExecuteMode mode = ExecuteMode.ASync)
         {
@@ -223,10 +231,16 @@ namespace Tsl.Math.Pathfinder
             this.CellMap(start.x, start.y).CellType = AstarCell.Type.Start;
             this.CellMap(goal.x, goal.y).CellType = AstarCell.Type.Goal;
             this.pathCount = 0;
+            this.pathfindFinished = false;
+            this.goalCandidate.Clear();
 
             if (this.first)
             {   // スタートマスの回りをスキャン
+                this.goalCell = this.cellMapBody.FirstOrDefault(c => c.CellType == AstarCell.Type.Goal);
+                setGridRelatedSearchRaycast(goalCell, true);
+
                 var startCell = this.cellMapBody.FirstOrDefault(c => c.CellType == AstarCell.Type.Start);
+                setGridRelatedSearchRaycast(startCell, true);
                 ScanAround(startCell);
                 this.first = false;
             }
@@ -274,13 +288,20 @@ namespace Tsl.Math.Pathfinder
                 foreach (var cell in cells.Where(c => c.Score == score))
                 {
                     ScanAround(cell);
-                    if (this.pathfindFinished) break;
                     cell.CellType = AstarCell.Type.Close;
                 }
             }
             else
             {   // 解決不能
                 this.pathfindFinished = true;
+            }
+            if (this.goalCandidate.Any())
+            {   // goalしたものがいる場合、open cellでgoalよりスコアが良いものが無いか探す
+                var goal = this.goalCandidate.OrderBy(g => g.Key).ElementAt(0);
+                if (!this.cellMapBody.Any(c => c.CellType == AstarCell.Type.Open && c.Score < goal.Key))
+                {
+                    Goal(goal.Value);
+                }
             }
         }
 
@@ -322,6 +343,7 @@ namespace Tsl.Math.Pathfinder
             return result;
         }
 
+        Dictionary<float, AstarCell> goalCandidate = new Dictionary<float, AstarCell>();
 
         private void ScanAround(AstarCell parent)
         {
@@ -333,8 +355,17 @@ namespace Tsl.Math.Pathfinder
             { 
                 if (related.cell.CellType == AstarCell.Type.Goal)
                 {   // !! GOAL!
-                    Goal(parent);
-                    return;
+                    var goalcost = parent.Cost + related.cost;
+                    related.cell.Cost = goalcost;
+                    related.cell.Score = goalcost;
+                    if (this.goalCandidate.ContainsKey(goalcost))
+                    {
+                        this.goalCandidate[goalcost] = parent;
+                    }
+                    else
+                    {
+                        this.goalCandidate.Add(goalcost, parent);
+                    }
                 }
 
                 //float cost = parent.Cost + (related.cell.Position - parent.Position).magnitude;
@@ -378,7 +409,7 @@ namespace Tsl.Math.Pathfinder
         }
 
         // 到達可能なノードを全ノードからレイキャストして調べる
-        public void setGridRelatedSearchRaycast(AstarCell parent)
+        public void setGridRelatedSearchRaycast(AstarCell parent, bool newCell = false)
         {
             parent.ClearRelated();
             foreach (var cell in this.cellMapBody.Where(c => c.IsValidCell()))
@@ -417,6 +448,10 @@ namespace Tsl.Math.Pathfinder
                                         {
                                             if (!this.GridMode) cost = (cell.Position - parent.Position).magnitude;
                                             parent.AddRelated(cell, cost);
+                                            if (newCell && !cell.Contains(parent))
+                                            {
+                                                cell.AddRelated(parent, cost);
+                                            }
                                         }
                                     }
                                 }

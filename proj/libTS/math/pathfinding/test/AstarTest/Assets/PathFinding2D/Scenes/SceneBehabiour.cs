@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using AStarPathfinder2D = Tsl.Math.Pathfinder.AStarPathfinder2D;
+using AStarPathfinder2DBasic = Tsl.Math.Pathfinder.AStarPathfinder2DBasic;
+
 using AstarCell = Tsl.Math.Pathfinder.AstarCell;
 
 public class SceneBehabiour : MonoBehaviour {
@@ -37,6 +39,7 @@ public class SceneBehabiour : MonoBehaviour {
             }
 
         }
+        AStarPathfinder2DBasic.Instance.MapInit(AStarPathfinder2D.Instance);
     }
 
     private void Update()
@@ -94,7 +97,10 @@ public class SceneBehabiour : MonoBehaviour {
 
     public void OnClickMapMakeButton(bool opt)
     {
-        AStarPathfinder2D.Instance.MapMake(opt);
+        if (opt)
+            AStarPathfinder2D.Instance.MapMake();
+        else
+            AStarPathfinder2DBasic.Instance.MapMake();
     }
 
     public void OnClickRandomMake()

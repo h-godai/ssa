@@ -8,23 +8,29 @@ namespace Tsl.Math.Pathfinder
 
     public class AStarPathfindLogic
     { 
-        int pathCount = 0;
-        bool pathfindFinished = false;
-        System.Action<AstarCell> MakeRelation;
-        System.Action<AstarCell> Goal;
         public List<AstarCell> cells;
         public AstarCell startCell;
         public AstarCell goalCell;
 
+        private int pathCount = 0;
+        private bool pathfindFinished = false;
+        private System.Action<AstarCell> MakeRelation;
+        private System.Action<List<Vector2>> onGoal;
+        private Dictionary<float, AstarCell> goalCandidate = new Dictionary<float, AstarCell>();
+
         public bool Finished {  get {  return this.pathfindFinished; } }
         public int PathCount {  get {  return this.pathCount; } }
 
-        public void PathFind(System.Action<AstarCell> makeRelation, System.Action<AstarCell> goal)
+        public void PathFind(AstarCell startCell, 
+                             AstarCell goalCell, 
+                             System.Action<AstarCell> makeRelation, 
+                             System.Action<List<Vector2>> onGoal,
+                             bool initOnly = false)
         {
-            this.startCell = cells.First(c => c.CellType == AstarCell.Type.Start);
-            this.goalCell = cells.First(c => c.CellType == AstarCell.Type.Goal);
+            this.startCell = startCell;
+            this.goalCell = goalCell;
             this.MakeRelation = makeRelation;
-            this.Goal = goal;
+            this.onGoal = onGoal;
             this.pathCount = 0;
             this.pathfindFinished = false;
             this.goalCandidate.Clear();
@@ -34,6 +40,11 @@ namespace Tsl.Math.Pathfinder
             this.MakeRelation(this.startCell);
 
             ScanAround(this.startCell);
+
+            if (!initOnly)
+            {
+                while(!this.pathfindFinished) pathFindProcess();
+            }
         }
 
         public void pathFindProcess()
@@ -55,20 +66,18 @@ namespace Tsl.Math.Pathfinder
             else
             {   // 解決不能
                 this.pathfindFinished = true;
+                this.onGoal(null);
             }
             if (this.goalCandidate.Any())
             {   // goalしたものがいる場合、open cellでgoalよりスコアが良いものが無いか探す
                 var goal = this.goalCandidate.OrderBy(g => g.Key).ElementAt(0);
                 if (!this.cells.Any(c => c.CellType == AstarCell.Type.Open && c.Score < goal.Key))
                 {
-                    Goal(goal.Value);
+                    goaled(goal.Value);
                     this.pathfindFinished = true;
                 }
             }
         }
-
-
-        Dictionary<float, AstarCell> goalCandidate = new Dictionary<float, AstarCell>();
 
         private void ScanAround(AstarCell parent)
         {
@@ -105,5 +114,22 @@ namespace Tsl.Math.Pathfinder
                 }
             }
         }
+
+        private void goaled(AstarCell cell)
+        {
+            var pathList = new List<Vector2>();
+            pathList.Add(this.goalCell.Position);
+            var parent = cell;
+            while (parent.Parent != null)
+            {
+                pathList.Add(parent.Position);
+                parent.CellType = AstarCell.Type.Correct;
+                parent = parent.Parent;
+            }
+            pathList.Add(this.startCell.Position);
+            pathList.Reverse();
+            this.onGoal(pathList);
+        }
+
     }
 }

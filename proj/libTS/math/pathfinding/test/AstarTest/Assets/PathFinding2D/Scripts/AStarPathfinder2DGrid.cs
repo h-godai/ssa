@@ -8,6 +8,7 @@ namespace Tsl.Math.Pathfinder
     public class AStarPathfinder2DGrid : MonoBehaviour
     {
         public float TileSize = 1.0f;
+        public int ProcessCoroutineFactor = 1; // CoroutineでPathfindを実行するときの重み
         protected AstarCell[] cellMapBody;
         protected Rect MapRect = new Rect(0, 0, 16, 16);
         protected List<Vector2> pathList; // 結果を一時的に保存する
@@ -73,11 +74,12 @@ namespace Tsl.Math.Pathfinder
         }
 
         // 動的なセルの追加(状態変更)
-        public void SetCellTypeImmediate(Vector2 pos, AstarCell.Type type)
+        public AstarCell SetCellTypeImmediate(Vector2 pos, AstarCell.Type type)
         {
             var cell = CellMap(pos);
             cell.CellType = type;
             MakeRelation(cell);
+            return cell;
         }
 
         // セル間の接続情報の生成
@@ -147,63 +149,44 @@ namespace Tsl.Math.Pathfinder
             }
         }
 
-        // GOALに到達した時の処理
-        protected virtual void Goal(AstarCell cell)
+        public void PathFind(Vector2 start,
+                             Vector2 goal,
+                             System.Action<List<Vector2>> onEnd = null,
+                             ExecuteMode mode = ExecuteMode.ASync)
         {
-            this.pathList = new List<Vector2>();
-            this.pathList.Add(this.logic.goalCell.Position);
-            var parent = cell;
-            while (parent.Parent != null)
-            {
-                this.pathList.Add(parent.Position);
-                parent.CellType = AstarCell.Type.Correct;
-                parent = parent.Parent;
-            }
-            this.pathList.Add(this.logic.startCell.Position);
-            this.pathList.Reverse();
-        }
-
-        public void PathFind(Vector2 start, Vector2 goal, System.Action<List<Vector2>> onEnd = null, ExecuteMode mode = ExecuteMode.ASync)
-        {
-            SetCellTypeImmediate(start, AstarCell.Type.Start);
-            SetCellTypeImmediate(goal, AstarCell.Type.Goal);
-
             if (mode != ExecuteMode.StepNext)
             {
-                this.logic.PathFind(this.MakeRelation, this.Goal);
+                var startCell = SetCellTypeImmediate(start, AstarCell.Type.Start);
+                var goalCell = SetCellTypeImmediate(goal, AstarCell.Type.Goal);
+                this.logic.PathFind(startCell, goalCell, this.MakeRelation, onEnd, mode != ExecuteMode.Sync);
             }
             switch(mode)
             {
-                case ExecuteMode.ASync:
-                    StartCoroutine(pathFindProcessCoroutine(onEnd));
-                    break;
                 case ExecuteMode.Sync:
-                    while(!this.logic.Finished) 
-                    {
-                        this.logic.pathFindProcess();
-                    }
-                    if (onEnd != null) onEnd(this.pathList);
+                    break;
+                case ExecuteMode.ASync:
+                    StartCoroutine(pathFindProcessCoroutine());
                     break;
                 case ExecuteMode.StepFirst:
                 case ExecuteMode.StepNext:
                     this.logic.pathFindProcess();
-                    if (this.logic.Finished && onEnd != null)
-                    {
-                        onEnd(this.pathList);
-                    }
                     break;
                 default:
                     throw new System.InvalidOperationException();
             }
         }
-        private IEnumerator pathFindProcessCoroutine(System.Action<List<Vector2>> onEnd)
+
+        // CoroutineでPathfindを実行する
+        private IEnumerator pathFindProcessCoroutine()
         {
             while(!this.logic.Finished)
             {
-                this.logic.pathFindProcess();
+                for (int i = 0; i <= this.ProcessCoroutineFactor && !this.logic.Finished; ++i)
+                {
+                    this.logic.pathFindProcess();
+                }
                 yield return null;
             }
-            if (onEnd != null) onEnd(this.pathList);
         }
     }
 

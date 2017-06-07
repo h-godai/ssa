@@ -72,6 +72,7 @@ public class SceneBehaviourUIMap : MonoBehaviour {
             {
                 AStarPathfinder2D.Instance.PathFind(this.StartPoint, this.GoalPoint, r =>
                 {
+                    r = AStarPathfinder2D.Instance.FillGrid(r);
                     this.distance = DrawLine(r);
                     this.goled = true;
                 });
@@ -188,6 +189,7 @@ public class SceneBehaviourUIMap : MonoBehaviour {
             now = System.DateTime.Now;
             AStarPathfinder2D.Instance.PathFind(this.StartPoint, this.GoalPoint, r => 
             {
+                r = AStarPathfinder2D.Instance.FillGrid(r);
                 optimizedTime += (System.DateTime.Now - now).TotalSeconds;
                 optimizedDistance = DrawLine(r);
                 this.goled = true;

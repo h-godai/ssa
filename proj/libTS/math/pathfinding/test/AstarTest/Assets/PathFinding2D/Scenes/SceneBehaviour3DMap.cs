@@ -64,16 +64,15 @@ public class SceneBehaviour3DMap : MonoBehaviour {
         var color = coltbl[(int)cell.CellType];
         if (cell.CellType != Tsl.Math.Pathfinder.AstarCell.Type.Removed)
         {
-            UnityEngine.Debug.DrawLine(new Vector3(x - t, 0.1f, y - t), new Vector3(x + t, 0.1f, y - t), color, 1.0f, false);
-            UnityEngine.Debug.DrawLine(new Vector3(x + t, 0.1f, y - t), new Vector3(x + t, 0.1f, y + t), color, 1.0f, false);
-            UnityEngine.Debug.DrawLine(new Vector3(x + t, 0.1f, y + t), new Vector3(x - t, 0.1f, y + t), color, 1.0f, false);
-            UnityEngine.Debug.DrawLine(new Vector3(x - t, 0.1f, y + t), new Vector3(x - t, 0.1f, y - t), color, 1.0f, false);
-
+            Debug.DrawLine(new Vector3(x - t, 0.1f, y - t), new Vector3(x + t, 0.1f, y - t), color, 1.0f, false);
+            Debug.DrawLine(new Vector3(x + t, 0.1f, y - t), new Vector3(x + t, 0.1f, y + t), color, 1.0f, false);
+            Debug.DrawLine(new Vector3(x + t, 0.1f, y + t), new Vector3(x - t, 0.1f, y + t), color, 1.0f, false);
+            Debug.DrawLine(new Vector3(x - t, 0.1f, y + t), new Vector3(x - t, 0.1f, y - t), color, 1.0f, false);
             
             foreach(var r in cell.Related)
             {
                 var p = r.cell.Position;
-                Debug.DrawLine(new Vector3(x, 0.1f, y), new Vector3(p.x, 0.1f, p.y), new Color(0.0f,1.0f,1.0f,0.5f));
+                Debug.DrawLine(new Vector3(x, 0.1f, y), new Vector3(p.x, 0.1f, p.y), new Color(0.0f,1.0f,1.0f,0.2f));
             }
         }
     }

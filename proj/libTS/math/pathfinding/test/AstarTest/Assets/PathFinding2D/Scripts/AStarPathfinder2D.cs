@@ -14,16 +14,7 @@ namespace Tsl.Math.Pathfinder
             AStarPathfinder2D.Instance = this;
         }
 
-        protected override void Goal(AstarCell cell)
-        {
-            base.Goal(cell);
-            if (this.GridMode)
-            {
-                this.pathList = fillGrid(this.pathList);
-            }
-        }
-
-        private List<Vector2> fillGrid(List<Vector2> lines)
+        public List<Vector2> FillGrid(List<Vector2> lines)
         {
             List<Vector2> result = new List<Vector2>();
             for (int i = 0; i < lines.Count - 1; ++i)

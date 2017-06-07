@@ -1,11 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using AStarPathfinder = Tsl.Math.Pathfinder.AStarPathfinder;
 using AstarCell  = Tsl.Math.Pathfinder.AstarCell;
-
-using AstarCell2D = Tsl.Math.Pathfinder.AstarCell2D;
 
 public class SceneBehaviour3DMap : MonoBehaviour {
 
@@ -55,7 +53,7 @@ public class SceneBehaviour3DMap : MonoBehaviour {
         }
     }
 
-    private void drawCell(AstarCell2D cell)
+    private void drawCell(AstarCell cell)
     {
         float x=  cell.Position.x;
         float y = cell.Position.y;
@@ -74,12 +72,12 @@ public class SceneBehaviour3DMap : MonoBehaviour {
             
             foreach(var r in cell.Related)
             {
-                var p = (r.cell as AstarCell2D).Position;
+                var p = r.cell.Position;
                 Debug.DrawLine(new Vector3(x, 0.1f, y), new Vector3(p.x, 0.1f, p.y), new Color(0.0f,1.0f,1.0f,0.5f));
             }
         }
     }
-    private void drawCellCorrect(AstarCell2D cell)
+    private void drawCellCorrect(AstarCell cell)
     {
         if (cell.CellType == AstarCell.Type.Correct || cell.CellType == AstarCell.Type.Start || cell.CellType == AstarCell.Type.Goal)
         {
@@ -87,7 +85,7 @@ public class SceneBehaviour3DMap : MonoBehaviour {
             {
                 if (r.cell.CellType == Tsl.Math.Pathfinder.AstarCell.Type.Correct)
                 {
-                    var p = (r.cell as AstarCell2D).Position;
+                    var p = r.cell.Position;
                     Debug.DrawLine(new Vector3(cell.Position.x, 0.1f, cell.Position.y), new Vector3(p.x, 0.1f, p.y), Color.red, 1.0f, false);
                 }
             }
@@ -162,7 +160,7 @@ public class SceneBehaviour3DMap : MonoBehaviour {
     
     public void OnClickClear()
     {
-        AStarPathfinder.Instance.EachCell(cell => cell.CellType = AstarCell2D.Type.Removed);
+        AStarPathfinder.Instance.EachCell(cell => cell.CellType = AstarCell.Type.Removed);
     }
 
     public void OnClickAutoTest()
@@ -194,7 +192,6 @@ public class SceneBehaviour3DMap : MonoBehaviour {
 
             while (!this.goled) yield return null;
             yield return null;
-            var dis = this.distance;
             ++testCount;
             TestText.text = string.Format("{0} tests\n{1:0.000} / {2:0.000}", testCount, basicTime, basicTime/testCount);
 

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -29,11 +29,10 @@ namespace Tsl.Math.Pathfinder
         // 上下左右斜めのグリッドに対してリンクを作成する
         public override void MakeRelation(AstarCell parent)
         {
-            var parent2D = parent as AstarCell2D;
             parent.Related.Clear();
             if (parent.CellType == AstarCell.Type.Block) return;
-            int x = (int)parent2D.Position.x;
-            int y = (int)parent2D.Position.y;
+            int x = (int)parent.Position.x;
+            int y = (int)parent.Position.y;
             for (int dx = -1; dx < 2; ++dx)
             {
                 for (int dy = -1; dy < 2; ++dy)

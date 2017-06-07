@@ -29,12 +29,12 @@ namespace Tsl.Math.Pathfinder
             for (int i = 0; i < lines.Count - 1; ++i)
             {
                 if (i == 0) result.Add(lines[i]);
-                AStarPathfinder2D.Instance.RaycastCell(lines[i], lines[i + 1], AstarCell2D.Type.Block, cell =>
+                AStarPathfinder2D.Instance.RaycastCell(lines[i], lines[i + 1], AstarCell.Type.Block, cell =>
                   {
                       if (cell != null)
                       {
                           if (cell.CellType == AstarCell.Type.Removed) cell.CellType = AstarCell.Type.SkipPoint;
-                          result.Add((cell as AstarCell2D).Position);
+                          result.Add(cell.Position);
                       }
                       return false;
                   });

@@ -1,22 +1,26 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
 namespace Tsl.Math.Pathfinder
 {
+    // GridベースのASterセルを、リンク形式で結合するために最適化を行う
+    // GridMode = trueで、GridベースのA* Pathfindingと互換性を持たせる
+    // GridMode = falseの場合は、ノード間を最短ルートで結ぶ
     public abstract class AStarPathfinder2DOptimized : AStarPathfinder2DGrid
     {
         public bool GridMode = true; // 最適化時に、結果をグリッドのリストに変換する
 
+        // 接続情報を生成する
         public override void MakeRelation(AstarCell cell)
         {
             if (!this.logic.cells.Contains(cell)) this.logic.cells.Add(cell);
-            setGridRelatedSearchRaycast(cell as AstarCell2D, true);
+            setGridRelatedSearchRaycast(cell, true);
         }
 
         // 到達可能なノードを全ノードからレイキャストして調べる
-        public void setGridRelatedSearchRaycast(AstarCell2D parent, bool newCell = false)
+        public void setGridRelatedSearchRaycast(AstarCell parent, bool newCell = false)
         {
             parent.ClearRelated();
             foreach (var cell in this.logic.cells.Where(c => c.IsValidCell()))
@@ -36,7 +40,7 @@ namespace Tsl.Math.Pathfinder
                 var prevPos = parent.Position;
                 if (!this.GridMode)
                 {   // 最短距離で結ぶ場合
-                    RaycastCell(parent.Position, (cell as AstarCell2D).Position, AstarCell.Type.Removed,
+                    RaycastCell(parent.Position, cell.Position, AstarCell.Type.Removed,
                             rcell =>
                             {
                                 if (rcell.CellType != AstarCell.Type.Removed)
@@ -47,7 +51,7 @@ namespace Tsl.Math.Pathfinder
                                         {   // 見つかった!
                                         if (!parent.Contains(cell))
                                             {
-                                                cost = ((cell as AstarCell2D).Position - parent.Position).magnitude;
+                                                cost = (cell.Position - parent.Position).magnitude;
                                                 parent.AddRelated(cell, cost);
                                                 if (newCell && !cell.Contains(parent))
                                                 {
@@ -66,10 +70,9 @@ namespace Tsl.Math.Pathfinder
                 }
                 else
                 {   // グリッドモード
-                    RaycastCell(parent.Position, (cell as AstarCell2D).Position, AstarCell.Type.Correct,
-                        r =>
+                    RaycastCell(parent.Position, cell.Position, AstarCell.Type.Correct,
+                        rcell =>
                         {
-                            var rcell = r as AstarCell2D;
                             var nowpos = rcell.Position;
                             cost += (nowpos - prevPos).magnitude;
                             prevPos = nowpos;
@@ -81,7 +84,7 @@ namespace Tsl.Math.Pathfinder
                                     {   // 見つかった!
                                         if (!parent.Contains(cell))
                                         {
-                                            if (!this.GridMode) cost = ((cell as AstarCell2D).Position - parent.Position).magnitude;
+                                            if (!this.GridMode) cost = (cell.Position - parent.Position).magnitude;
                                             parent.AddRelated(cell, cost);
                                             if (newCell && !cell.Contains(parent))
                                             {
@@ -136,13 +139,11 @@ namespace Tsl.Math.Pathfinder
             {
                 cell.CellType = AstarCell.Type.Removed;
             }
+            var emptyCells = this.cellMapBody.Where(c => c.CellType == AstarCell.Type.Empty);
 
-            // 角以外のセルを削除
-            List<AstarCell> removeList = new List<AstarCell>();
-            foreach (var cell in this.cellMapBody.Where(c => c.CellType == AstarCell.Type.Empty))
+            // 3x3周囲のセル情報をセットする
+            System.Action<Vector2, AstarCell.Type[,]> set3x3 = (pos, ar) =>
             {
-                var pos = cell.Position;
-                AstarCell.Type[,] ar = new AstarCell.Type[3, 3]; // check around
                 for (int ix = -1; ix < 2; ++ix)
                 {
                     for (int iy = -1; iy < 2; ++iy)
@@ -153,6 +154,14 @@ namespace Tsl.Math.Pathfinder
                         ar[ix + 1, iy + 1] = this.CellType(new Vector2(x, y));
                     }
                 }
+            };
+            // 角以外のセルを削除
+            List<AstarCell> removeList = new List<AstarCell>();
+            foreach (var cell in emptyCells)
+            {
+                var pos = cell.Position;
+                AstarCell.Type[,] ar = new AstarCell.Type[3, 3]; // check around
+                set3x3(pos, ar);
                 // 縦横3連ブロックチェック
                 for (int inv = 0; inv < 2; ++inv)
                 {
@@ -190,12 +199,57 @@ namespace Tsl.Math.Pathfinder
             {
                 cell.CellType = AstarCell.Type.Removed;
             }
+            removeList.Clear();
+
+            if (!this.GridMode)
+            {
+                // 角にある3点を1点にする
+                // □ □ □      □ □ □ 
+                // □ * *   => □ □ *
+                // ? ■ *      ? ■ *
+                foreach (var cell in emptyCells.Where(c => c.CellType == AstarCell.Type.Empty))
+                {
+                    var pos = cell.Position;
+                    AstarCell.Type[,] ar = new AstarCell.Type[3, 3]; // check around
+                    set3x3(pos, ar);
+                    // 90度つず回転する[x,y][y,x][-x,y][x,-ｙ]
+                    for (int angle = 0; angle < 8; ++angle)
+                    {
+                        System.Func<int, int, AstarCell.Type> m = (x, y) =>
+                        {
+                            switch (angle)
+                            {
+                                default:
+                                case 0: return ar[x, y];
+                                case 1: return ar[y, 2 - x];
+                                case 2: return ar[2 - x, 2 - y];
+                                case 3: return ar[2 - y, x];
+                                case 4: return ar[y, x];
+                                case 5: return ar[x, 2 - y];
+                                case 6: return ar[2 - y, 2 - x];
+                                case 7: return ar[2 - x, y];
+                            }
+                        };
+                        if (m(0, 0) == AstarCell.Type.Removed && m(1, 0) == AstarCell.Type.Removed && m(2, 0) == AstarCell.Type.Removed
+                         && m(0, 1) == AstarCell.Type.Removed && m(1, 1) == AstarCell.Type.Empty && m(2, 1) == AstarCell.Type.Empty
+                         /*&& m(0,2) == AstarCell.Type.Block*/ && m(1, 2) == AstarCell.Type.Block && m(2, 2) == AstarCell.Type.Empty)
+                        {
+                            removeList.Add(cell);
+                        }
+                    };
+                }
+
+                foreach (var cell in removeList)
+                {
+                    cell.CellType = AstarCell.Type.Removed;
+                }
+            }
 
             // 残ったセルに対して、接続情報をセットする
             this.logic.cells = this.cellMapBody.Where(c => c.CellType == AstarCell.Type.Empty).Select(c => c as AstarCell).ToList();
             foreach (var cell in this.logic.cells)
             {
-                setGridRelatedSearchRaycast(cell as AstarCell2D);
+                setGridRelatedSearchRaycast(cell);
             }
         }
     }

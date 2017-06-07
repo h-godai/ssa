@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Tsl.Math.Pathfinder
 {
-    public abstract class AstarCell
+    public class AstarCell
     {
         public enum Type
         {
@@ -36,8 +36,6 @@ namespace Tsl.Math.Pathfinder
         // 接続しているセル
         public List<RelatedData> Related = new List<RelatedData>();
 
-        public abstract float Heuristic(AstarCell cell);
-
         public void Reset()
         {
             this.CellType = Type.Removed;
@@ -65,6 +63,11 @@ namespace Tsl.Math.Pathfinder
             return this.Related.Find(r => r.cell == cell);
         }
 
+        public Vector2 Position;
+        public float Heuristic(AstarCell cell)
+        {
+            return (cell.Position - this.Position).magnitude;
+        }
 
         // 経路探索に有効なセルの場合true
         public bool IsValidCell()
@@ -77,20 +80,12 @@ namespace Tsl.Math.Pathfinder
         }
     }
 
-    public class AstarCell2D : AstarCell
-    {
-        public Vector2 Position;
-        public override float Heuristic(AstarCell cell)
-        {
-            return ((cell as AstarCell2D).Position - this.Position).magnitude;
-        }
-    }
     public class AstarCell3D : AstarCell
     {
-        public Vector3 Position;
-        public override float Heuristic(AstarCell cell)
+        public Vector3 Position3D;
+        public float Heuristic3D(AstarCell cell)
         {
-            return ((cell as AstarCell3D).Position - this.Position).magnitude;
+            return ((cell as AstarCell3D).Position3D - this.Position3D).magnitude;
         }
     }
 

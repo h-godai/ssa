@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace Tsl.Math.Pathfinder
     public class AStarPathfinder2DGrid : MonoBehaviour
     {
         public float TileSize = 1.0f;
-        protected AstarCell2D[] cellMapBody;
+        protected AstarCell[] cellMapBody;
         protected Rect MapRect = new Rect(0, 0, 16, 16);
         protected List<Vector2> pathList; // 結果を一時的に保存する
         
@@ -47,7 +47,7 @@ namespace Tsl.Math.Pathfinder
             return cellMapBody[index];
         }
 
-        public void EachCell(System.Action<AstarCell2D> act)
+        public void EachCell(System.Action<AstarCell> act)
         {
             foreach(var cell in this.cellMapBody)
             {
@@ -117,12 +117,12 @@ namespace Tsl.Math.Pathfinder
         {
             if (tilesize != 0.0f) this.TileSize = tilesize;
             this.MapRect = mapRect;
-            this.cellMapBody = new AstarCell2D[this.GridHeight * this.GridWidth];
+            this.cellMapBody = new AstarCell[this.GridHeight * this.GridWidth];
             for (float y = mapRect.y; y < mapRect.yMax; y += this.TileSize)
             {
                 for (float x = mapRect.x; x < mapRect.xMax; x += this.TileSize)
                 {
-                    var cell = new AstarCell2D();
+                    var cell = new AstarCell();
                     cell.Position = new Vector2(x, y);
                     cellMapBody[cellIndex(cell.Position)] = cell;
                 }
@@ -151,15 +151,15 @@ namespace Tsl.Math.Pathfinder
         protected virtual void Goal(AstarCell cell)
         {
             this.pathList = new List<Vector2>();
-            this.pathList.Add((this.logic.goalCell as AstarCell2D).Position);
-            var parent = cell as AstarCell2D;
+            this.pathList.Add(this.logic.goalCell.Position);
+            var parent = cell;
             while (parent.Parent != null)
             {
                 this.pathList.Add(parent.Position);
                 parent.CellType = AstarCell.Type.Correct;
-                parent = parent.Parent as AstarCell2D;
+                parent = parent.Parent;
             }
-            this.pathList.Add((this.logic.startCell as AstarCell2D).Position);
+            this.pathList.Add(this.logic.startCell.Position);
             this.pathList.Reverse();
         }
 

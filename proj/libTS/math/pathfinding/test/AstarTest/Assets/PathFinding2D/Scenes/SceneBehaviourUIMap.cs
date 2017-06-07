@@ -4,8 +4,7 @@ using UnityEngine;
 using System.Linq;
 using AStarPathfinder2D = Tsl.Math.Pathfinder.AStarPathfinder2D;
 using AStarPathfinder2DBasic = Tsl.Math.Pathfinder.AStarPathfinder2DBasic;
-
-using AstarCell2D = Tsl.Math.Pathfinder.AstarCell2D;
+using AstarCell = Tsl.Math.Pathfinder.AstarCell;
 
 public class SceneBehaviourUIMap : MonoBehaviour {
 
@@ -36,7 +35,7 @@ public class SceneBehaviourUIMap : MonoBehaviour {
                 var cell = Instantiate(CellPrefab.gameObject) as GameObject;
                 this.cellMap[x, y] = cell.GetComponent<Tsl.UI.Pathfinder.Cell>();
                 cell.transform.SetParent(this.MapRoot, false);
-                this.cellMap[x, y].AstarCell = AStarPathfinder2D.Instance.CellMap(new Vector2(x, y)) as AstarCell2D;
+                this.cellMap[x, y].AstarCell = AStarPathfinder2D.Instance.CellMap(new Vector2(x, y));
             }
 
         }
@@ -127,7 +126,7 @@ public class SceneBehaviourUIMap : MonoBehaviour {
             while(l-- != 0)
             {
                 if (!range.Contains(pos)) break;
-                AStarPathfinder2D.Instance.CellMap(pos).CellType = AstarCell2D.Type.Block;
+                AStarPathfinder2D.Instance.CellMap(pos).CellType = AstarCell.Type.Block;
                 pos.x += dir ? this.TileSize : 0.0f;
                 pos.y += dir ? 0.0f : this.TileSize;
             }
@@ -136,7 +135,7 @@ public class SceneBehaviourUIMap : MonoBehaviour {
     
     public void OnClickClear()
     {
-        AStarPathfinder2D.Instance.EachCell(cell => cell.CellType = AstarCell2D.Type.Removed);
+        AStarPathfinder2D.Instance.EachCell(cell => cell.CellType = AstarCell.Type.Removed);
     }
 
     public void OnClickAutoTest()
@@ -162,12 +161,12 @@ public class SceneBehaviourUIMap : MonoBehaviour {
             {
                 this.StartPoint = new Vector2(Random.Range(this.MapRect.x, this.MapRect.width / 3 - this.TileSize),
                                               Random.Range(this.MapRect.y, this.MapRect.height / 3 - this.TileSize));
-            } while(AStarPathfinder2D.Instance.CellMap(this.StartPoint).CellType == AstarCell2D.Type.Block);
+            } while(AStarPathfinder2D.Instance.CellMap(this.StartPoint).CellType == AstarCell.Type.Block);
             do
             {
                 this.GoalPoint = new Vector2(Random.Range(this.MapRect.x, this.MapRect.width / 3) + this.MapRect.width * 2 / 3 - this.TileSize,
                                          Random.Range(this.MapRect.y, this.MapRect.width / 3) + this.MapRect.width * 2 / 3 - this.TileSize);
-            } while(AStarPathfinder2D.Instance.CellMap(this.GoalPoint).CellType == AstarCell2D.Type.Block);
+            } while(AStarPathfinder2D.Instance.CellMap(this.GoalPoint).CellType == AstarCell.Type.Block);
             this.goled = false;
             var now = System.DateTime.Now;
             float basicDistance = 0.0f;
@@ -182,6 +181,7 @@ public class SceneBehaviourUIMap : MonoBehaviour {
 
             while (!this.goled) yield return null;
             yield return null;
+
             Reset();
             this.goled = false;
             AStarPathfinder2D.Instance.MapMake();
@@ -208,8 +208,6 @@ public class SceneBehaviourUIMap : MonoBehaviour {
             TestText.text = string.Format("{0} tests\n       basic: {1:0.000} / {2:0.000}\noptimized: {3:0.000} / {4:0.000}",
                              testCount, basicTime, basicTime/testCount, optimizedTime,  optimizedTime/testCount);
 
-            yield return null;
-            Reset();
         }
     }
 }

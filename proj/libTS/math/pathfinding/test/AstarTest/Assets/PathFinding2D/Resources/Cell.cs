@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using AstarCell = Tsl.Math.Pathfinder.AstarCell;
+using AstarCell2D = Tsl.Math.Pathfinder.AstarCell2D;
 
 namespace Tsl.UI.Pathfinder
 {
@@ -10,7 +11,7 @@ namespace Tsl.UI.Pathfinder
     {
         public Text Text;
         public Image Image;
-        public AstarCell AstarCell;
+        public AstarCell2D AstarCell;
         public Color[] CellColor = new Color[9];
 
         public AstarCell.Type CellType
@@ -38,18 +39,18 @@ namespace Tsl.UI.Pathfinder
 
         private void onClick()
         {
-            if (this.CellType == AstarCell.Type.Empty || this.CellType == AstarCell.Type.Correct)
+            if (this.CellType == AstarCell2D.Type.Empty || this.CellType ==  AstarCell2D.Type.Correct)
             {
                 Tsl.Math.Pathfinder.AStarPathfinder2D.Instance.setGridRelatedSearchRaycast(this.AstarCell);
-                var newtype = this.CellType == AstarCell.Type.Empty ? AstarCell.Type.Correct : AstarCell.Type.Empty;
+                var newtype = this.CellType == AstarCell2D.Type.Empty ? AstarCell2D.Type.Correct : AstarCell2D.Type.Empty;
                 foreach(var cell in this.AstarCell.Related)
                 {
                     cell.cell.CellType = newtype;
                 }
                 this.CellType = newtype;
             }
-            else if (this.CellType == AstarCell.Type.Block) this.CellType = AstarCell.Type.Removed;
-            else if (this.CellType == AstarCell.Type.Removed) this.CellType = AstarCell.Type.Block;
+            else if (this.CellType == AstarCell2D.Type.Block) this.CellType = AstarCell2D.Type.Removed;
+            else if (this.CellType == AstarCell2D.Type.Removed) this.CellType = AstarCell2D.Type.Block;
         }
     }
 

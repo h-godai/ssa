@@ -5,14 +5,14 @@ using System.Linq;
 using AStarPathfinder2D = Tsl.Math.Pathfinder.AStarPathfinder2D;
 using AStarPathfinder2DBasic = Tsl.Math.Pathfinder.AStarPathfinder2DBasic;
 
-using AstarCell = Tsl.Math.Pathfinder.AstarCell;
+using AstarCell2D = Tsl.Math.Pathfinder.AstarCell2D;
 
-public class SceneBehabiour : MonoBehaviour {
+public class SceneBehaviourUIMap : MonoBehaviour {
 
     public Transform MapRoot;
     public GameObject CellPrefab;
-    public int GridWidth = 16;
-    public int GridHeight = 16;
+    public Rect MapRect = new Rect(0,0,16,16);
+    public float TileSize = 1.0f;
     public Vector2 StartPoint = new Vector2(0, 0);
     public Vector2 GoalPoint = new Vector2(15, 15);
     public UnityEngine.UI.Text MessageText;
@@ -25,17 +25,18 @@ public class SceneBehabiour : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        AStarPathfinder2D.Instance.MapInit(new Rect(0,0, this.GridHeight, this.GridWidth));
-
-        this.cellMap = new Tsl.UI.Pathfinder.Cell[this.GridHeight,this.GridWidth];
-        for (int y = 0; y < this.GridHeight; ++y)
+        AStarPathfinder2D.Instance.MapInit(this.MapRect);
+        int w = (int)this.MapRect.width;
+        int h = (int)this.MapRect.height;
+        this.cellMap = new Tsl.UI.Pathfinder.Cell[w,h];
+        for (int y = 0; y < w; ++y)
         {
-            for (int x = 0; x < this.GridWidth; ++x)
+            for (int x = 0; x < h; ++x)
             {
                 var cell = Instantiate(CellPrefab.gameObject) as GameObject;
                 this.cellMap[x, y] = cell.GetComponent<Tsl.UI.Pathfinder.Cell>();
                 cell.transform.SetParent(this.MapRoot, false);
-                this.cellMap[x, y].AstarCell = AStarPathfinder2D.Instance.CellMap(x, y);
+                this.cellMap[x, y].AstarCell = AStarPathfinder2D.Instance.CellMap(new Vector2(x, y)) as AstarCell2D;
             }
 
         }
@@ -55,8 +56,10 @@ public class SceneBehabiour : MonoBehaviour {
     public void Reset()
     {
         AStarPathfinder2D.Instance.Reset();
+        AStarPathfinder2DBasic.Instance.Reset();
         this.goled = false;
     }
+    bool usingOptimize = false;
 
     public void OnClickStartButton()
     {
@@ -66,41 +69,50 @@ public class SceneBehabiour : MonoBehaviour {
         }
         else
         {
-            AStarPathfinder2D.Instance.PathFind(this.StartPoint, this.GoalPoint, r => 
+            if (this.usingOptimize)
             {
-                DrawLine(r);
-                this.goled = true;
-            });
+                AStarPathfinder2D.Instance.PathFind(this.StartPoint, this.GoalPoint, r =>
+                {
+                    this.distance = DrawLine(r);
+                    this.goled = true;
+                });
+            }
+            else
+            {
+                AStarPathfinder2DBasic.Instance.PathFind(this.StartPoint, this.GoalPoint, r =>
+                {
+                    this.distance = DrawLine(r);
+                    this.goled = true;
+                });
+            }
         }
     }
 
-    private void DrawLine(List<Vector2> lines)
+    private float DrawLine(List<Vector2> lines)
     {
-        this.distance = 0.0f;
+        float distance = 0.0f;
         if (lines != null)
         {
             for (int i = 0; i < lines.Count - 1; ++i)
             {
-                this.distance += (lines[i+1] - lines[i]).magnitude;
-                if (!AStarPathfinder2D.Instance.GridMode)
-                {
-                    AStarPathfinder2D.Instance.RaycastCell(lines[i], lines[i + 1], (x, y) =>
-                      {
-                          var cell = AStarPathfinder2D.Instance.CellMap(x, y);
-                          if (cell.CellType == AstarCell.Type.Removed) cell.CellType = AstarCell.Type.SkipPoint;
-                          return false;
-                      });
-                }
+                distance += (lines[i+1] - lines[i]).magnitude;
             }
         }
+        return distance;
     }
 
     public void OnClickMapMakeButton(bool opt)
     {
         if (opt)
+        {
+            this.usingOptimize = true;
             AStarPathfinder2D.Instance.MapMake();
+        }
         else
+        {
+            this.usingOptimize = false;
             AStarPathfinder2DBasic.Instance.MapMake();
+        }
     }
 
     public void OnClickRandomMake()
@@ -108,28 +120,23 @@ public class SceneBehabiour : MonoBehaviour {
         for (int n = 0; n < 10; ++n)
         {
             int l = UnityEngine.Random.Range(1,10);
-            int x = Random.Range(0, this.GridWidth);
-            int y = Random.Range(0, this.GridHeight);
+            Vector2 pos = new Vector2(Random.Range(this.MapRect.xMin, this.MapRect.width),
+                                      Random.Range(this.MapRect.yMin, this.MapRect.height));
             bool dir = Random.Range(0,2) == 0;
+            var range = new Rect(this.MapRect.xMin, this.MapRect.yMin, this.MapRect.width - this.TileSize, this.MapRect.height - this.TileSize);
             while(l-- != 0)
             {
-                if (x < 0 || y < 0 || x >= this.GridWidth || y >= this.GridHeight) break;
-                AStarPathfinder2D.Instance.CellMap(x, y).CellType = Tsl.Math.Pathfinder.AstarCell.Type.Block;
-                x += dir ? 1 : 0;
-                y += dir ? 0 : 1;
+                if (!range.Contains(pos)) break;
+                AStarPathfinder2D.Instance.CellMap(pos).CellType = AstarCell2D.Type.Block;
+                pos.x += dir ? this.TileSize : 0.0f;
+                pos.y += dir ? 0.0f : this.TileSize;
             }
         }
     }
     
     public void OnClickClear()
     {
-        for (int y = 0; y < this.GridHeight; ++y)
-        {
-            for (int x = 0; x < this.GridWidth; ++x)
-            {
-                AStarPathfinder2D.Instance.CellMap(x, y).CellType = Tsl.Math.Pathfinder.AstarCell.Type.Removed;
-            }
-        }
+        AStarPathfinder2D.Instance.EachCell(cell => cell.CellType = AstarCell2D.Type.Removed);
     }
 
     public void OnClickAutoTest()
@@ -147,43 +154,53 @@ public class SceneBehabiour : MonoBehaviour {
             OnClickRandomMake();
             OnClickRandomMake();
             OnClickRandomMake();
-            Reset();
-            OnClickMapMakeButton(false);
-            yield return null;
 
-            this.StartPoint = new Vector2(Random.Range(0, this.GridWidth/3), Random.Range(0, this.GridHeight/3));
-            this.GoalPoint = new Vector2(Random.Range(0, this.GridWidth/3) + this.GridWidth*2/3, Random.Range(0, this.GridHeight/3)+this.GridHeight*2/3);
+            Reset();
+            AStarPathfinder2DBasic.Instance.MapMake();
+
+            do
+            {
+                this.StartPoint = new Vector2(Random.Range(this.MapRect.x, this.MapRect.width / 3 - this.TileSize),
+                                              Random.Range(this.MapRect.y, this.MapRect.height / 3 - this.TileSize));
+            } while(AStarPathfinder2D.Instance.CellMap(this.StartPoint).CellType == AstarCell2D.Type.Block);
+            do
+            {
+                this.GoalPoint = new Vector2(Random.Range(this.MapRect.x, this.MapRect.width / 3) + this.MapRect.width * 2 / 3 - this.TileSize,
+                                         Random.Range(this.MapRect.y, this.MapRect.width / 3) + this.MapRect.width * 2 / 3 - this.TileSize);
+            } while(AStarPathfinder2D.Instance.CellMap(this.GoalPoint).CellType == AstarCell2D.Type.Block);
             this.goled = false;
             var now = System.DateTime.Now;
-            AStarPathfinder2D.Instance.PathFind(this.StartPoint, this.GoalPoint, r => 
+            float basicDistance = 0.0f;
+            float optimizedDistance = 0.0f;
+            AStarPathfinder2DBasic.Instance.PathFind(this.StartPoint, this.GoalPoint, r => 
             {
                 basicTime += (System.DateTime.Now - now).TotalSeconds;
-                DrawLine(r);
+                basicDistance = DrawLine(r);
+                this.distance = basicDistance;
                 this.goled = true;
             }, Tsl.Math.Pathfinder.AStarPathfinder2D.ExecuteMode.Sync);
 
             while (!this.goled) yield return null;
             yield return null;
-            var dis = this.distance;
             Reset();
             this.goled = false;
-            OnClickMapMakeButton(true);
+            AStarPathfinder2D.Instance.MapMake();
             now = System.DateTime.Now;
             AStarPathfinder2D.Instance.PathFind(this.StartPoint, this.GoalPoint, r => 
             {
                 optimizedTime += (System.DateTime.Now - now).TotalSeconds;
-                DrawLine(r);
+                optimizedDistance = DrawLine(r);
                 this.goled = true;
             }, Tsl.Math.Pathfinder.AStarPathfinder2D.ExecuteMode.Sync);
             while (!this.goled) yield return null;
             yield return null;
 
-            if (dis != 0.0f)
+            if (basicDistance != 0.0f)
             {
                 ++testCount;
-                if (Mathf.Abs(dis - this.distance) > 0.01f)
+                if (Mathf.Abs(basicDistance - optimizedDistance) > 0.01f)
                 {
-                    Debug.Log(string.Format("distance not equal opt:{0} as {1}", dis, this.distance));
+                    Debug.Log(string.Format("distance not equal opt:{0} as {1}", optimizedDistance, basicDistance));
                     break;
                 }
             }

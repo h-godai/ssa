@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Tsl.Math.Pathfinder
 {
-    public class AstarCell
+    public abstract class AstarCell
     {
         public enum Type
         {
@@ -18,6 +18,7 @@ namespace Tsl.Math.Pathfinder
             Correct,
             Removed,
             SkipPoint,
+            Links,
         }
 
         public struct RelatedData 
@@ -26,7 +27,6 @@ namespace Tsl.Math.Pathfinder
             public float cost;
         }
 
-        public Vector2 Position;
         public Type CellType = Type.Removed;
         public float Score = 0.0f;
         public float Cost = 0.0f;
@@ -35,6 +35,8 @@ namespace Tsl.Math.Pathfinder
         public AstarCell Parent = null;
         // 接続しているセル
         public List<RelatedData> Related = new List<RelatedData>();
+
+        public abstract float Heuristic(AstarCell cell);
 
         public void Reset()
         {
@@ -72,6 +74,23 @@ namespace Tsl.Math.Pathfinder
                 || this.CellType == Type.Close
                 || this.CellType == Type.Goal
                 || this.CellType == Type.Correct;
+        }
+    }
+
+    public class AstarCell2D : AstarCell
+    {
+        public Vector2 Position;
+        public override float Heuristic(AstarCell cell)
+        {
+            return ((cell as AstarCell2D).Position - this.Position).magnitude;
+        }
+    }
+    public class AstarCell3D : AstarCell
+    {
+        public Vector3 Position;
+        public override float Heuristic(AstarCell cell)
+        {
+            return ((cell as AstarCell3D).Position - this.Position).magnitude;
         }
     }
 
